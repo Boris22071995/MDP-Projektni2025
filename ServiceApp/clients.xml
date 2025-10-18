@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.3" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>osjecani</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bv@mai.com</string>
+    </void>
+    <void property="lastName">
+     <string>Vasiljevic</string>
+    </void>
+    <void property="name">
+     <string>Boris</string>
+    </void>
+    <void property="password">
+     <string>boris</string>
+    </void>
+    <void property="phone">
+     <string>066 032 089</string>
+    </void>
+    <void property="username">
+     <string>boris</string>
+    </void>
+    <void property="vehicleData">
+     <string>golf6</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>osjecani</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bv@mai.com</string>
+    </void>
+    <void property="lastName">
+     <string>Vasiljevic</string>
+    </void>
+    <void property="name">
+     <string>Boris</string>
+    </void>
+    <void property="password">
+     <string>boris</string>
+    </void>
+    <void property="phone">
+     <string>066 032 089</string>
+    </void>
+    <void property="username">
+     <string>boris</string>
+    </void>
+    <void property="vehicleData">
+     <string>golf6</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>osjecani2</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bv@mai.com2</string>
+    </void>
+    <void property="lastName">
+     <string>Vasiljevic2</string>
+    </void>
+    <void property="name">
+     <string>Boris2</string>
+    </void>
+    <void property="password">
+     <string>boris2</string>
+    </void>
+    <void property="phone">
+     <string>066 032 089</string>
+    </void>
+    <void property="username">
+     <string>boris2</string>
+    </void>
+    <void property="vehicleData">
+     <string>golf6</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
