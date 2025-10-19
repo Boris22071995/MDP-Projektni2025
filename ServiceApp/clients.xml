@@ -9,6 +9,9 @@
     <void property="approved">
      <boolean>true</boolean>
     </void>
+    <void property="blocked">
+     <boolean>true</boolean>
+    </void>
     <void property="email">
      <string>bv@mai.com</string>
     </void>
@@ -66,28 +69,28 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Client">
     <void property="address">
-     <string>osjecani2</string>
+     <string>osjecani</string>
     </void>
     <void property="approved">
      <boolean>true</boolean>
     </void>
     <void property="email">
-     <string>bv@mai.com2</string>
+     <string>bv@mai.com</string>
     </void>
     <void property="lastName">
-     <string>Vasiljevic2</string>
+     <string>Vasiljevic</string>
     </void>
     <void property="name">
-     <string>Boris2</string>
+     <string>Boris</string>
     </void>
     <void property="password">
-     <string>boris2</string>
+     <string>boris</string>
     </void>
     <void property="phone">
      <string>066 032 089</string>
     </void>
     <void property="username">
-     <string>boris2</string>
+     <string>boris</string>
     </void>
     <void property="vehicleData">
      <string>golf6</string>

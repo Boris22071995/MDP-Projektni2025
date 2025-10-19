@@ -45,4 +45,8 @@ public class ClientService {
 		}
 	}
 	
+	public void delete(String username) {
+		repository.deleteClient(username);
+	}
+	
 }

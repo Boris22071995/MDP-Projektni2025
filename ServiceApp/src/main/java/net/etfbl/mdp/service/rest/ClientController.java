@@ -38,7 +38,8 @@ public class ClientController {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response login(HashMap<String, String> credentials) {
 		boolean ok = service.login(credentials.get("username"), credentials.get("password"));
-		return ok ? Response.ok().build() : Response.status(Response.Status.UNAUTHORIZED).build();
+		return ok ? Response.ok().entity("Uspjesno logovanje!").build() : Response.status(Response.Status.UNAUTHORIZED)
+				.entity("Pogresni podaci ili nalog nije odobren.").build();
 	}
 
 }
