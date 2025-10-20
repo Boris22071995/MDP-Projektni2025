@@ -5,6 +5,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +17,10 @@ import java.beans.XMLDecoder;
 
 public class ClientRepository {
 
-	private static final String FILE_PATH = "clients.xml";
+	private static final String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\clients.xml";
 
+	//private static final String FILE_PATH = Paths.get(System.getProperty("user.dir"), "webapp", "WEB-INF", "clients.xml").toString();
+	
 	@SuppressWarnings("unchecked")
 	public ArrayList<Client> getAllClients() {
 		File file = new File(FILE_PATH);
