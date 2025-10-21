@@ -4,62 +4,28 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Client">
     <void property="address">
-     <string>osjecani</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
+     <string>sadasdas</string>
     </void>
     <void property="email">
-     <string>bv@mai.com</string>
+     <string>dasdasdas</string>
     </void>
     <void property="lastName">
-     <string>Vasiljevic</string>
+     <string>asdasd</string>
     </void>
     <void property="name">
-     <string>Boris</string>
+     <string>asdasdasd</string>
     </void>
     <void property="password">
-     <string>boris</string>
+     <string>sdasdasdas</string>
     </void>
     <void property="phone">
-     <string>066 032 089</string>
+     <string>dasdasdas</string>
     </void>
     <void property="username">
-     <string>boris</string>
+     <string>dasdasda</string>
     </void>
     <void property="vehicleData">
-     <string>golf6</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
-     <string>AA</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
-    </void>
-    <void property="email">
-     <string>bv@mai.com</string>
-    </void>
-    <void property="lastName">
-     <string>AA</string>
-    </void>
-    <void property="name">
-     <string>AA</string>
-    </void>
-    <void property="password">
-     <string>AA</string>
-    </void>
-    <void property="phone">
-     <string>066 032 089</string>
-    </void>
-    <void property="username">
-     <string>AA</string>
-    </void>
-    <void property="vehicleData">
-     <string>golf6</string>
+     <string>asdasd</string>
     </void>
    </object>
   </void>

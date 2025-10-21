@@ -13,15 +13,16 @@ import javax.swing.JTable;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.ClientService;
+import net.etfbl.mdp.service.gui.rest.RestClient;
 
 public class ClientPanel extends JPanel {
 
 	private JTable table;
 	private ClientTableModel tableModel;
-	private ClientService service;
+	private RestClient restClient;
 	
 	public ClientPanel() {
-		service = new ClientService();
+		restClient = new RestClient();
 		
 		setLayout(new BorderLayout());
 		
@@ -53,7 +54,7 @@ public class ClientPanel extends JPanel {
 	}
 	
 	private void loadClients() {
-		List<Client> clients = service.getAllClients();
+		List<Client> clients = restClient.getAllClients();
 		tableModel.setClients(clients);
 	}
 	
@@ -61,7 +62,7 @@ public class ClientPanel extends JPanel {
         int row = table.getSelectedRow();
         if (row >= 0) {
             String username = tableModel.getClientAt(row).getUsername();
-            service.approveClient(username);
+            restClient.approveClient(username);
             loadClients();
         } else {
             JOptionPane.showMessageDialog(this, "Approve client!", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -72,7 +73,7 @@ public class ClientPanel extends JPanel {
         int row = table.getSelectedRow();
         if (row >= 0) {
             String username = tableModel.getClientAt(row).getUsername();
-            service.blockClient(username);
+            restClient.blockClient(username);
             loadClients();
         } else {
             JOptionPane.showMessageDialog(this, "Odaberite klijenta!", "Upozorenje", JOptionPane.WARNING_MESSAGE);
@@ -85,7 +86,7 @@ public class ClientPanel extends JPanel {
             String username = tableModel.getClientAt(row).getUsername();
             int confirm = JOptionPane.showConfirmDialog(this, "Da li ste sigurni da želite obrisati klijenta " + username + "?", "Potvrda", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
-                service.delete(username);
+                restClient.deleteClient(username);
                 loadClients();
             }
         } else {
