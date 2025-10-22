@@ -21,6 +21,21 @@ public class HttpUtil {
 	        return readResponse(conn);
 	}
 	
+	public static int sendPostRegister(String urlString, String jsonBody) throws IOException {
+		URL url = new URL(urlString);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/json");
+        conn.setDoOutput(true);
+
+        try (OutputStream os = conn.getOutputStream()) {
+            os.write(jsonBody.getBytes());
+        }
+
+        return conn.getResponseCode();
+	}
+	
 	public static String sendGet(String urlString) throws IOException{
 		 URL url = new URL(urlString);
 	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();

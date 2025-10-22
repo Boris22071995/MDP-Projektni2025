@@ -49,8 +49,8 @@ public class AuthService {
 	            
 	            System.out.println(json.toString());
 
-	            String response = HttpUtil.sendPost(BASE_URL + "/register", json.toString());
-	            return response.contains("success") || response.contains("ok");
+	            int response = HttpUtil.sendPostRegister(BASE_URL + "/register", json.toString());
+	            return response >= 200 && response <= 300;
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	            return false;
