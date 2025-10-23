@@ -19,7 +19,7 @@ public class ClientService {
 	public static ArrayList<Client> getClients() {
 		ArrayList<Client> clients = new ArrayList<>();
 		try {
-			URL url = new URL(OSNOVNI_URL);
+			URL url = new URL(OSNOVNI_URL + "/all");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");

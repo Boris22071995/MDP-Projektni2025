@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.3" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>k1</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>k1</string>
+    </void>
+    <void property="lastName">
+     <string>k1</string>
+    </void>
+    <void property="name">
+     <string>k1</string>
+    </void>
+    <void property="password">
+     <string>k1</string>
+    </void>
+    <void property="phone">
+     <string>k1</string>
+    </void>
+    <void property="username">
+     <string>k1</string>
+    </void>
+    <void property="vehicleData">
+     <string>k1</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>k2</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>k2</string>
+    </void>
+    <void property="lastName">
+     <string>k2</string>
+    </void>
+    <void property="name">
+     <string>k2</string>
+    </void>
+    <void property="password">
+     <string>k2</string>
+    </void>
+    <void property="phone">
+     <string>k2</string>
+    </void>
+    <void property="username">
+     <string>k2</string>
+    </void>
+    <void property="vehicleData">
+     <string>k2</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

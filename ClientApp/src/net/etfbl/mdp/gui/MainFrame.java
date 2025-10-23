@@ -1,9 +1,13 @@
 package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.model.Client;
+import net.etfbl.mdp.service.ClientService;
 
 import javax.swing.*;
 import java.awt.*;
+
+import java.util.*;
+import java.util.List;
 
 public class MainFrame extends JFrame{
 
@@ -23,6 +27,16 @@ public class MainFrame extends JFrame{
         add(btnHistory);
         add(btnChatClient);
         add(btnChatService);
+       
+        ArrayList<Client> korisnici = ClientService.getClients(); // GET /clients/all
+        System.out.println("OVDJE SMO: " + korisnici.size());
+        List<String> imena = new ArrayList<>();
+        for(Client c : korisnici) imena.add(c.getUsername());
+        JFrame chatFrame = new JFrame("Sigurni chat");
+        chatFrame.add(new ChatSecurePanel(client.getName(), imena));
+        chatFrame.setSize(500, 400);
+        chatFrame.setVisible(true);
+        
 	}
 	
 }
