@@ -5,10 +5,15 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSocket;
+
+import net.etfbl.mdp.service.securechat.storage.OfflineMessageStorage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.KeyStore;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class SSLChatServer {
@@ -17,6 +22,7 @@ public class SSLChatServer {
     private static String KEY_STORE_PATH = "./keystore.jks";
     private static final String KEY_STORE_PASSWORD = "servis123";
     private static final Set<SSLClientHandler> clients = new HashSet<>();
+    private static Map<String, SSLClientHandler> onlineUsers = new HashMap<>();
 
     public static void main(String[] args) {
         try {
@@ -70,12 +76,38 @@ public class SSLChatServer {
         System.out.println("[SSLChatServer] Removed client: " + client.getName());
     }
     
-    public static synchronized void sendPrivate(String username, String msg) {
+    /*public static synchronized void sendPrivate(String username, String msg) {
         for (SSLClientHandler c : clients) {
             if (username.equalsIgnoreCase(c.getName())) {
                 c.sendMessage(msg);
                 break;
             }
         }
+    }*/
+    
+    public static synchronized void sendPrivate(String toUser, String msg) {
+        SSLClientHandler recipient = onlineUsers.get(toUser);
+        if (recipient != null) {
+            recipient.sendMessage(msg);
+        } else {
+            // offline korisnik - čuvaj poruku
+            OfflineMessageStorage.saveMessage(toUser, "Server", msg);
+        }
+    }
+    
+    public static synchronized void registerUser(String username, SSLClientHandler handler) {
+        onlineUsers.put(username, handler);
+    }
+    
+    public static synchronized void unregisterUser(String username) {
+        onlineUsers.remove(username);
+    }
+    
+    public static synchronized boolean isOnline(String username) {
+        return onlineUsers.containsKey(username);
+    }
+    
+    public static synchronized Set<String> getOnlineUsers() {
+        return onlineUsers.keySet();
     }
 }

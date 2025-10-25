@@ -10,8 +10,10 @@ import java.util.*;
 import java.util.List;
 
 public class MainFrame extends JFrame{
+	Client client;
 
 	public MainFrame(Client client) {
+		this.client = client;
 		setTitle("Welcome, " + client.getName() + " " + client.getLastName());
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,18 +27,36 @@ public class MainFrame extends JFrame{
 
         add(btnSchedule);
         add(btnHistory);
-        add(btnChatClient);
         add(btnChatService);
+        btnChatClient.addActionListener(e -> {
+            List<Client> users = ClientService.getClients();
+            List<String> imena = new ArrayList<>();
+            for(Client c : users) imena.add(c.getUsername());
+            JFrame chatFrame = new JFrame("Sigurni chat - " + client.getUsername());
+            chatFrame.add(new ChatSecurePanel(client.getUsername(), imena));
+            chatFrame.setSize(600, 400);
+            chatFrame.setVisible(true);
+        });
+        add(btnChatClient);
+  
        
-        ArrayList<Client> korisnici = ClientService.getClients(); // GET /clients/all
+        /*ArrayList<Client> korisnici = ClientService.getClients(); // GET /clients/all
         System.out.println("OVDJE SMO: " + korisnici.size());
         List<String> imena = new ArrayList<>();
         for(Client c : korisnici) imena.add(c.getUsername());
         JFrame chatFrame = new JFrame("Sigurni chat");
         chatFrame.add(new ChatSecurePanel(client.getName(), imena));
         chatFrame.setSize(500, 400);
-        chatFrame.setVisible(true);
+        chatFrame.setVisible(true);*/
         
 	}
+	 private void openChatClient() {
+		 ArrayList<Client> korisnici = ClientService.getClients();
+	        List<String> imena = new ArrayList<>();
+	        for(Client c : korisnici) imena.add(c.getUsername());
+		 new ChatSecurePanel(client.getUsername(),imena).setVisible(true);;
+			this.dispose();
+     }
+    
 	
 }

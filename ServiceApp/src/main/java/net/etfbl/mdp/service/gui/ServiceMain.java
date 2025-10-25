@@ -14,6 +14,10 @@ public class ServiceMain extends JFrame {
 		setLocationRelativeTo(null);
 		
 		add(new ClientPanel(), BorderLayout.CENTER);
+		JFrame serverFrame = new JFrame("Server Chat Kontrola");
+		serverFrame.add(new ChatServerPanel());
+		serverFrame.setSize(400, 400);
+		serverFrame.setVisible(true);
 	}
 	
 	public static void main(String[] args) {

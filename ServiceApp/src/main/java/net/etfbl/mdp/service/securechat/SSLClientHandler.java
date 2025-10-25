@@ -1,7 +1,11 @@
 package net.etfbl.mdp.service.securechat;
 
 import javax.net.ssl.SSLSocket;
+
+import net.etfbl.mdp.service.securechat.storage.OfflineMessageStorage;
+
 import java.io.*;
+import java.util.List;
 
 public class SSLClientHandler implements Runnable {
 
@@ -24,9 +28,15 @@ public class SSLClientHandler implements Runnable {
 	            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	            out = new PrintWriter(socket.getOutputStream(), true);
 
-	            out.println("Unesite korisničko ime: ");
+	           // out.println("Unesite korisničko ime: ");
 	            name = in.readLine();
+	            SSLChatServer.registerUser(name, this);
 	            SSLChatServer.broadcast("🔒 " + name + " se priključio sigurnom chatu.", this);
+	            
+	            List<String> offlineMsgs = OfflineMessageStorage.loadMessagesForUser(name);
+	            for (String m : offlineMsgs) {
+	                sendMessage(m);
+	            }
 
 	            String message;
 	            while ((message = in.readLine()) != null) {
@@ -46,8 +56,10 @@ public class SSLClientHandler implements Runnable {
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        } finally {
+	        	 SSLChatServer.unregisterUser(name);
 	            SSLChatServer.removeClient(this);
 	            SSLChatServer.broadcast("❌ " + name + " je napustio chat.", this);
+	           
 	            try {
 	                socket.close();
 	            } catch (IOException e) {

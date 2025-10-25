@@ -4,6 +4,7 @@ package net.etfbl.mdp.securechat;
 import javax.net.ssl.*;
 import java.io.*;
 import java.security.KeyStore;
+import java.util.function.Consumer;
 import java.io.FileInputStream;
 import java.io.File;
 
@@ -14,6 +15,12 @@ public class SSLChatClientTest {
     private PrintWriter out;
     private BufferedReader in;
     private Thread receiverThread;
+    
+    private Consumer<String> onMessage; // GUI callback
+
+    public SSLChatClientTest(Consumer<String> onMessage) {
+        this.onMessage = onMessage;
+    }
     
     public void connect(String username) throws Exception {
     	      String HOST = "localhost";
@@ -40,21 +47,34 @@ public class SSLChatClientTest {
               SSLSocket socket = (SSLSocket) sf.createSocket(HOST, PORT);
               socket.startHandshake(); // eksplicitno pokreni handshake
               
-              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-              BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
-
-              // Thread za primanje poruka
-              new Thread(() -> {
+               in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+               out = new PrintWriter(socket.getOutputStream(), true);
+              //BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+              
+              out.println(username);
+              receiverThread = new Thread(() -> {
                   try {
                       String msg;
                       while ((msg = in.readLine()) != null) {
-                          System.out.println(msg);
+                          if (onMessage != null) onMessage.accept(msg);
                       }
                   } catch (IOException e) {
-                      System.out.println("Veza prekinuta.");
+                      if (onMessage != null) onMessage.accept("[Veza prekinuta]");
                   }
-              }).start();
+              });
+              receiverThread.start();
+              
+              // Thread za primanje poruka
+//              new Thread(() -> {
+//                  try {
+//                      String msg;
+//                      while ((msg = in.readLine()) != null) {
+//                          System.out.println(msg);
+//                      }
+//                  } catch (IOException e) {
+//                      System.out.println("Veza prekinuta.");
+//                  }
+//              }).start();
     }
     
 
