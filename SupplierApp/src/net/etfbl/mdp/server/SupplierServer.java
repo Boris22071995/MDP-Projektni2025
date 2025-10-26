@@ -18,7 +18,7 @@ public class SupplierServer {
 			System.out.println("[SupplierServer] Ucitano dijelova: " + parts.size());
 			
 			try(ServerSocket serverSocket = new ServerSocket(PORT)) {
-				System.out.println("[SupplierServer] Server ceka na portu " + PORT);
+				//System.out.println("[SupplierServer] Server ceka na portu " + PORT);
 				while(true) {
 					Socket socket = serverSocket.accept();
 					new Thread(new SupplierHandler(socket)).start();
