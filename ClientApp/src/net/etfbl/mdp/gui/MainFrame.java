@@ -26,8 +26,8 @@ public class MainFrame extends JFrame{
         mainPanel = new JPanel(cardLayout);
 
         // dodajemo panele
-        ReservationPanel reservationPanel = new ReservationPanel();
-        HistoryPanel historyPanel = new HistoryPanel();
+        ReservationPanel reservationPanel = new ReservationPanel(client);
+        HistoryPanel historyPanel = new HistoryPanel(client);
         mainPanel.add(reservationPanel, "reservation");
         mainPanel.add(historyPanel, "history");
 

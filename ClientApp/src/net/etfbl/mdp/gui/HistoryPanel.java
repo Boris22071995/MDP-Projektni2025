@@ -1,19 +1,22 @@
 package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.model.Appointment;
-import net.etfbl.mdp.model.Appointment.Status;
+import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.AppointmentService;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.util.List;
 
 public class HistoryPanel extends JPanel {
-
+    AppointmentService service = new AppointmentService();
 	private JTable table;
     private DefaultTableModel model;
+    Client client = new Client();
 
-    public HistoryPanel() {
+    public HistoryPanel(Client client) {
+    	this.client = client;
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createTitledBorder("Service history"));
 
@@ -30,9 +33,11 @@ public class HistoryPanel extends JPanel {
     }
 
     private void loadHistory() {
-        model.setRowCount(0);
-        // Test podaci - kasnije ide REST poziv
-        model.addRow(new Object[]{"2025-10-20", "09:30", "Redovni servis", "Završeno", "Zamjena ulja"});
-        model.addRow(new Object[]{"2025-10-22", "14:00", "Popravka", "U toku", "Zamjena kočnica"});
+    	List<Appointment> appointments = service.getAppointmentsByUser(client.getUsername());
+    	for(int i = 0; i < appointments.size(); i++) {
+    		 model.setRowCount(i);
+    	     model.addRow(new Object[]{appointments.get(i).getDate(), appointments.get(i).getTime(), appointments.get(i).getType(),
+    	    		 appointments.get(i).getStatus(), appointments.get(i).getDescription()});
+    	}
     }
 }

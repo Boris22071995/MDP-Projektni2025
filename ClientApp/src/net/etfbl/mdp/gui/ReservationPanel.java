@@ -1,8 +1,7 @@
 package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.model.Appointment;
-import net.etfbl.mdp.model.Appointment.Status;
-import net.etfbl.mdp.model.Appointment.Type;
+import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.AppointmentService;
 
 import javax.swing.*;
@@ -16,8 +15,11 @@ public class ReservationPanel extends JPanel {
 	    private JTextField timeField;
 	    private JComboBox<String> serviceTypeBox;
 	    private JTextArea descriptionArea;
+	    AppointmentService service = new AppointmentService();
+	    Client client = new Client();
 
-	    public ReservationPanel() {
+	    public ReservationPanel(Client client) {
+	    	this.client = client;
 	        setLayout(new GridLayout(5, 2, 10, 10));
 	        setBorder(BorderFactory.createTitledBorder("Termin reservation"));
 
@@ -35,7 +37,14 @@ public class ReservationPanel extends JPanel {
 	                    serviceTypeBox.getSelectedItem(),
 	                    descriptionArea.getText()
 	            );
+	            Appointment appointment = new Appointment();
+	            appointment.setDate(dateField.getText());
+	            appointment.setTime(timeField.getText());
+	            appointment.setType(serviceTypeBox.getSelectedItem().toString());
+	            appointment.setDescription(descriptionArea.getText());
+	            appointment.setOwnerUsername(client.getUsername());
 	            JOptionPane.showMessageDialog(this, msg, "Potvrda", JOptionPane.INFORMATION_MESSAGE);
+	            service.createAppointment(appointment);
 	        });
 
 	        add(new JLabel("Datum (yyyy-MM-dd):"));

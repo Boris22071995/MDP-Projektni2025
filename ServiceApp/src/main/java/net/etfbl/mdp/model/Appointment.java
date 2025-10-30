@@ -93,5 +93,6 @@ public class Appointment implements Serializable {
 				+ ", type=" + type + ", description=" + description + ", status=" + status + "]";
 	}
 
-
+	
+	
 }

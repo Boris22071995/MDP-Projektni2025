@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.3" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-10-30</string>
+    </void>
+    <void property="description">
+     <string>Otisao motor</string>
+    </void>
+    <void property="id">
+     <string>97f160b8-21e4-40e4-a48c-94f22c744ae1</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Reparation</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-11-25</string>
+    </void>
+    <void property="description">
+     <string>Treba mi mali servis</string>
+    </void>
+    <void property="id">
+     <string>a793e14e-1668-4bdf-badd-9db81c146b6b</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="time">
+     <string>12:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
