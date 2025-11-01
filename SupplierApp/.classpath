@@ -7,5 +7,8 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/jsoup-1.21.2.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.22.jar"/>
+	<classpathentry kind="lib" path="lib/amqp-client-5.26.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
