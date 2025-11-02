@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class Order implements Serializable {
-
+	private static final long serialVersionUID = 1L;
 	private String orderId;
     private String partName;
     private int quantity;
     private double price;
     private String clientUsername;
     private LocalDateTime createdAt;
-    private String status;
+    private boolean  status;
     
     public Order() {
     	
@@ -25,7 +25,7 @@ public class Order implements Serializable {
 		this.price = price;
 		this.clientUsername = clientUsername;
 		this.createdAt = LocalDateTime.now();
-        this.status = "PENDING";
+        this.status = false;
 	}
 
 	public String getOrderId() {
@@ -76,11 +76,11 @@ public class Order implements Serializable {
 		this.createdAt = createdAt;
 	}
 
-	public String getStatus() {
+	public boolean getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(boolean status) {
 		this.status = status;
 	}
 

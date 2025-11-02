@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface InvoiceService extends Remote{
 	
-	void addInvoice(Invoice invoice) throws RemoteException;
+	//void addInvoice(Invoice invoice) throws RemoteException;
 	
-	List<Invoice> getAllInvoices() throws RemoteException;
+	//List<Invoice> getAllInvoices() throws RemoteException;
 	
 	void saveInvoice(String orderId, String client, double totalAmount) throws RemoteException;
 

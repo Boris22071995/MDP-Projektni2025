@@ -1,7 +1,7 @@
 package net.etfbl.mdp.rmi;
 
 import net.etfbl.mdp.model.Invoice;
-import net.etfbl.mdp.util.InvoiceStorage;
+
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -14,23 +14,23 @@ public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceSe
 	private List<Invoice> invoices;
 	
 	public InvoiceServiceImpl() throws RemoteException {
-		invoices = InvoiceStorage.loadInvoices();
-		System.out.println("[RMI] ucitano faktura: " + invoices.size());
+		//invoices = InvoiceStorage.loadInvoices();
+		//System.out.println("[RMI] ucitano faktura: " + invoices.size());
 	}
 	
-
-	@Override
-	public void addInvoice(Invoice invoice) throws RemoteException {
-		invoices.add(invoice);
-		InvoiceStorage.saveInvoice(invoices);
-		System.out.println("[RMI] Nova faktura primljena: " + invoice);
-		
-	}
-
-	@Override
-	public List<Invoice> getAllInvoices() throws RemoteException {
-		return invoices;
-	}
+//
+//	@Override
+//	public void addInvoice(Invoice invoice) throws RemoteException {
+//		invoices.add(invoice);
+//		//InvoiceStorage.saveInvoice(invoices);
+//		System.out.println("[RMI] Nova faktura primljena: " + invoice);
+//		
+//	}
+//
+//	@Override
+//	public List<Invoice> getAllInvoices() throws RemoteException {
+//		return invoices;
+//	}
 	
 	 @Override
 	    public void saveInvoice(String orderId, String client, double totalAmount) throws RemoteException {

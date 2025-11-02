@@ -2,22 +2,23 @@ package net.etfbl.mdp.messaging;
 
 import com.rabbitmq.client.*;
 import net.etfbl.mdp.model.Order;
+import net.etfbl.mdp.service.OrderQueueService;
+
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.DeliverCallback;
 
 import java.io.ByteArrayInputStream;
 import java.io.ObjectInputStream;
 
-public class OrderConsumer {
+public class OrderConsumer implements Runnable{
 
     private static final String QUEUE_NAME = "orders_queue";
 
-    public static void startListening() {
+    @Override
+    public void run() {
         try {
             ConnectionFactory factory = new ConnectionFactory();
             factory.setHost("localhost");
-            factory.setUsername("guest");
-            factory.setPassword("guest");
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
 
@@ -29,13 +30,17 @@ public class OrderConsumer {
                 try (ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data))) {
                     Order order = (Order) ois.readObject();
                     System.out.println("[SupplierApp] Received order: " + order);
-                } catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+                    OrderQueueService.addOrder(order);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             };
 
-            channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+            CancelCallback cancelCallback = consumerTag ->
+                    System.out.println("[SupplierApp] Cancelled: " + consumerTag);
+
+            channel.basicConsume(QUEUE_NAME, true, deliverCallback, cancelCallback);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
