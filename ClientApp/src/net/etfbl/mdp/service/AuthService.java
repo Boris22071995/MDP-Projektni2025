@@ -17,8 +17,8 @@ public class AuthService {
 			
 			String response = HttpUtil.sendPost(BASE_URL + "/login", json.toString());
 			JSONObject obj = new JSONObject(response);
-			System.out.println("Korisnik:" + obj.toString());
-			
+			if(response.contains("Wrong password"))
+				return null;
 			 Client c = new Client();
 	            c.setUsername(obj.getString("username"));
 	            c.setName(obj.optString("name"));
@@ -45,9 +45,9 @@ public class AuthService {
 	            json.put("phone", client.getPhone());
 	            json.put("email", client.getEmail());
 	            json.put("approved", client.isApproved());
-	            json.put("blocket", client.isBlocked());
+	            json.put("blocked", client.isBlocked());
 	            
-	            System.out.println(json.toString());
+	            
 
 	            int response = HttpUtil.sendPostRegister(BASE_URL + "/register", json.toString());
 	            return response >= 200 && response <= 300;

@@ -4,6 +4,37 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Client">
     <void property="address">
+     <string>boris</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>boris</string>
+    </void>
+    <void property="lastName">
+     <string>boris</string>
+    </void>
+    <void property="name">
+     <string>boris</string>
+    </void>
+    <void property="password">
+     <string>boris</string>
+    </void>
+    <void property="phone">
+     <string>boris</string>
+    </void>
+    <void property="username">
+     <string>boris</string>
+    </void>
+    <void property="vehicleData">
+     <string>boris</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
      <string>k1</string>
     </void>
     <void property="approved">
@@ -35,31 +66,28 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Client">
     <void property="address">
-     <string>k2</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
+     <string>aa</string>
     </void>
     <void property="email">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="lastName">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="name">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="password">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="phone">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="username">
-     <string>k2</string>
+     <string>aa</string>
     </void>
     <void property="vehicleData">
-     <string>k2</string>
+     <string>aa</string>
     </void>
    </object>
   </void>

@@ -25,8 +25,10 @@ public class ClientService {
 	}
 	
 	public boolean login(String username, String password) {
+		System.out.println("OVDJE NA SERVERU PODACI: " + username + " " + password);
 		Client c = repository.findByUsername(username);
-		return (c != null && c.getPassword().equals(password) && c.isApproved() && !c.isBlocked());
+		return (c != null && c.getPassword().equals(password));
+		//return (c != null && c.getPassword().equals(password) && c.isApproved() && !c.isBlocked());
 	}
 	
 	public void approveClient(String username) {

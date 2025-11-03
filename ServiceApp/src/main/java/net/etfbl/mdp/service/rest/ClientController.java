@@ -74,19 +74,20 @@ public class ClientController {
                 return Response.status(Response.Status.BAD_REQUEST)
                         .entity("{\"message\":\"Invalid credentials\"}").build();
             }
-
+            
             boolean ok = service.login(req.username, req.password);
+            Client c = service.findByUsername(req.username);
             if (!ok) {
                 return Response.status(Response.Status.UNAUTHORIZED)
-                        .entity("{\"message\":\"Invalid credentials or not approved\"}").build();
+                        .entity("{\"message\":\"Wrong password\"}").build();
             }
 
-            // vrati puni Client objekat (da GUI dobije informacije kao approved, blocked, name, ...)
-            Client c = service.findByUsername(req.username);
+       
+           
             if (c == null) {
                 // neočekivano: login prošao ali nema objekta
                 return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-                        .entity("{\"message\":\"User found but cannot retrieve data\"}").build();
+                        .entity(c).build();
             }
             return Response.ok(c).build();
         } catch (Exception e) {

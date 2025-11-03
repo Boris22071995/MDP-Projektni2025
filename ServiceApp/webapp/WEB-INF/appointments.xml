@@ -45,5 +45,93 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-11-03</string>
+    </void>
+    <void property="description">
+     <string>asdasdasda</string>
+    </void>
+    <void property="id">
+     <string>b8f4e6de-88ca-4a02-94f9-567b15303e93</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-11-03</string>
+    </void>
+    <void property="description">
+     <string>asdas</string>
+    </void>
+    <void property="id">
+     <string>9f850fb4-41f7-474f-99f4-e82ba890d439</string>
+    </void>
+    <void property="ownerUsername">
+     <string>boris</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-11-03</string>
+    </void>
+    <void property="description">
+     <string>Popravka</string>
+    </void>
+    <void property="id">
+     <string>6d6c6206-dda2-4c83-a364-b6d0fa5d7531</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="date">
+     <string>2025-11-03</string>
+    </void>
+    <void property="description">
+     <string></string>
+    </void>
+    <void property="id">
+     <string>2e7b17da-5214-4fc4-99c4-909efe1a5638</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

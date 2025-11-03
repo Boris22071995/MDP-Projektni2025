@@ -16,28 +16,41 @@ public class HistoryPanel extends JPanel {
     Client client = new Client();
 
     public HistoryPanel(Client client) {
-    	this.client = client;
-        setLayout(new BorderLayout());
-        setBorder(BorderFactory.createTitledBorder("Service history"));
+    	
+    	  this.client = client;
+          setLayout(new BorderLayout(10, 10));
+          setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+          setBackground(Color.WHITE);
 
-        model = new DefaultTableModel(new Object[]{"Date", "Time", "Type", "Status", "Description"}, 0);
-        table = new JTable(model);
-        add(new JScrollPane(table), BorderLayout.CENTER);
+          JLabel title = new JLabel("Service history", SwingConstants.CENTER);
+          title.setFont(new Font("Segoe UI", Font.BOLD, 18));
+          add(title, BorderLayout.NORTH);
 
-        JButton btnLoad = new JButton("Refresh");
-        btnLoad.addActionListener(e -> loadHistory());
+          model = new DefaultTableModel(new Object[]{"Date", "Time", "Type", "Status", "Description"}, 0);
+          table = new JTable(model);
+          table.setRowHeight(26);
+          table.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+          add(new JScrollPane(table), BorderLayout.CENTER);
 
-        add(btnLoad, BorderLayout.SOUTH);
+          JButton btnLoad = new JButton("Refresh");
+          btnLoad.setBackground(new Color(52, 73, 94));
+          btnLoad.setForeground(Color.BLACK);
+          btnLoad.addActionListener(e -> loadHistory());
+          add(btnLoad, BorderLayout.SOUTH);
 
-        loadHistory();
+          loadHistory();
+    	
     }
 
     private void loadHistory() {
-    	List<Appointment> appointments = service.getAppointmentsByUser(client.getUsername());
-    	for(int i = 0; i < appointments.size(); i++) {
-    		 model.setRowCount(i);
-    	     model.addRow(new Object[]{appointments.get(i).getDate(), appointments.get(i).getTime(), appointments.get(i).getType(),
-    	    		 appointments.get(i).getStatus(), appointments.get(i).getDescription()});
-    	}
+    	
+    	 model.setRowCount(0);
+         List<Appointment> appointments = service.getAppointmentsByUser(client.getUsername());
+         for (Appointment a : appointments) {
+             model.addRow(new Object[]{
+                     a.getDate(), a.getTime(), a.getType(), a.getStatus(), a.getDescription()
+             });
+         }
+    	
     }
 }

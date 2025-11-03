@@ -9,98 +9,91 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-public class MainFrame extends JFrame{
+public class MainFrame extends JFrame {
 	Client client;
 	private CardLayout cardLayout;
 	private JPanel mainPanel;
 
 	public MainFrame(Client client) {
-		
+
 		this.client = client;
-        setTitle("Welcome, " + client.getName() + " " + client.getLastName());
-        setSize(700, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+		setTitle("Service Portal - " + client.getUsername());
+		setSize(900, 600);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setLayout(new BorderLayout());
 
-        cardLayout = new CardLayout();
-        mainPanel = new JPanel(cardLayout);
+		JLabel lblHeader = new JLabel("Car Service Portal", SwingConstants.CENTER);
+		lblHeader.setFont(new Font("Segoe UI", Font.BOLD, 22));
+		lblHeader.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
+		add(lblHeader, BorderLayout.NORTH);
 
-        // dodajemo panele
-        ReservationPanel reservationPanel = new ReservationPanel(client);
-        HistoryPanel historyPanel = new HistoryPanel(client);
-        mainPanel.add(reservationPanel, "reservation");
-        mainPanel.add(historyPanel, "history");
+		JPanel sidebar = new JPanel(new GridLayout(7, 1, 10, 10));
+		sidebar.setBackground(new Color(33, 47, 61));
+		sidebar.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
 
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 10));
-        JButton btnSchedule = new JButton("Termin reservation");
-        JButton btnHistory = new JButton("Service history");
-        JButton btnChatClient = new JButton("Chat");
-        JButton btnChatService = new JButton("Chat with service");
+		JButton btnReservation = createSidebarButton("Reservation");
+		JButton btnHistory = createSidebarButton("Reservation history");
+		JButton btnChat = createSidebarButton("Chat");
+		JButton btnChatService = createSidebarButton("Chat with service");
+		JButton btnLogout = createSidebarButton("Log out");
 
-        // akcije
-        btnSchedule.addActionListener(e -> cardLayout.show(mainPanel, "reservation"));
-        btnHistory.addActionListener(e -> cardLayout.show(mainPanel, "history"));
+		sidebar.add(btnReservation);
+		sidebar.add(btnHistory);
+		sidebar.add(btnChat);
+		sidebar.add(btnChatService);
+		sidebar.add(new JLabel());
+		sidebar.add(btnLogout);
 
-        btnChatClient.addActionListener(e -> {
-            List<Client> users = ClientService.getClients();
-            List<String> imena = new ArrayList<>();
-            for (Client c : users) imena.add(c.getUsername());
-            JFrame chatFrame = new JFrame("Sigurni chat - " + client.getUsername());
-            chatFrame.add(new ChatSecurePanel(client.getUsername(), imena));
-            chatFrame.setSize(600, 400);
-            chatFrame.setVisible(true);
-        });
+		add(sidebar, BorderLayout.WEST);
 
-        buttonPanel.add(btnSchedule);
-        buttonPanel.add(btnHistory);
-        buttonPanel.add(btnChatService);
-        buttonPanel.add(btnChatClient);
+		cardLayout = new CardLayout();
+		mainPanel = new JPanel(cardLayout);
 
-        add(buttonPanel, BorderLayout.NORTH);
-        add(mainPanel, BorderLayout.CENTER);
-    }
-		
-//		this.client = client;
-//		setTitle("Welcome, " + client.getName() + " " + client.getLastName());
-//        setSize(500, 400);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setLocationRelativeTo(null);
-//        setLayout(new GridLayout(4, 1, 10, 10));
-//
-//        JButton btnSchedule = new JButton("Termin reservation");
-//        JButton btnHistory = new JButton("Service history");
-//        JButton btnChatClient = new JButton("Chat");
-//        JButton btnChatService = new JButton("Chat with service");
-//
-//        add(btnSchedule);
-//        add(btnHistory);
-//        add(btnChatService);
-//        btnChatClient.addActionListener(e -> {
-//            List<Client> users = ClientService.getClients();
-//            List<String> imena = new ArrayList<>();
-//            for(Client c : users) imena.add(c.getUsername());
-//            JFrame chatFrame = new JFrame("Sigurni chat - " + client.getUsername());
-//            chatFrame.add(new ChatSecurePanel(client.getUsername(), imena));
-//            chatFrame.setSize(600, 400);
-//            chatFrame.setVisible(true);
-//        });
-//        add(btnChatClient);
-  
-       
-        /*ArrayList<Client> korisnici = ClientService.getClients(); // GET /clients/all
-        System.out.println("OVDJE SMO: " + korisnici.size());
-        List<String> imena = new ArrayList<>();
-        for(Client c : korisnici) imena.add(c.getUsername());
-        JFrame chatFrame = new JFrame("Sigurni chat");
-        chatFrame.add(new ChatSecurePanel(client.getName(), imena));
-        chatFrame.setSize(500, 400);
-        chatFrame.setVisible(true);*/
-	 private void openChatClient() {
-		 ArrayList<Client> korisnici = ClientService.getClients();
-	        List<String> imena = new ArrayList<>();
-	        for(Client c : korisnici) imena.add(c.getUsername());
-		 new ChatSecurePanel(client.getUsername(),imena).setVisible(true);;
-			this.dispose();
-     }
+		ReservationPanel reservationPanel = new ReservationPanel(client);
+		HistoryPanel historyPanel = new HistoryPanel(client);
+
+		mainPanel.add(reservationPanel, "reservation");
+		mainPanel.add(historyPanel, "history");
+
+		add(mainPanel, BorderLayout.CENTER);
+
+		btnReservation.addActionListener(e -> cardLayout.show(mainPanel, "reservation"));
+		btnHistory.addActionListener(e -> cardLayout.show(mainPanel, "history"));
+
+		btnChat.addActionListener(e -> openChatClient());
+		btnChatService.addActionListener(e -> JOptionPane.showMessageDialog(this, "Not connected yet."));
+		btnLogout.addActionListener(e -> logout());
+
+		setVisible(true);
+
+	}
+
+	private void openChatClient() {
+		List<Client> users = ClientService.getClients();
+		List<String> names = new ArrayList<>();
+		for (Client c : users)
+			names.add(c.getUsername());
+
+		JFrame chatFrame = new JFrame("Secure Chat - " + client.getUsername());
+		chatFrame.add(new ChatSecurePanel(client.getUsername(), names));
+		chatFrame.setSize(600, 450);
+		chatFrame.setLocationRelativeTo(this);
+		chatFrame.setVisible(true);
+	}
+
+	private JButton createSidebarButton(String text) {
+		JButton button = new JButton(text);
+		button.setBackground(new Color(52, 73, 94));
+		button.setForeground(Color.BLACK);
+		button.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+		button.setFocusPainted(false);
+		button.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		return button;
+	}
+
+	private void logout() {
+		dispose();
+		new LoginFrame().setVisible(true);
+	}
 }
-
