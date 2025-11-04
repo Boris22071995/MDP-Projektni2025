@@ -68,6 +68,9 @@
     <void property="address">
      <string>aa</string>
     </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
     <void property="email">
      <string>aa</string>
     </void>
@@ -88,6 +91,37 @@
     </void>
     <void property="vehicleData">
      <string>aa</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>korisnik2</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>korisnik2</string>
+    </void>
+    <void property="lastName">
+     <string>korisnik2</string>
+    </void>
+    <void property="name">
+     <string>korisnik2</string>
+    </void>
+    <void property="password">
+     <string>korisnik2</string>
+    </void>
+    <void property="phone">
+     <string>korisnik2</string>
+    </void>
+    <void property="username">
+     <string>korisnik2</string>
+    </void>
+    <void property="vehicleData">
+     <string>korisnik2</string>
     </void>
    </object>
   </void>

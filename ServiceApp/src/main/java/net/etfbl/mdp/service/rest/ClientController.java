@@ -133,6 +133,25 @@ public class ClientController {
         }
     }
     
+    @PUT
+    @Path("/unblock/{username}")
+    public Response unblockClient(@PathParam("username") String username) {
+        try {
+            Client c = service.findByUsername(username);
+            if (c == null) {
+                return Response.status(Response.Status.NOT_FOUND)
+                        .entity("{\"message\":\"User not found\"}").build();
+            }
+            service.unblockClient(username);
+            return Response.ok("{\"message\":\"blocked\"}").build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity("{\"message\":\"Server error\"}").build();
+        }
+    }
+    
+    
     @DELETE
     @Path("/{username}")
     public Response deleteClient(@PathParam("username") String username) {

@@ -8,47 +8,54 @@ import net.etfbl.mdp.service.repository.ClientRepository;
 public class ClientService {
 
 	private ClientRepository repository = new ClientRepository();
-	
-	public ArrayList<Client> getAllClients(){
+
+	public ArrayList<Client> getAllClients() {
 		return repository.getAllClients();
 	}
-	
+
 	public Client findByUsername(String username) {
 		return repository.findByUsername(username);
 	}
-	
+
 	public boolean register(Client c) {
-		if(repository.findByUsername(c.getUsername()) != null)
+		if (repository.findByUsername(c.getUsername()) != null)
 			return false;
 		repository.addClient(c);
 		return true;
 	}
-	
+
 	public boolean login(String username, String password) {
 		System.out.println("OVDJE NA SERVERU PODACI: " + username + " " + password);
 		Client c = repository.findByUsername(username);
 		return (c != null && c.getPassword().equals(password));
-		//return (c != null && c.getPassword().equals(password) && c.isApproved() && !c.isBlocked());
 	}
-	
+
 	public void approveClient(String username) {
 		Client c = repository.findByUsername(username);
-		if(c != null) {
+		if (c != null) {
 			c.setApproved(true);
 			repository.updateClient(c);
 		}
 	}
-	
+
 	public void blockClient(String username) {
 		Client c = repository.findByUsername(username);
-		if(c != null) {
+		if (c != null) {
 			c.setBlocked(true);
 			repository.updateClient(c);
 		}
 	}
-	
+
+	public void unblockClient(String username) {
+		Client c = repository.findByUsername(username);
+		if (c != null) {
+			c.setBlocked(false);
+			repository.updateClient(c);
+		}
+	}
+
 	public void delete(String username) {
 		repository.deleteClient(username);
 	}
-	
+
 }

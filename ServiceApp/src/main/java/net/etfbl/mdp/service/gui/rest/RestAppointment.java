@@ -1,6 +1,8 @@
 package net.etfbl.mdp.service.gui.rest;
 
+import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.model.Client;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,12 +12,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestClient {
-
-	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/clients";
+public class RestAppointment {
+	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/appointments";
 	
-	public List<Client> getAllClients() {
-		List<Client> clients = new ArrayList<>();
+	public List<Appointment> getAllAppointments() {
+		List<Appointment> appointments = new ArrayList<>();
 		try {
 			URL url = new URL(BASE_URL + "/all");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -24,7 +25,7 @@ public class RestClient {
 			
 			if(conn.getResponseCode() != 200) {
 				System.out.println("Error with GET method: " + conn.getResponseCode());
-				return clients;
+				return appointments;
 			}
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -34,50 +35,36 @@ public class RestClient {
 			JSONArray array = new JSONArray(sb.toString());
 			for(int i = 0; i < array.length(); i++) {
 				JSONObject obj = array.getJSONObject(i);
-				Client c = new Client();
-				c.setUsername(obj.optString("username"));
-				c.setPassword(obj.optString("password"));
-				c.setName(obj.optString("name"));
-				c.setLastName(obj.optString("lastName"));
-				c.setAddress(obj.optString("address"));
-				c.setEmail(obj.optString("email"));
-				c.setPhone(obj.optString("phone"));
-				c.setVehicleData(obj.optString("vehicleData"));
-				c.setApproved(obj.optBoolean("approved"));
-				c.setBlocked(obj.optBoolean("blocked"));
-				clients.add(c);
+				Appointment a = new Appointment();
+				a.setDate(obj.optString("date"));
+				a.setDescription(obj.optString("description"));
+				a.setId(obj.optString("id"));
+				a.setOwnerUsername(obj.optString("ownerUsername"));
+				a.setTime(obj.optString("time"));
+				a.setStatus("reserved"); //TODO
+				a.setType(obj.optString("type"));
+				appointments.add(a);
 			}
 			br.close();
 			conn.disconnect();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return clients;
+		return appointments;
 	}
-	
-	public void approveClient(String username) {
+
+	public void approveAppointment(String username) {
 		sendPutRequest(BASE_URL + "/approve/" + username);
 	}
 	
-	public void blockClient(String username) {
-		sendPutRequest(BASE_URL + "/block/" + username);
+	public void rejectAppointment(String username) {
+		sendPutRequest(BASE_URL + "/approve/" + username);
 	}
 	
-	public void unblockClient(String username) {
-		sendPutRequest(BASE_URL + "/unblock/" + username);
+	public void addComment(String username, String comment) {
+		
 	}
 	
-	public void deleteClient(String username) {
-		try {
-			URL url = new URL(BASE_URL + "/" + username);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("DELETE");
-			conn.getResponseCode();
-			conn.disconnect();
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
 	
 	private void sendPutRequest(String urlString) {
 		try {
@@ -90,5 +77,6 @@ public class RestClient {
 			e.printStackTrace();
 		}
 	}
+	
 	
 }
