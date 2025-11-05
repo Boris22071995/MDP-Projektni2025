@@ -26,7 +26,7 @@ public class HistoryPanel extends JPanel {
           title.setFont(new Font("Segoe UI", Font.BOLD, 18));
           add(title, BorderLayout.NORTH);
 
-          model = new DefaultTableModel(new Object[]{"Date", "Time", "Type", "Status", "Description"}, 0);
+          model = new DefaultTableModel(new Object[]{"Date", "Time", "Type", "Status", "Description", "Comment"}, 0);
           table = new JTable(model);
           table.setRowHeight(26);
           table.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -48,9 +48,30 @@ public class HistoryPanel extends JPanel {
          List<Appointment> appointments = service.getAppointmentsByUser(client.getUsername());
          for (Appointment a : appointments) {
              model.addRow(new Object[]{
-                     a.getDate(), a.getTime(), a.getType(), a.getStatus(), a.getDescription()
+                     a.getDate(), a.getTime(), a.getType(), a.getStatus(), a.getDescription(), a.getComment()
              });
          }
+         
+         table.getColumnModel().getColumn(3).setCellRenderer((table, value, isSelected, hasFocus, row, column) -> {
+             JLabel label = new JLabel(value != null ? value.toString() : "");
+             if (value != null) {
+                 String status = value.toString().toLowerCase();
+                 if (status.contains("approved")) {
+                 	 label.setForeground(new Color(39, 174, 96));
+                 	 label.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+                 } else if (status.contains("rejected")) {
+                 	label.setForeground(new Color(192, 57, 43));
+                 	 label.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+                 } else { 
+                     label.setForeground(new Color(243, 156, 18));
+                     label.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+                 }
+             } else {
+                 label.setBackground(Color.WHITE);
+             }
+
+             return label;
+         });
     	
     }
 }

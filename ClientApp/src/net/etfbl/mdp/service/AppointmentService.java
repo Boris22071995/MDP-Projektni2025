@@ -43,6 +43,7 @@ public class AppointmentService {
                     a.setType(o.optString("type"));
 	                a.setDescription(o.optString("description"));
 	                a.setStatus(o.optString("status"));
+	                a.setComment(o.optString("comment"));
 	                list.add(a);
 	            }
 	            conn.disconnect();
@@ -69,6 +70,7 @@ public class AppointmentService {
 	            json.put("type", a.getType());
 	            json.put("description", a.getDescription());
 	            json.put("status", a.getStatus());
+	            json.put("comment", " ");
 
 	            try (OutputStream os = conn.getOutputStream()) {
 	                os.write(json.toString().getBytes(StandardCharsets.UTF_8));

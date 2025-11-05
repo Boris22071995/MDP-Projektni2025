@@ -33,6 +33,17 @@ public class StatusCellRenderer extends DefaultTableCellRenderer {
 	                } else if (text.equalsIgnoreCase("Not blocked")) {
 	                    c.setForeground(new Color(39, 174, 96)); 
 	                }
+	                
+	                else if(text.equalsIgnoreCase("approved")) {
+	                	 c.setForeground(new Color(39, 174, 96));
+	                }
+	                
+	                else if(text.equalsIgnoreCase("rejected")) {
+	                	c.setForeground(new Color(192, 57, 43)); 
+	                }
+	                else if(text.equalsIgnoreCase("pending")) {
+	                	c.setForeground(new Color(243, 156, 18));  
+	                }
 	            }
 	        }
 	        return c;

@@ -13,10 +13,12 @@ public class Appointment implements Serializable {
 	private String type;
 	private String description;
 	private String status;
+	private String comment;
 	
 	public Appointment() {
 		this.id = UUID.randomUUID().toString();
 		this.status = "RESERVED";
+		this.comment = "";
 	}
 
 	public Appointment(String id, String ownerUsername, String date, String time, String type, String description,
@@ -28,7 +30,16 @@ public class Appointment implements Serializable {
 		this.type = type;
 		this.description = description;
 		this.status = "RESERVED";
+		this.comment = "";
 	
+	}
+	
+	public String getComment() {
+		return comment;
+	}
+	
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public String getId() {

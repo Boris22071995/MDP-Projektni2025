@@ -41,8 +41,9 @@ public class RestAppointment {
 				a.setId(obj.optString("id"));
 				a.setOwnerUsername(obj.optString("ownerUsername"));
 				a.setTime(obj.optString("time"));
-				a.setStatus("reserved"); //TODO
+				a.setStatus(obj.optString("status")); //TODO
 				a.setType(obj.optString("type"));
+				a.setComment(obj.optString("comment"));
 				appointments.add(a);
 			}
 			br.close();
@@ -53,16 +54,37 @@ public class RestAppointment {
 		return appointments;
 	}
 
-	public void approveAppointment(String username) {
-		sendPutRequest(BASE_URL + "/approve/" + username);
+	public void approveAppointment(String id) {
+		sendPutRequest(BASE_URL + "/approve/" + id);
 	}
 	
 	public void rejectAppointment(String username) {
-		sendPutRequest(BASE_URL + "/approve/" + username);
+		sendPutRequest(BASE_URL + "/reject/" + username);
 	}
 	
-	public void addComment(String username, String comment) {
-		
+	public void addComment(String id, String comment) {
+	    try {
+	        URL url = new URL(BASE_URL + "/comment/" + id);
+	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	        conn.setRequestMethod("PUT");
+	        conn.setDoOutput(true);
+	        conn.setRequestProperty("Content-Type", "text/plain; charset=UTF-8");
+
+	        try (OutputStream os = conn.getOutputStream()) {
+	            os.write(comment.getBytes("UTF-8"));
+	        }
+
+	        int responseCode = conn.getResponseCode();
+	        if (responseCode == HttpURLConnection.HTTP_OK) {
+	            System.out.println("✅ Comment added successfully for appointment " + id);
+	        } else {
+	            System.err.println("⚠️ Failed to add comment: " + responseCode);
+	        }
+
+	        conn.disconnect();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 	
 	

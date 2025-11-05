@@ -3,61 +3,23 @@
  <object class="java.util.ArrayList">
   <void method="add">
    <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>ZXZX</string>
+    </void>
     <void property="date">
-     <string>2025-10-30</string>
+     <string>2025-11-05</string>
     </void>
     <void property="description">
-     <string>Otisao motor</string>
+     <string>asd	</string>
     </void>
     <void property="id">
-     <string>97f160b8-21e4-40e4-a48c-94f22c744ae1</string>
+     <string>74024880-a3c7-42f6-8219-2d7ac1f6242d</string>
     </void>
     <void property="ownerUsername">
      <string>k1</string>
     </void>
-    <void property="time">
-     <string>10:00</string>
-    </void>
-    <void property="type">
-     <string>Reparation</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="date">
-     <string>2025-11-25</string>
-    </void>
-    <void property="description">
-     <string>Treba mi mali servis</string>
-    </void>
-    <void property="id">
-     <string>a793e14e-1668-4bdf-badd-9db81c146b6b</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="time">
-     <string>12:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="date">
-     <string>2025-11-03</string>
-    </void>
-    <void property="description">
-     <string>asdasdasda</string>
-    </void>
-    <void property="id">
-     <string>b8f4e6de-88ca-4a02-94f9-567b15303e93</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
+    <void property="status">
+     <string>approved</string>
     </void>
     <void property="time">
      <string>10:00</string>
@@ -69,64 +31,26 @@
   </void>
   <void method="add">
    <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>aaaa</string>
+    </void>
     <void property="date">
-     <string>2025-11-03</string>
+     <string>2025-11-05</string>
     </void>
     <void property="description">
-     <string>asdas</string>
+     <string>aaa</string>
     </void>
     <void property="id">
-     <string>9f850fb4-41f7-474f-99f4-e82ba890d439</string>
-    </void>
-    <void property="ownerUsername">
-     <string>boris</string>
-    </void>
-    <void property="time">
-     <string>10:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="date">
-     <string>2025-11-03</string>
-    </void>
-    <void property="description">
-     <string>Popravka</string>
-    </void>
-    <void property="id">
-     <string>6d6c6206-dda2-4c83-a364-b6d0fa5d7531</string>
+     <string>68807172-08b0-44b4-b66a-658bd815b821</string>
     </void>
     <void property="ownerUsername">
      <string>k1</string>
     </void>
-    <void property="time">
-     <string>10:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="date">
-     <string>2025-11-03</string>
-    </void>
-    <void property="description">
-     <string></string>
-    </void>
-    <void property="id">
-     <string>2e7b17da-5214-4fc4-99c4-909efe1a5638</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
+    <void property="status">
+     <string>approved</string>
     </void>
     <void property="time">
-     <string>10:00</string>
+     <string>10:10</string>
     </void>
     <void property="type">
      <string>Service</string>

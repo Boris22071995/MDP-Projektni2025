@@ -54,9 +54,6 @@ public class AppointmentRepository {
 	}
 	
 	public Appointment addAppointment(Appointment appointment) {
-		Appointment app = new Appointment();
-		appointment.setStatus(app.getStatus());
-		appointment.setId(app.getId());
 		List<Appointment> appointments = getAllAppointments();
 		if(appointments.add(appointment)) {
 			saveAllAppointments(appointments);
