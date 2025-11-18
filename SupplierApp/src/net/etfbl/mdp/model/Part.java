@@ -1,6 +1,10 @@
 package net.etfbl.mdp.model;
 
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class Part implements Serializable {
 
@@ -52,6 +56,25 @@ public class Part implements Serializable {
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
 	}
+	
+	public static String encode(String s) {
+        try {
+			return URLEncoder.encode(s == null ? "" : s, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return s;
+		}
+    }
+    public static String decode(String s) {
+        try {
+			return s == null ? "" : URLDecoder.decode(s, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return s;
+		}
+    }
 
 	@Override
 	public String toString() {

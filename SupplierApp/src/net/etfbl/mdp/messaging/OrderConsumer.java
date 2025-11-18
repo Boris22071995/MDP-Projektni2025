@@ -12,7 +12,11 @@ import java.io.ObjectInputStream;
 
 public class OrderConsumer implements Runnable{
 
-    private static final String QUEUE_NAME = "orders_queue";
+    private static String QUEUE_NAME = "orders_queue";
+    
+    public OrderConsumer(String queueName) {
+    	this.QUEUE_NAME = queueName;
+    }
 
     @Override
     public void run() {

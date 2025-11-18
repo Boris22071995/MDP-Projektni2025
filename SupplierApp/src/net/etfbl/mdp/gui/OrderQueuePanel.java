@@ -1,6 +1,8 @@
 package net.etfbl.mdp.gui;
 
+import net.etfbl.mdp.messaging.OrderConsumer;
 import net.etfbl.mdp.model.Order;
+import net.etfbl.mdp.server.SupplierServer;
 import net.etfbl.mdp.service.OrderQueueService;
 
 import javax.swing.*;
@@ -12,8 +14,20 @@ import java.util.List;
 public class OrderQueuePanel extends JPanel {
 	 private JTable orderTable;
 	    private DefaultTableModel tableModel;
+	    private String supplier;
+	    private String queueName;
 
-	    public OrderQueuePanel() {
+	    public OrderQueuePanel(String supplier) {
+	    	this.supplier = supplier;
+	    	 if("Supplier1".equals(supplier)) {
+		        	queueName = "orders_queue1";
+		        }else if ("Supplier2".equals(supplier)) {
+		        	queueName = "orders_queue2";
+		        }else if("Supplier3".equals(supplier)) {
+		        	queueName = "orders_queue3";
+		        }else {
+		        	queueName = "orders_queue4";
+		        }
 	        setLayout(new BorderLayout());
 
 	        tableModel = new DefaultTableModel(new String[]{"Order ID", "Client", "Part", "Qty", "Price", "Time"}, 0);
@@ -23,19 +37,24 @@ public class OrderQueuePanel extends JPanel {
 
 	        JButton approveBtn = new JButton("Approve");
 	        JButton rejectBtn = new JButton("Reject");
+	        JButton refreshBtn = new JButton("Refresh");
 
 	        approveBtn.addActionListener(e -> handleDecision(true));
 	        rejectBtn.addActionListener(e -> handleDecision(false));
+	        refreshBtn.addActionListener(e ->refreshOrders());
 
 	        JPanel buttonPanel = new JPanel();
 	        buttonPanel.add(approveBtn);
 	        buttonPanel.add(rejectBtn);
+	        buttonPanel.add(refreshBtn);
 
 	        add(new JScrollPane(orderTable), BorderLayout.CENTER);
 	        add(buttonPanel, BorderLayout.SOUTH);
 	    }
 
 	    private void refreshOrders() {
+	    	new Thread(new OrderConsumer(queueName)).start();
+	    	
 	        tableModel.setRowCount(0);
 	        List<Order> orders = OrderQueueService.getPendingOrders();
 	        for (Order o : orders) {

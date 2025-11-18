@@ -4,7 +4,7 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Appointment">
     <void property="comment">
-     <string>ZXZX</string>
+     <string>bice uradjeno</string>
     </void>
     <void property="date">
      <string>2025-11-05</string>

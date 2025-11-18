@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parts>
+    <part>
+        <code>31290</code>
+        <title>SENZORTEMPERATURERASHLADNETE%C4%8CNOSTI-FAE</title>
+        <price>15.72</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0240%2F31290.JPG</image>
+    </part>
+    <part>
+        <code>7.3015</code>
+        <title>SENZORTEMPERATURERASHLADNETE%C4%8CNOSTI-FACET</title>
+        <price>11.21</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0159%2F7.3015-fa.JPG</image>
+    </part>
+    <part>
+        <code>WS2524</code>
+        <title>SENZORTEMPERATURERASHLADNETE%C4%8CNOSTI-CALORSTATBYVERNET</title>
+        <price>17.88</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0215%2FWS2524.JPG</image>
+    </part>
+    <part>
+        <code>V20-72-0522</code>
+        <title>SENZORTEMPERATURERASHLADNETE%C4%8CNOSTI-VEMO</title>
+        <price>36.75</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0183%2FV20-72-0522_02.JPG</image>
+    </part>
+    <part>
+        <code>70511042</code>
+        <title>SENZORTEMPERATURERASHLADNETE%C4%8CNOSTI-HERTH%2BBUSSELPARTS</title>
+        <price>25.0</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0072%2F70511042.JPG</image>
+    </part>
+</parts>

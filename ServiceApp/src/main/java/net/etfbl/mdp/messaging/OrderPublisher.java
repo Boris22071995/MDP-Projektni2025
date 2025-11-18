@@ -12,7 +12,7 @@ public class OrderPublisher {
 	
 	private static final String QUEUE_NAME = "orders_queue";
 	
-	 public static void sendOrder(Order order) {
+	 public static void sendOrder(Order order, String queueName, int quantity) {
 	        try {
 	            ConnectionFactory factory = new ConnectionFactory();
 	            factory.setHost("localhost");
@@ -21,15 +21,16 @@ public class OrderPublisher {
 
 	            try (Connection connection = factory.newConnection();) {
 	            	Channel channel = connection.createChannel();
-	                channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+	                channel.queueDeclare(queueName, false, false, false, null);
 
 	                ByteArrayOutputStream baos = new ByteArrayOutputStream();
 	                ObjectOutputStream oos = new ObjectOutputStream(baos);
 	                oos.writeObject(order);
+	                oos.writeObject(quantity);
 	                oos.close();
 
 	                byte[] data = baos.toByteArray();
-	                channel.basicPublish("", QUEUE_NAME, null, data);
+	                channel.basicPublish("", queueName, null, data);
 	                System.out.println("[ServiceApp] Sent order: " + order);
 	                channel.close();
 	            }
