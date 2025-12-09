@@ -34,9 +34,31 @@ public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceSe
 	
 	 @Override
 	    public void saveInvoice(String orderId, String client, double totalAmount) throws RemoteException {
+		 
+		 /*
+		  * 
+		  * 
+		  *  String timestamp = java.time.LocalDateTime.now()
+                .toString()
+                .replace(":", "-"); // zamijeni ':' jer nije dozvoljen u imenu fajla
+
+        // Naziv fajla: supplierName_timestamp.json
+        String fileName = invoice.getSupplierName() + "_" + timestamp + ".json";
+
+        // Jackson ObjectMapper za JSON serializaciju
+        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
+        mapper.findAndRegisterModules(); // da podrži LocalDateTime automatski
+
+        // Snimi invoice u JSON fajl
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new java.io.File(fileName), invoice);
+
+        System.out.println("[RMI Server] Invoice saved as JSON: " + fileName);
+		  * */
+		 
+		 
 	        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(orderId + ".ser"))) {
 	            oos.writeObject("Invoice for " + client + " total: " + totalAmount);
-	            System.out.println("[RMI Server] Invoice saved for " + client);
+	            System.out.println("[RMI Server] Invoice saved for " + client + totalAmount);
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }

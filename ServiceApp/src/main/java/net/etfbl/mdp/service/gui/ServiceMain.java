@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
+import net.etfbl.mdp.service.securechat.SSLChatServer;
+
 public class ServiceMain extends JFrame {
 
 	private CardLayout cardLayout;
@@ -37,9 +39,10 @@ public class ServiceMain extends JFrame {
         PartsPanel partsPanel = new PartsPanel();
         SupplierOrdersPanel supplierOrdersPanel = new SupplierOrdersPanel();
         InvoicePanel invoicePanel = new InvoicePanel();
-        
+        new Thread(new SSLChatServer()).start();
         mainPanel.add(clientPanel, "clients");
         mainPanel.add(chatPanel, "chat");
+        chatPanel.registerListener();
         mainPanel.add(appointmentPanel, "appointments");
         mainPanel.add(partsPanel, "parts");
         mainPanel.add(supplierOrdersPanel, "supplier");
@@ -74,13 +77,7 @@ public class ServiceMain extends JFrame {
         
         
         btnClients.addActionListener(e -> cardLayout.show(mainPanel, "clients"));
-        btnChat.addActionListener(e -> {
-            JFrame chatFrame = new JFrame("Server Chat Control");
-            chatFrame.add(new ChatServerPanel());
-            chatFrame.setSize(400, 400);
-            chatFrame.setLocationRelativeTo(this);
-            chatFrame.setVisible(true);
-        });
+        btnChat.addActionListener(e -> cardLayout.show(mainPanel, "chat"));
         btnExit.addActionListener(e -> dispose());
         btnAppointments.addActionListener(e -> cardLayout.show(mainPanel, "appointments"));
         btnParts.addActionListener(e -> cardLayout.show(mainPanel, "parts"));

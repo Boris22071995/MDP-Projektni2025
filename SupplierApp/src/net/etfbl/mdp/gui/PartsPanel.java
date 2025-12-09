@@ -25,10 +25,21 @@ public class PartsPanel extends JPanel {
         model = new DefaultTableModel(new Object[]{"Article number", "Title", "Price (€)", "Image url"}, 0);
         table = new JTable(model);
         add(new JScrollPane(table), BorderLayout.CENTER);
-        new Thread(new SupplierServer("Supplier1", "5001")).start();
-        new Thread(new SupplierServer("Supplier2", "5002")).start();
-        new Thread(new SupplierServer("Supplier3", "5003")).start();
-        new Thread(new SupplierServer("Supplier4", "5004")).start();
+        
+        if(!isPortInUse(5001)) {
+        	new Thread(new SupplierServer("Supplier1", "5001")).start();
+        }
+        if(!isPortInUse(5002)) {
+        	new Thread(new SupplierServer("Supplier2", "5002")).start();
+        }
+        if(!isPortInUse(5003)) {
+        	new Thread(new SupplierServer("Supplier3", "5003")).start();
+        }
+ 		if(!isPortInUse(5004)) {
+ 			new Thread(new SupplierServer("Supplier4", "5004")).start();
+ 		}
+        
+        
         JButton refreshBtn = new JButton("Refresh");
         refreshBtn.addActionListener(e -> {
 			try {
@@ -47,6 +58,15 @@ public class PartsPanel extends JPanel {
 			e1.printStackTrace();
 		}
     }
+	
+	public  boolean isPortInUse(int port) {
+	    try {
+	        new java.net.ServerSocket(port).close();
+	        return false; // port je slobodan
+	    } catch (Exception e) {
+	        return true; // port je zauzet
+	    }
+	}
 	
 	private void loadParts() throws Exception {
         model.setRowCount(0);

@@ -3,20 +3,32 @@ package net.etfbl.mdp.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Invoice {
-	private String invoiceId;
-    private String orderId;
-    private double totalWithVAT;
-    private LocalDateTime issuedAt;
-    
-    public Invoice() {}
+public class Invoice implements Serializable {
 
-    public Invoice(String invoiceId, String orderId, double totalWithVAT) {
-        this.invoiceId = invoiceId;
-        this.orderId = orderId;
-        this.totalWithVAT = totalWithVAT;
-        this.issuedAt = LocalDateTime.now();
-    }
+	private static final long serialVersionUID = 1L;
+	
+	private String invoiceId;
+	private String supplierName;
+	private String partCode;
+	private String partTitle;
+	private double priceWithoutVAT;
+	private double totalWithVAT;
+	private LocalDateTime issueDate;
+	
+	public Invoice() {
+		
+	}
+
+	public Invoice(String invoiceId, String supplierName, String partCode, String partTitle, double priceWithoutVAT) {
+		super();
+		this.invoiceId = invoiceId;
+		this.supplierName = supplierName;
+		this.partCode = partCode;
+		this.partTitle = partTitle;
+		this.priceWithoutVAT = priceWithoutVAT;
+		this.totalWithVAT = priceWithoutVAT * 1.17;
+		this.issueDate = LocalDateTime.now();
+	}
 
 	public String getInvoiceId() {
 		return invoiceId;
@@ -26,12 +38,36 @@ public class Invoice {
 		this.invoiceId = invoiceId;
 	}
 
-	public String getOrderId() {
-		return orderId;
+	public String getSupplierName() {
+		return supplierName;
 	}
 
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
+	}
+
+	public String getPartCode() {
+		return partCode;
+	}
+
+	public void setPartCode(String partCode) {
+		this.partCode = partCode;
+	}
+
+	public String getPartTitle() {
+		return partTitle;
+	}
+
+	public void setPartTitle(String partTitle) {
+		this.partTitle = partTitle;
+	}
+
+	public double getPriceWithoutVAT() {
+		return priceWithoutVAT;
+	}
+
+	public void setPriceWithoutVAT(double priceWithoutVAT) {
+		this.priceWithoutVAT = priceWithoutVAT;
 	}
 
 	public double getTotalWithVAT() {
@@ -42,20 +78,20 @@ public class Invoice {
 		this.totalWithVAT = totalWithVAT;
 	}
 
-	public LocalDateTime getIssuedAt() {
-		return issuedAt;
+	public LocalDateTime getIssueDate() {
+		return issueDate;
 	}
 
-	public void setIssuedAt(LocalDateTime issuedAt) {
-		this.issuedAt = issuedAt;
+	public void setIssueDate(LocalDateTime issueDate) {
+		this.issueDate = issueDate;
 	}
 
 	@Override
 	public String toString() {
-		return "Invoice [invoiceId=" + invoiceId + ", orderId=" + orderId + ", totalWithVAT=" + totalWithVAT
-				+ ", issuedAt=" + issuedAt + "]";
+		return "Invoice [invoiceId=" + invoiceId + ", supplierName=" + supplierName + ", partCode=" + partCode
+				+ ", partTitle=" + partTitle + ", priceWithoutVAT=" + priceWithoutVAT + ", totalWithVAT=" + totalWithVAT
+				+ ", issueDate=" + issueDate + "]";
 	}
-    
-    
+	
 
 }

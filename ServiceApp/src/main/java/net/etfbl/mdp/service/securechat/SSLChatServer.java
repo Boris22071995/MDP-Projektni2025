@@ -16,52 +16,92 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class SSLChatServer {
+public class SSLChatServer implements Runnable{
 
     private static final int PORT = 9443;
     private static String KEY_STORE_PATH = "./keystore.jks";
     private static final String KEY_STORE_PASSWORD = "servis123";
     private static final Set<SSLClientHandler> clients = new HashSet<>();
     private static Map<String, SSLClientHandler> onlineUsers = new HashMap<>();
+    private static Map<String, Set<SSLClientHandler>> groups = new HashMap<>();
+    
+    @Override
+    public void run() {
+    	 try {
+             File f = new File(KEY_STORE_PATH);
+             KEY_STORE_PATH = f.getAbsolutePath();
 
-    public static void main(String[] args) {
-        try {
-            // Absolutna putanja do keystore-a
-            File f = new File(KEY_STORE_PATH);
-            KEY_STORE_PATH = f.getAbsolutePath();
+             System.setProperty("javax.net.ssl.keyStore", KEY_STORE_PATH);
+             System.setProperty("javax.net.ssl.keyStorePassword", KEY_STORE_PASSWORD);
 
-            System.setProperty("javax.net.ssl.keyStore", KEY_STORE_PATH);
-            System.setProperty("javax.net.ssl.keyStorePassword", KEY_STORE_PASSWORD);
+             char[] passphrase = KEY_STORE_PASSWORD.toCharArray();
+             KeyStore ks = KeyStore.getInstance("JKS");
+             try (FileInputStream fis = new FileInputStream(KEY_STORE_PATH)) {
+                 ks.load(fis, passphrase);
+             }
 
-            // Učitavanje keystore-a
-            char[] passphrase = KEY_STORE_PASSWORD.toCharArray();
-            KeyStore ks = KeyStore.getInstance("JKS");
-            try (FileInputStream fis = new FileInputStream(KEY_STORE_PATH)) {
-                ks.load(fis, passphrase);
-            }
+             KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
+             kmf.init(ks, passphrase);
 
-            KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
-            kmf.init(ks, passphrase);
+             SSLContext sc = SSLContext.getInstance("TLS");
+             sc.init(kmf.getKeyManagers(), null, null);
 
-            SSLContext sc = SSLContext.getInstance("TLS");
-            sc.init(kmf.getKeyManagers(), null, null);
+             SSLServerSocketFactory ssf = sc.getServerSocketFactory();
+             SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(PORT);
 
-            SSLServerSocketFactory ssf = sc.getServerSocketFactory();
-            SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(PORT);
+             System.out.println("[SSLChatServer] ✅ Secure server started on port " + PORT);
 
-            System.out.println("[SSLChatServer] ✅ Secure server started on port " + PORT);
+             while (true) {
+                 SSLSocket socket = (SSLSocket) serverSocket.accept();
+                 SSLClientHandler handler = new SSLClientHandler(socket);
+                 clients.add(handler);
+                 new Thread(handler).start();
+             }
 
-            while (true) {
-                SSLSocket socket = (SSLSocket) serverSocket.accept();
-                SSLClientHandler handler = new SSLClientHandler(socket);
-                clients.add(handler);
-                new Thread(handler).start();
-            }
+         } catch (Exception e) {
+             e.printStackTrace();
+         }
+     }
+    
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//        try {
+//            // Absolutna putanja do keystore-a
+//            File f = new File(KEY_STORE_PATH);
+//            KEY_STORE_PATH = f.getAbsolutePath();
+//
+//            System.setProperty("javax.net.ssl.keyStore", KEY_STORE_PATH);
+//            System.setProperty("javax.net.ssl.keyStorePassword", KEY_STORE_PASSWORD);
+//
+//            // Učitavanje keystore-a
+//            char[] passphrase = KEY_STORE_PASSWORD.toCharArray();
+//            KeyStore ks = KeyStore.getInstance("JKS");
+//            try (FileInputStream fis = new FileInputStream(KEY_STORE_PATH)) {
+//                ks.load(fis, passphrase);
+//            }
+//
+//            KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
+//            kmf.init(ks, passphrase);
+//
+//            SSLContext sc = SSLContext.getInstance("TLS");
+//            sc.init(kmf.getKeyManagers(), null, null);
+//
+//            SSLServerSocketFactory ssf = sc.getServerSocketFactory();
+//            SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(PORT);
+//
+//            System.out.println("[SSLChatServer] ✅ Secure server started on port " + PORT);
+//
+//            while (true) {
+//                SSLSocket socket = (SSLSocket) serverSocket.accept();
+//                SSLClientHandler handler = new SSLClientHandler(socket);
+//                clients.add(handler);
+//                new Thread(handler).start();
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static synchronized void broadcast(String message, SSLClientHandler exclude) {
         for (SSLClientHandler client : clients) {
@@ -94,6 +134,58 @@ public class SSLChatServer {
             OfflineMessageStorage.saveMessage(toUser, "Server", msg);
         }
     }
+    
+    
+    public static synchronized void createGroup(String name, SSLClientHandler creator) {
+        groups.putIfAbsent(name, new HashSet<>());
+        groups.get(name).add(creator);
+        creator.sendMessage("[Server] Kreirana grupa: " + name);
+    }
+
+    public static synchronized void joinGroup(String name, SSLClientHandler user) {
+        groups.putIfAbsent(name, new HashSet<>());
+        groups.get(name).add(user);
+        user.sendMessage("[Server] Pridruženi ste grupi: " + name);
+    }
+
+    public static synchronized void addUserToGroup(String group, String username) {
+        SSLClientHandler c = onlineUsers.get(username);
+        if (c != null) {
+            groups.putIfAbsent(group, new HashSet<>());
+            groups.get(group).add(c);
+            c.sendMessage("[Server] Dodani ste u grupu: " + group);
+        }
+    }
+
+    public static synchronized void sendMulticast(String group, String fromUser, String text) {
+    	
+        if (!groups.containsKey(group)) return;
+
+        String formatted = "[Group " + group + "] " + fromUser + ": " + text;
+
+        for (SSLClientHandler c : groups.get(group)) {
+        	System.out.println("DA LI SMO U SEND MULTICASTU e sad me ovo zanima");
+            // preskoci samog sebe
+            if (c.getName().equals(fromUser)) continue;
+
+            // ako je online — šalji normalno
+            if (onlineUsers.containsKey(c.getName())) {
+                c.sendMessage(formatted);
+            } 
+            else {
+            	System.out.println("DA LI SMO OVDJE");
+                // ako je OFFLINE — spremi poruku
+                OfflineMessageStorage.saveMessage(
+                    c.getName(),        // korisnik za kojeg se čuva poruka
+                    fromUser,           // ko je poslao
+                    formatted           // sadržaj poruke
+                );
+            }
+        }
+    }
+
+
+    
     
     public static synchronized void registerUser(String username, SSLClientHandler handler) {
         onlineUsers.put(username, handler);

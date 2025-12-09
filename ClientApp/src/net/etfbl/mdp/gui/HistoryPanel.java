@@ -3,13 +3,16 @@ package net.etfbl.mdp.gui;
 import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.AppointmentService;
+import net.etfbl.mdp.util.AppLogger;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class HistoryPanel extends JPanel {
+	private static final Logger log = AppLogger.getLogger();
     AppointmentService service = new AppointmentService();
 	private JTable table;
     private DefaultTableModel model;
@@ -72,6 +75,6 @@ public class HistoryPanel extends JPanel {
 
              return label;
          });
-    	
+    	log.info("Reservation history loaded.");
     }
 }

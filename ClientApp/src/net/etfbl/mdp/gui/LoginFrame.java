@@ -2,12 +2,15 @@ package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.AuthService;
+import net.etfbl.mdp.util.AppLogger;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.logging.Logger;
 
 public class LoginFrame extends JFrame {
 
+	private static final Logger log = AppLogger.getLogger();
 	private JTextField txtUsername;
 	private JPasswordField txtPassword;
 	private AuthService authService = new AuthService();
@@ -16,6 +19,7 @@ public class LoginFrame extends JFrame {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (Exception ignored) {
+			log.severe(ignored.toString());
 		}
 
 		setTitle("Client Portal - Login");
@@ -85,6 +89,7 @@ public class LoginFrame extends JFrame {
 		String username = txtUsername.getText().trim();
 		String password = new String(txtPassword.getPassword());
 		if (username.isEmpty() || password.isEmpty()) {
+			log.warning("Login failed - empty fields");
 			JOptionPane.showMessageDialog(this, "Username and password are required.", "Error",
 					JOptionPane.ERROR_MESSAGE);
 			return;
@@ -93,20 +98,24 @@ public class LoginFrame extends JFrame {
 		Client client = authService.login(username, password);
 
 		if (client == null) {
+			log.warning("Login failed for user: " + username + " - wrong credentials.");
 			JOptionPane.showMessageDialog(this, "Wrong data!", "Error", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		if (!client.isApproved()) {
+			log.info("User " + username + " tried to login but is not approved.");
 			JOptionPane.showMessageDialog(this, "Your account is not approved yet.", "Notification",
 					JOptionPane.WARNING_MESSAGE);
 			return;
 		}
 		if (client.isBlocked()) {
+			log.warning("Blocked user " + username + " attempted login.");
 			JOptionPane.showMessageDialog(this, "Your account is blocked.", "Notification",
 					JOptionPane.WARNING_MESSAGE);
 			return;
 		}
-
+		 log.info("User " + username + " successfully logged in.");
+		
 		new MainFrame(client).setVisible(true);
 		dispose();
 	}
@@ -131,9 +140,11 @@ public class LoginFrame extends JFrame {
 					f5.getText(), f6.getText(), f3.getText(), false, false);
 
 			if (authService.register(c)) {
+				 log.info("Registration completed successfully.");
 				JOptionPane.showMessageDialog(this,
 						"Registration completed successfully! Please wait for administrator approval");
 			} else {
+				log.warning("Registration failed");
 				JOptionPane.showMessageDialog(this, "Registration error.", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}

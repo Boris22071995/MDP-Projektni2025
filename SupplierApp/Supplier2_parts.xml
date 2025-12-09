@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parts>
+    <part>
+        <code>motor</code>
+        <title>FEBIBILSTEIN-06739-</title>
+        <price>16.02</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0101%2F06739_1.JPG</image>
+    </part>
+    <part>
+        <code>1105</code>
+        <title>NOSA%C4%8CMOTORA-MEYLE-300</title>
+        <price>23.62</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0144%2FFS_3001181105_1.JPG</image>
+    </part>
+    <part>
+        <code>00089175</code>
+        <title>NOSA%C4%8CMOTORA-TEDGUM</title>
+        <price>17.36</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F4593%2F00089175.JPG</image>
+    </part>
+    <part>
+        <code>30858</code>
+        <title>NOSA%C4%8CMOTORA-ORIGINALIMPERIUM</title>
+        <price>18.91</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0331%2F30858.JPG</image>
+    </part>
+    <part>
+        <code>1101</code>
+        <title>NOSA%C4%8CMOTORA-MEYLE-300</title>
+        <price>26.14</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0144%2FFS_3001181101_1.JPG</image>
+    </part>
+    <part>
+        <code>30162</code>
+        <title>NOSA%C4%8CMOTORA-ORIGINALIMPERIUM</title>
+        <price>27.23</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0331%2F30162.JPG</image>
+    </part>
+</parts>

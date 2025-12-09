@@ -88,6 +88,7 @@ public class SupplierMain extends JFrame{
                     }
                 }
             }
+            if(counter == 4) counter = 0;
             counter++;
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
                 writer.write(String.valueOf(counter));

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parts>
+    <part>
+        <code>D1B008TT</code>
+        <title>PUMPAZAVODU-THERMOTEC</title>
+        <price>72.41</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F4466%2FD1B008TT_%25231.JPG</image>
+    </part>
+    <part>
+        <code>B206</code>
+        <title>PUMPAZAVODU-DOLZ</title>
+        <price>92.34</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0154%2FB206.BMP</image>
+    </part>
+    <part>
+        <code>PA382</code>
+        <title>PUMPAZAVODU-SALERISIL</title>
+        <price>95.4</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0245%2FPA382.JPG</image>
+    </part>
+    <part>
+        <code>10</code>
+        <title>PUMPAZAVODU-INA-538</title>
+        <price>126.85</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0204%2F538016010.JPG</image>
+    </part>
+    <part>
+        <code>PA383</code>
+        <title>PUMPAZAVODU-SALERISIL</title>
+        <price>104.9</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0245%2FPA383.JPG</image>
+    </part>
+    <part>
+        <code>10</code>
+        <title>PUMPAZAVODU-INA-538</title>
+        <price>127.94</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0204%2F538015710.JPG</image>
+    </part>
+</parts>

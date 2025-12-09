@@ -1,6 +1,7 @@
 package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.messaging.OrderConsumer;
+import net.etfbl.mdp.model.Invoice;
 import net.etfbl.mdp.model.Order;
 import net.etfbl.mdp.server.SupplierServer;
 import net.etfbl.mdp.service.OrderQueueService;
@@ -75,9 +76,14 @@ public class OrderQueuePanel extends JPanel {
 	            JOptionPane.showMessageDialog(this, "Select an order first.");
 	            return;
 	        }
-
+	        
 	        String orderId = tableModel.getValueAt(row, 0).toString();
-	        OrderQueueService.processOrder(orderId, approved);
+	        String supplierName = tableModel.getValueAt(row,1).toString();
+	        String partTitle = tableModel.getValueAt(row, 2).toString();
+	        int quant = (Integer)tableModel.getValueAt(row, 3);
+	        double price = (Double)tableModel.getValueAt(row, 4);
+	        Invoice invoice = new Invoice(orderId, supplierName, orderId, partTitle, price*quant);
+	        OrderQueueService.processOrder(invoice,approved);
 	        refreshOrders();
 
 	        JOptionPane.showMessageDialog(this,

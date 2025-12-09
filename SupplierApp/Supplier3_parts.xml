@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parts>
+    <part>
+        <code>027</code>
+        <title>FILTERVAZDUHA-FILTRON-</title>
+        <price>40.0</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0256%2FAP_027.JPG</image>
+    </part>
+    <part>
+        <code>210</code>
+        <title>FILTERVAZDUHA-KNECHT-</title>
+        <price>40.52</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0034%2F33078889.JPG</image>
+    </part>
+    <part>
+        <code>33-2530</code>
+        <title>FILTERVAZDUHA-K%26NFILTERS</title>
+        <price>364.72</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0305%2F33-2530.JPG</image>
+    </part>
+    <part>
+        <code>4190</code>
+        <title>FILTERVAZDUHA-MANN-FILTER-</title>
+        <price>39.69</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0004%2FC_4190.JPG</image>
+    </part>
+    <part>
+        <code>E84L</code>
+        <title>FILTERVAZDUHA-HENGSTFILTER</title>
+        <price>71.6</price>
+        <image>https%3A%2F%2Fautomarket.blob.core.windows.net%2Ftecdocimages%2F0081%2FD260843001-002.JPG</image>
+    </part>
+</parts>

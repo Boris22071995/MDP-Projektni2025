@@ -125,5 +125,33 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>Osjecani bb</string>
+    </void>
+    <void property="email">
+     <string>bvasiljevic21@gmail.com</string>
+    </void>
+    <void property="lastName">
+     <string>markovic</string>
+    </void>
+    <void property="name">
+     <string>marko</string>
+    </void>
+    <void property="password">
+     <string>12345</string>
+    </void>
+    <void property="phone">
+     <string>066032089</string>
+    </void>
+    <void property="username">
+     <string>marko</string>
+    </void>
+    <void property="vehicleData">
+     <string>BMW6</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

@@ -1,5 +1,6 @@
 package net.etfbl.mdp.service;
 
+import net.etfbl.mdp.model.Invoice;
 import net.etfbl.mdp.model.Order;
 import net.etfbl.mdp.rmi.InvoiceService;
 
@@ -22,28 +23,31 @@ public class OrderQueueService {
 	    public static void addOrder(Order order) {
 	        orderQueue.offer(order);
 	    }
-
-	    public static void processOrder(String orderId, boolean approved) {
-	        Order order = orderQueue.stream()
-	                .filter(o -> o.getOrderId().equals(orderId))
-	                .findFirst()
-	                .orElse(null);
-
-	        if (order == null) return;
-
-	        if (approved) {
-	            order.setStatus(approved);
-	            double total = order.getPrice() * 1.17; // PDV 17%
-	            try {
-	                InvoiceService invoiceService =
-	                        (InvoiceService) Naming.lookup("//localhost/InvoiceService");
-	                invoiceService.saveInvoice(order.getOrderId(), order.getClientUsername(), total);
-	            } catch (Exception e) {
-	                e.printStackTrace();
-	            }
-	        }
-
-	        orderQueue.remove(order);
+	    public static void processOrder(Invoice invoice, boolean approved) {
+	    	
+	    	
 	    }
+//	    public static void processOrder(String orderId, boolean approved) {
+//	        Order order = orderQueue.stream()
+//	                .filter(o -> o.getOrderId().equals(orderId))
+//	                .findFirst()
+//	                .orElse(null);
+//
+//	        if (order == null) return;
+//
+//	        if (approved) {
+//	            order.setStatus(approved);
+//	            double total = order.getPrice() * 1.17; // PDV 17%
+//	            try {
+//	                InvoiceService invoiceService =
+//	                        (InvoiceService) Naming.lookup("//localhost/InvoiceService");
+//	                invoiceService.saveInvoice(order.getOrderId(), order.getClientUsername(), total);
+//	            } catch (Exception e) {
+//	                e.printStackTrace();
+//	            }
+//	        }
+//
+//	        orderQueue.remove(order);
+//	    }
 	
 }

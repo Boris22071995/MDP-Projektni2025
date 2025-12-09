@@ -2,15 +2,19 @@ package net.etfbl.mdp.securechat;
 
 
 import javax.net.ssl.*;
+
+import net.etfbl.mdp.util.AppLogger;
+
 import java.io.*;
 import java.security.KeyStore;
 import java.util.function.Consumer;
+import java.util.logging.Logger;
 import java.io.FileInputStream;
 import java.io.File;
 
 public class SSLChatClientTest {
 
-
+	private static final Logger log = AppLogger.getLogger();
     private SSLSocket socket;
     private PrintWriter out;
     private BufferedReader in;
@@ -58,66 +62,37 @@ public class SSLChatClientTest {
                       while ((msg = in.readLine()) != null) {
                           if (onMessage != null) onMessage.accept(msg);
                       }
+                      log.info("Connection to secure chat - successfuly.");
                   } catch (IOException e) {
                       if (onMessage != null) onMessage.accept("[Veza prekinuta]");
+                      log.severe(e.toString());
                   }
               });
               receiverThread.start();
               
-              // Thread za primanje poruka
-//              new Thread(() -> {
-//                  try {
-//                      String msg;
-//                      while ((msg = in.readLine()) != null) {
-//                          System.out.println(msg);
-//                      }
-//                  } catch (IOException e) {
-//                      System.out.println("Veza prekinuta.");
-//                  }
-//              }).start();
     }
     
 
-   /* public void connect(String username) throws Exception {
-        File tsFile = new File("truststore.jks");
-        if (!tsFile.exists())
-            throw new FileNotFoundException("Truststore nije pronađen: " + tsFile.getAbsolutePath());
-
-        System.setProperty("javax.net.ssl.trustStore", tsFile.getAbsolutePath());
-        System.setProperty("javax.net.ssl.trustStorePassword", "servis123");
-        System.setProperty("jdk.tls.client.protocols", "TLSv1.2");
-
-        SSLSocketFactory sf = (SSLSocketFactory) SSLSocketFactory.getDefault();
-        socket = (SSLSocket) sf.createSocket("localhost", 9443);
-
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out = new PrintWriter(socket.getOutputStream(), true);
-
-        // šalje korisničko ime serveru
-        out.println(username);
-
-        // nit koja stalno sluša nove poruke
-        receiverThread = new Thread(() -> {
-            try {
-                String msg;
-                while ((msg = in.readLine()) != null) {
-                    onMessageReceived(msg);
-                }
-            } catch (IOException e) {
-                onConnectionClosed();
-            }
-        });
-        receiverThread.start();
-    }*/
 
     public void sendMessage(String msg) {
         if (out != null) out.println(msg);
+        log.info("Message sent.");
+    }
+    
+    public void sendMessageMulticast(String group, String message) {
+        if (out != null) {
+            out.println("MULTICAST " + group + " " + message);
+            log.info("Multicast message sent to group " + group);
+        }
     }
 
     public void disconnect() {
         try {
             if (socket != null) socket.close();
-        } catch (IOException ignored) { }
+            log.info("Disconnected from secure chat.");
+        } catch (IOException ignored) {
+        	log.severe(ignored.toString());
+        }
     }
 
     // ove dvije metode će GUI klasa override-ovati

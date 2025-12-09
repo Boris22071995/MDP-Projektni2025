@@ -2,14 +2,17 @@ package net.etfbl.mdp.gui;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.ClientService;
+import net.etfbl.mdp.util.AppLogger;
 
 import javax.swing.*;
 import java.awt.*;
 
 import java.util.*;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class MainFrame extends JFrame {
+	private static final Logger log = AppLogger.getLogger();
 	Client client;
 	private CardLayout cardLayout;
 	private JPanel mainPanel;
@@ -62,11 +65,19 @@ public class MainFrame extends JFrame {
 		btnHistory.addActionListener(e -> cardLayout.show(mainPanel, "history"));
 
 		btnChat.addActionListener(e -> openChatClient());
-		btnChatService.addActionListener(e -> JOptionPane.showMessageDialog(this, "Not connected yet."));
+		btnChatService.addActionListener(e -> openServiceChat());
 		btnLogout.addActionListener(e -> logout());
 
 		setVisible(true);
 
+	}
+
+	private void openServiceChat() {
+	    JFrame chatFrame = new JFrame("Chat with Service");
+	    chatFrame.add(new ChatServicePanel(client.getUsername()));
+	    chatFrame.setSize(600, 400);
+	    chatFrame.setLocationRelativeTo(this);
+	    chatFrame.setVisible(true);
 	}
 
 	private void openChatClient() {
@@ -93,6 +104,7 @@ public class MainFrame extends JFrame {
 	}
 
 	private void logout() {
+		log.info("User: " + client.getUsername() + " loged out.");
 		dispose();
 		new LoginFrame().setVisible(true);
 	}
