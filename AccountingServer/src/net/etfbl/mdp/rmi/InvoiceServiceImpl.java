@@ -3,17 +3,29 @@ package net.etfbl.mdp.rmi;
 import net.etfbl.mdp.model.Invoice;
 import net.etfbl.mdp.util.InvoiceStorage;
 
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.ObjectOutputStream;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceService {
 	
 	private List<Invoice> invoices;
 	
+	private static final String INVOICE_DIR = "invoices";
+	
 	public InvoiceServiceImpl() throws RemoteException {
+		super();
+		new File(INVOICE_DIR).mkdirs();
 		invoices = InvoiceStorage.loadInvoices();
 		System.out.println("[RMI] ucitano faktura: " + invoices.size());
 	}
@@ -21,8 +33,8 @@ public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceSe
 
 	@Override
 	public void addInvoice(Invoice invoice) throws RemoteException {
-		invoices.add(invoice);
-		InvoiceStorage.saveInvoice(invoices);
+		//invoices.add(invoice);
+		//InvoiceStorage.saveInvoice(invoices);
 		System.out.println("[RMI] Nova faktura primljena: " + invoice);
 		
 	}
@@ -33,35 +45,38 @@ public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceSe
 	}
 	
 	 @Override
-	    public void saveInvoice(String orderId, String client, double totalAmount) throws RemoteException {
+	    public void saveInvoice(Invoice invoice) throws RemoteException {
+		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		 
-		 /*
-		  * 
-		  * 
-		  *  String timestamp = java.time.LocalDateTime.now()
-                .toString()
-                .replace(":", "-"); // zamijeni ':' jer nije dozvoljen u imenu fajla
+		try {
+			 Gson gson = new GsonBuilder()
+		                .setPrettyPrinting()
+		                .registerTypeAdapter(LocalDate.class,
+		                        (com.google.gson.JsonSerializer<LocalDate>)
+		                                (src, typeOfSrc, context) ->
+		                                        new com.google.gson.JsonPrimitive(src.toString()))
+		                .registerTypeAdapter(LocalDateTime.class,
+		                        (com.google.gson.JsonSerializer<LocalDateTime>)
+		                                (src, typeOfSrc, context) ->
+		                                        new com.google.gson.JsonPrimitive(src.toString()))
+		                .create();
+			 
+			 String fileName = invoice.getSupplierName() + "_"
+		                + invoice.getInvoiceId() + "_"
+		                + invoice.getIssueDate().format(formatter) + ".json";
 
-        // Naziv fajla: supplierName_timestamp.json
-        String fileName = invoice.getSupplierName() + "_" + timestamp + ".json";
+		        File file = new File(INVOICE_DIR, fileName);
+		        
+		        try (FileWriter writer = new FileWriter(file)) {
+		            gson.toJson(invoice, writer);
+		        }
 
-        // Jackson ObjectMapper za JSON serializaciju
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
-        mapper.findAndRegisterModules(); // da podrži LocalDateTime automatski
-
-        // Snimi invoice u JSON fajl
-        mapper.writerWithDefaultPrettyPrinter().writeValue(new java.io.File(fileName), invoice);
-
-        System.out.println("[RMI Server] Invoice saved as JSON: " + fileName);
-		  * */
-		 
-		 
-	        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(orderId + ".ser"))) {
-	            oos.writeObject("Invoice for " + client + " total: " + totalAmount);
-	            System.out.println("[RMI Server] Invoice saved for " + client + totalAmount);
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
+		        System.out.println("[RMI Server] Invoice saved: " + file.getAbsolutePath());
+		}catch (Exception e) {
+	        e.printStackTrace();
+	        throw new RemoteException("Failed to save invoice as JSON", e);
 	    }
+		 
+}
 
 }

@@ -13,6 +13,6 @@ public interface InvoiceService extends Remote{
 	
 	List<Invoice> getAllInvoices() throws RemoteException;
 	
-	void saveInvoice(String orderId, String client, double totalAmount) throws RemoteException;
+	void saveInvoice(Invoice invoice) throws RemoteException;
 
 }

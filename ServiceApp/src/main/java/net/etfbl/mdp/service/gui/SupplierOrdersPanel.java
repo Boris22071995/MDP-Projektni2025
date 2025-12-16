@@ -145,46 +145,7 @@ public class SupplierOrdersPanel extends JPanel {
 	        	}
 	        });
 	        reciverThread.start();
-//	        try (SSLSocket socket = (SSLSocket) SSLSocketFactory.getDefault().createSocket("localhost", port);
-//	             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-//	             PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true)) {
-//	        	socket.setEnabledProtocols(new String[] {"TLSv1.2"});
-//	        	socket.setEnabledCipherSuites(socket.getSupportedCipherSuites());
-//	        	System.out.println("EVO NAS OVDJE NA SERVISU A DOBAVLJAC");
-//	            out.println("GET_PARTS|" + supplier);
-//
-//	            String line;
-//	            while ((line = in.readLine()) != null) {
-//	            	
-//	                if ("END".equals(line)) break;
-//	                if (line.startsWith("PART|")) {
-//	                    String[] p = line.split("\\|", 5);
-//	                    if (p.length >= 5) {
-//	                        parts.add(new Part(
-//	                                decode(p[1]),
-//	                                decode(p[2]),
-//	                                Double.parseDouble(p[3]),
-//	                                decode(p[4])
-//	                        ));
-//	                    }
-//	                }
-//	            }
-//
-//	        } catch (Exception e) {
-//	            e.printStackTrace();
-//	            JOptionPane.showMessageDialog(this, "❌ Error loading parts: " + e.getMessage(),
-//	                    "Error", JOptionPane.ERROR_MESSAGE);
-//	        }
 
-	        // popuni tabelu
-//	        model.setRowCount(0);
-//	        for (Part part : parts) {
-//	            model.addRow(new Object[]{
-//	                    part.getId(), part.getName(), part.getPrice(), part.getDescription()
-//	            });
-//	        }
-
-//	        JOptionPane.showMessageDialog(this, "✅ Loaded " + parts.size() + " parts from " + supplier);
 	    }
 
 	    private void sendOrder() {
@@ -200,11 +161,9 @@ public class SupplierOrdersPanel extends JPanel {
 	        Double price = (Double) model.getValueAt(row, 2);
 	        String qty = JOptionPane.showInputDialog(this, "Enter quantity for part " + code + ":");
 	        Integer quant = Integer.parseInt(qty);
-	        //System.out.println("NARUDZBA: " + code + " " + supplier + " " + partName + " " + price + " " + quant);
-	        //String orderId, String clientUsername, String partName, int quantity, double price
 	       
 	        Order order = new Order(code, supplier, partName, quant, price);
-	      //  System.out.println("NARUDZBA: " + order);
+	        System.out.println("Vrijem iz servisa je: " + order.getTime());
 	        if (qty == null || qty.isEmpty()) return;
 	        String queueName = "";
 	        if("Supplier1".equals(supplier)) {
@@ -218,18 +177,13 @@ public class SupplierOrdersPanel extends JPanel {
 	        }
 	        
 	        OrderPublisher.sendOrder(order, queueName, quant);
-	  //      System.out.println("NARUDZBA: " + order);
-	       // OrderPublisher.sendOrder(null, qty, row)
-	        // TODO: ovdje ide RabbitMQ publish logika (slanje zahtjeva u red)
-	   //     JOptionPane.showMessageDialog(this, "📦 Order for part " + code +
-	  //              " sent to " + supplier + " (qty: " + qty + ")", "Order sent", JOptionPane.INFORMATION_MESSAGE);
+	        
 	    }
 
 	    private void refreshList() {
 	        model.setRowCount(0);
 	    }
 
-	    // Pomocne metode za kodiranje/dekodiranje (ako koristiš | u imenima)
 	    private static String decode(String val) {
 	        return val.replace("%7C", "|");
 	    }

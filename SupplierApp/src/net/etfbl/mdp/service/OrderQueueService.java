@@ -16,7 +16,6 @@ public class OrderQueueService {
 	 private static Queue<Order> orderQueue = new LinkedList<>();
 
 	    public static List<Order> getPendingOrders() {
-	    	//System.out.println("OVO ME ZANIMA OVDJE DA L SE UDJE");
 	    	return orderQueue.stream().collect(Collectors.toList());
 	    }
 
@@ -24,30 +23,20 @@ public class OrderQueueService {
 	        orderQueue.offer(order);
 	    }
 	    public static void processOrder(Invoice invoice, boolean approved) {
+	    	Order order = orderQueue.stream().filter(o->o.getPartName().equals(invoice.getPartTitle())).findFirst().orElse(null);
 	    	
+	    	if(order==null)return;
+	    	if(approved) {
+	    		try {
+	    			InvoiceService invoiceService = (InvoiceService)Naming.lookup("//localhost/InvoiceService");
+	    			invoiceService.saveInvoice(invoice);
+	    		}catch(Exception e) {
+	    			e.printStackTrace();
+	    		}
+	    	}
+	    	orderQueue.remove(order);
 	    	
 	    }
-//	    public static void processOrder(String orderId, boolean approved) {
-//	        Order order = orderQueue.stream()
-//	                .filter(o -> o.getOrderId().equals(orderId))
-//	                .findFirst()
-//	                .orElse(null);
-//
-//	        if (order == null) return;
-//
-//	        if (approved) {
-//	            order.setStatus(approved);
-//	            double total = order.getPrice() * 1.17; // PDV 17%
-//	            try {
-//	                InvoiceService invoiceService =
-//	                        (InvoiceService) Naming.lookup("//localhost/InvoiceService");
-//	                invoiceService.saveInvoice(order.getOrderId(), order.getClientUsername(), total);
-//	            } catch (Exception e) {
-//	                e.printStackTrace();
-//	            }
-//	        }
-//
-//	        orderQueue.remove(order);
-//	    }
+
 	
 }

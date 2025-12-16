@@ -10,6 +10,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.rmi.RemoteException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class OrderQueuePanel extends JPanel {
@@ -58,14 +60,19 @@ public class OrderQueuePanel extends JPanel {
 	    	
 	        tableModel.setRowCount(0);
 	        List<Order> orders = OrderQueueService.getPendingOrders();
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+
+	        
+
 	        for (Order o : orders) {
+	        	System.out.println("A VRIJEME JE " + o.getTime());
 	            tableModel.addRow(new Object[]{
 	                    o.getOrderId(),
 	                    o.getClientUsername(),
 	                    o.getPartName(),
 	                    o.getQuantity(),
 	                    o.getPrice(),
-	                    o.getCreatedAt()
+	                    o.getTime().format(formatter)
 	            });
 	        }
 	    }
@@ -82,7 +89,12 @@ public class OrderQueuePanel extends JPanel {
 	        String partTitle = tableModel.getValueAt(row, 2).toString();
 	        int quant = (Integer)tableModel.getValueAt(row, 3);
 	        double price = (Double)tableModel.getValueAt(row, 4);
-	        Invoice invoice = new Invoice(orderId, supplierName, orderId, partTitle, price*quant);
+	        String createdAt = tableModel.getValueAt(row, 5).toString();
+	        DateTimeFormatter formatter =
+	                DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+
+	        LocalDateTime time = LocalDateTime.parse(createdAt, formatter);
+	        Invoice invoice = new Invoice(supplierName, orderId, partTitle, price*quant, time);
 	        OrderQueueService.processOrder(invoice,approved);
 	        refreshOrders();
 

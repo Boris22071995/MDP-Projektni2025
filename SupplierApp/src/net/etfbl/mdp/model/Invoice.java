@@ -2,6 +2,7 @@ package net.etfbl.mdp.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Invoice implements Serializable {
 
@@ -19,15 +20,15 @@ public class Invoice implements Serializable {
 		
 	}
 
-	public Invoice(String invoiceId, String supplierName, String partCode, String partTitle, double priceWithoutVAT) {
+	public Invoice(String supplierName, String partCode, String partTitle, double priceWithoutVAT, LocalDateTime time) {
 		super();
-		this.invoiceId = invoiceId;
+		this.invoiceId = UUID.randomUUID().toString();;
 		this.supplierName = supplierName;
 		this.partCode = partCode;
 		this.partTitle = partTitle;
 		this.priceWithoutVAT = priceWithoutVAT;
 		this.totalWithVAT = priceWithoutVAT * 1.17;
-		this.issueDate = LocalDateTime.now();
+		this.issueDate = time;
 	}
 
 	public String getInvoiceId() {

@@ -14,7 +14,9 @@ public class Order implements Serializable {
 	    private double price;
 	    private LocalDateTime time;
 
-	    public Order() {}
+	    public Order() {
+	    	this.time = LocalDateTime.now();
+	    }
 
 	    public Order(String orderId, String clientUsername, String partName, int quantity, double price) {
 	        this.orderId = orderId;
