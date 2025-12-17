@@ -49,6 +49,19 @@ public class RedisPartService {
 	    public void deletePart(String id) {
 	        jedis.del("part:" + id);
 	    }
+
+		public Part getPart(String id) {
+			Part part = null;
+			List<Part> parts = new ArrayList<>();
+			parts = getAllParts();
+			
+			for(Part tmp : parts) {
+				if(id.equals(tmp.getId())) {
+					part = tmp;
+				}
+			}
+			return part;
+		}
 	
 	
 }

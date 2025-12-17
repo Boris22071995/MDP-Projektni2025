@@ -12,12 +12,14 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
+import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.service.securechat.SSLChatServer;
 
 public class ServiceMain extends JFrame {
 
 	private CardLayout cardLayout;
     private JPanel mainPanel;
+    private InvoicePanel invoicePanel;
 	
 	public ServiceMain() {
 		try {
@@ -35,10 +37,10 @@ public class ServiceMain extends JFrame {
 
         ClientPanel clientPanel = new ClientPanel();
         ChatServerPanel chatPanel = new ChatServerPanel();
-        AppointmentPanel appointmentPanel = new AppointmentPanel();
+        AppointmentPanel appointmentPanel = new AppointmentPanel(this);
         PartsPanel partsPanel = new PartsPanel();
         SupplierOrdersPanel supplierOrdersPanel = new SupplierOrdersPanel();
-        InvoicePanel invoicePanel = new InvoicePanel();
+      //  InvoicePanel invoicePanel = new InvoicePanel();
         new Thread(new SSLChatServer()).start();
         mainPanel.add(clientPanel, "clients");
         mainPanel.add(chatPanel, "chat");
@@ -46,6 +48,7 @@ public class ServiceMain extends JFrame {
         mainPanel.add(appointmentPanel, "appointments");
         mainPanel.add(partsPanel, "parts");
         mainPanel.add(supplierOrdersPanel, "supplier");
+        invoicePanel = new InvoicePanel();
         mainPanel.add(invoicePanel, "invoice");
 
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 10));
@@ -86,6 +89,11 @@ public class ServiceMain extends JFrame {
 
         add(topPanel, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
+	}
+	
+	public void showInvoicePanel(Appointment appointment) {
+		invoicePanel.loadAppointment(appointment);
+	    cardLayout.show(mainPanel, "invoice");
 	}
 	
 	public static void main(String[] args) {

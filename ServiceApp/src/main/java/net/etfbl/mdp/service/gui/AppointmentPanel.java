@@ -14,8 +14,9 @@ public class AppointmentPanel extends JPanel {
 	private JTable table;
     private DefaultTableModel model;
     private RestAppointment restAppointment = new RestAppointment();
-    
-    public AppointmentPanel() {
+    private ServiceMain serviceMain;
+    public AppointmentPanel(ServiceMain serviceMain) {
+    	this.serviceMain = serviceMain;
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createTitledBorder("Appointment scheduling"));
 
@@ -29,7 +30,8 @@ public class AppointmentPanel extends JPanel {
         JButton btnApprove = new JButton("Approve");
         JButton btnReject = new JButton("Reject");
         JButton btnComment = new JButton("Comment");
-        for (JButton b : new JButton[]{btnRefresh, btnApprove, btnReject, btnComment}) {
+        JButton btnCreateInvoice = new JButton("Create invoice");
+        for (JButton b : new JButton[]{btnRefresh, btnApprove, btnReject, btnComment,btnCreateInvoice}) {
             b.setFocusPainted(false);
             b.setFont(new Font("Segoe UI", Font.BOLD, 14));
             b.setBackground(new Color(52, 73, 94));
@@ -41,17 +43,45 @@ public class AppointmentPanel extends JPanel {
         bottomPanel.add(btnApprove);
         bottomPanel.add(btnReject);
         bottomPanel.add(btnComment);
+        bottomPanel.add(btnCreateInvoice);
         add(bottomPanel, BorderLayout.SOUTH);
 
         btnRefresh.addActionListener(e -> loadAppointments());
         btnApprove.addActionListener(e -> approveAppointment());
         btnReject.addActionListener(e -> rejectAppointment());
         btnComment.addActionListener(e -> addComment());
-
+        btnCreateInvoice.addActionListener(e -> createInvoice());
         loadAppointments();
     }
     
-    private void loadAppointments() {
+    private void createInvoice() {
+    	int row = table.getSelectedRow();
+    	if(row < 0) {
+    		JOptionPane.showMessageDialog(this, "Select appointment first!");
+    		return;
+    	}
+    	
+    	String username = model.getValueAt(row, 0).toString();
+    	String date = model.getValueAt(row, 1).toString();
+    	String time = model.getValueAt(row, 2).toString();
+    	
+    	Appointment selected = null;
+    	for(Appointment a : restAppointment.getAllAppointments()) {
+    		if(a.getOwnerUsername().equals(username) && a.getDate().equals(date)&&a.getTime().equals(time)) {
+    			selected = a;
+    			break;
+    		}
+    	}
+    	
+    	if(selected == null) return;
+    	serviceMain.showInvoicePanel(selected);
+    }
+    
+//    private void openInvoicePanel() {
+//    	serviceMain.showInvoicePanel();
+//	}
+
+	private void loadAppointments() {
         model.setRowCount(0);
         List<Appointment> list = restAppointment.getAllAppointments(); // REST poziv
 
