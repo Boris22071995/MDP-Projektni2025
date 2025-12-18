@@ -2,6 +2,8 @@ package net.etfbl.mdp.service;
 
 
 import net.etfbl.mdp.model.Appointment;
+import net.etfbl.mdp.util.ConfigurationLoader;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -14,7 +16,9 @@ import java.util.List;
 
 public class AppointmentService {
 	
-	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/appointments";
+	//private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/appointments";
+	
+	private static final String BASE_URL = ConfigurationLoader.getString("appointments.url");
 	
 	 public List<Appointment> getAppointmentsByUser(String username) {
 	        List<Appointment> list = new ArrayList<>();
@@ -25,7 +29,6 @@ public class AppointmentService {
 	            conn.setRequestProperty("Accept", "application/json");
 
 	            if (conn.getResponseCode() != 200) {
-	                System.out.println("HTTP error: " + conn.getResponseCode());
 	                return list;
 	            }
 
@@ -96,5 +99,4 @@ public class AppointmentService {
 	        return sb.toString();
 	    }
 
-	
 }

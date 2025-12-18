@@ -12,14 +12,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import net.etfbl.mdp.model.Client;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 public class ClientService {
-	private static final String OSNOVNI_URL = "http://localhost:8080/ServiceApp/api/clients";
+	//private static final String OSNOVNI_URL = "http://localhost:8080/ServiceApp/api/clients";
+	private static final String BASE_URL = ConfigurationLoader.getString("clientservice.url");
 	
 	public static ArrayList<Client> getClients() {
 		ArrayList<Client> clients = new ArrayList<>();
 		try {
-			URL url = new URL(OSNOVNI_URL + "/all");
+			URL url = new URL(BASE_URL + "/all");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");

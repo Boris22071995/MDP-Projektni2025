@@ -1,13 +1,15 @@
 package net.etfbl.mdp.service;
 
 import net.etfbl.mdp.model.Client;
+import net.etfbl.mdp.util.ConfigurationLoader;
 import net.etfbl.mdp.util.HttpUtil;
+
 import org.json.JSONObject;
 
 public class AuthService {
 
-	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/clients";
-	
+	//private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/clients";
+	private static final String BASE_URL = ConfigurationLoader.getString("authservice.url");
 	
 	public Client login(String username, String password) {
 		try {

@@ -3,6 +3,7 @@ package net.etfbl.mdp.model;
 import java.io.Serializable;
 
 public class Client implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
 
 	private String name;
@@ -114,7 +115,6 @@ public class Client implements Serializable {
 	public void setBlocked(boolean blocked) {
 		this.blocked = blocked;
 	}
-	
 
 	@Override
 	public String toString() {

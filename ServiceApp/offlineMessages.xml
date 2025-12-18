@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <messages>
-                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                    
 
     
 
@@ -18,6 +18,47 @@
 
     
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -69,8 +110,49 @@
     
     
     <message from="Server" to="service">[Privatno od k1]: Dobar dan</message>
-                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                            
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -120,13 +202,54 @@
     
     
     <message from="Server" to="service">[Privatno od k1]: dobar dan</message>
-                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                    
 
 
     
 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -170,7 +293,7 @@
     
     
     <message from="Server" to="service">[Privatno od korisnik2]: qeqweqw</message>
-                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                            
 
 
 
@@ -179,6 +302,47 @@
 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -214,7 +378,7 @@
     
     
     <message from="Server" to="service">[Privatno od k1]: Dobar dan vam zelim</message>
-                                                                                                                                        
+                                                                                                                                                                                                                                                                                                            
 
 
     
@@ -226,6 +390,47 @@
 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -250,7 +455,7 @@
     
     
     <message from="Server" to="service">[Od k1]: Dobar dan</message>
-                                                                                            
+                                                                                                                                                                                                                                                                
 
 
 
@@ -274,5 +479,182 @@
 
     
 
+
+
+
+
+    
+
+
+
+    
+    
+    
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                                    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <message from="Server" to="boris">[Privatno od k1]: asdasd time:19:34</message>
+                                                                                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                                
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                
+
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+                            
+    
+
+
+
+
+    
+    
+    
+        
+
+    
+
+
+
+    
+
+
+    
+
+
+
+
+    
 
 </messages>

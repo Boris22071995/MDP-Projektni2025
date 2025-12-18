@@ -88,7 +88,7 @@ public class InvoicePanel extends JPanel {
 		        EmailSender.sendZip(
 		            "mdpService2025@gmail.com",
 		            "xorw ssob hcha mdhh",
-		            "bvasiljevic21@gmail.com",
+		            "saralukic559@gmail.com",
 		            "Service invoice",
 		            "Dear customer,\n\nYour service invoice is attached.\n\nRegards.",
 		            zipFileForSend

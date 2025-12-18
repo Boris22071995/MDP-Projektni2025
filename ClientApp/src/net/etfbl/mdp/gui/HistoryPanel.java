@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class HistoryPanel extends JPanel {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private static final Logger log = AppLogger.getLogger();
     AppointmentService service = new AppointmentService();
 	private JTable table;

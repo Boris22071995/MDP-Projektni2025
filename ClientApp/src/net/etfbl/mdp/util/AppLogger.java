@@ -9,8 +9,7 @@ public class AppLogger {
 	
 	static {
 		logger = Logger.getLogger("MDPClientLogger");
-		logger.setUseParentHandlers(false);
-		
+		logger.setUseParentHandlers(false);		
 		try {
 			FileHandler fh = new FileHandler("client_app.log",true);
 			fh.setFormatter(new SimpleFormatter());

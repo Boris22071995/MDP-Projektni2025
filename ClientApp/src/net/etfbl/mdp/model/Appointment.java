@@ -1,11 +1,12 @@
 package net.etfbl.mdp.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.UUID;
 
 public class Appointment implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
 	private String id;
 	private String ownerUsername;
 	private String date;
@@ -103,6 +104,5 @@ public class Appointment implements Serializable {
 		return "Appointment [id=" + id + ", ownerUsername=" + ownerUsername + ", date=" + date + ", time=" + time
 				+ ", type=" + type + ", description=" + description + ", status=" + status + "]";
 	}
-
 
 }

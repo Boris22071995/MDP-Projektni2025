@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class MainFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	private static final Logger log = AppLogger.getLogger();
 	Client client;
 	private CardLayout cardLayout;
@@ -38,13 +40,13 @@ public class MainFrame extends JFrame {
 		JButton btnReservation = createSidebarButton("Reservation");
 		JButton btnHistory = createSidebarButton("Reservation history");
 		JButton btnChat = createSidebarButton("Chat");
-		JButton btnChatService = createSidebarButton("Chat with service");
 		JButton btnLogout = createSidebarButton("Log out");
 
 		sidebar.add(btnReservation);
 		sidebar.add(btnHistory);
 		sidebar.add(btnChat);
-		sidebar.add(btnChatService);
+		sidebar.add(new JLabel());
+		sidebar.add(new JLabel());
 		sidebar.add(new JLabel());
 		sidebar.add(btnLogout);
 
@@ -65,19 +67,10 @@ public class MainFrame extends JFrame {
 		btnHistory.addActionListener(e -> cardLayout.show(mainPanel, "history"));
 
 		btnChat.addActionListener(e -> openChatClient());
-		btnChatService.addActionListener(e -> openServiceChat());
 		btnLogout.addActionListener(e -> logout());
 
 		setVisible(true);
 
-	}
-
-	private void openServiceChat() {
-	    JFrame chatFrame = new JFrame("Chat with Service");
-	    chatFrame.add(new ChatServicePanel(client.getUsername()));
-	    chatFrame.setSize(600, 400);
-	    chatFrame.setLocationRelativeTo(this);
-	    chatFrame.setVisible(true);
 	}
 
 	private void openChatClient() {
@@ -102,10 +95,24 @@ public class MainFrame extends JFrame {
 		button.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		return button;
 	}
+	
+	private void restartApplication() {
+		try {
+			String javaBin = System.getProperty("java.home") + "/bin/java";
+			String classPath = System.getProperty("java.class.path");
+			String className = LoginFrame.class.getName();
+			
+			ProcessBuilder builder = new ProcessBuilder(javaBin, "-cp", classPath, className);
+			builder.start();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		System.exit(0);
+	}
 
 	private void logout() {
 		log.info("User: " + client.getUsername() + " loged out.");
-		dispose();
-		new LoginFrame().setVisible(true);
+		restartApplication();
 	}
 }

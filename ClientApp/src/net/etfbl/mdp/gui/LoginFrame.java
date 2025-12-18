@@ -10,6 +10,8 @@ import java.util.logging.Logger;
 
 public class LoginFrame extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+	
 	private static final Logger log = AppLogger.getLogger();
 	private JTextField txtUsername;
 	private JPasswordField txtPassword;
@@ -140,7 +142,7 @@ public class LoginFrame extends JFrame {
 					f5.getText(), f6.getText(), f3.getText(), false, false);
 
 			if (authService.register(c)) {
-				 log.info("Registration completed successfully.");
+				log.info("Registration completed successfully.");
 				JOptionPane.showMessageDialog(this,
 						"Registration completed successfully! Please wait for administrator approval");
 			} else {

@@ -169,5 +169,61 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>acacacac</string>
+    </void>
+    <void property="date">
+     <string>2025-12-19</string>
+    </void>
+    <void property="description">
+     <string>asdsadasdasdasd</string>
+    </void>
+    <void property="id">
+     <string>024f0dde-76b2-4301-9997-42fb7d1d09f1</string>
+    </void>
+    <void property="ownerUsername">
+     <string>k1</string>
+    </void>
+    <void property="status">
+     <string>pending</string>
+    </void>
+    <void property="time">
+     <string>11:07</string>
+    </void>
+    <void property="type">
+     <string>Repair</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>Uradicemo</string>
+    </void>
+    <void property="date">
+     <string>2025-12-25</string>
+    </void>
+    <void property="description">
+     <string>Treba da odradite redovni mali servis na automobilu.</string>
+    </void>
+    <void property="id">
+     <string>4eeab34e-0bc7-4621-b6f8-4286dd0ba71c</string>
+    </void>
+    <void property="ownerUsername">
+     <string>borvas</string>
+    </void>
+    <void property="status">
+     <string>approved</string>
+    </void>
+    <void property="time">
+     <string>09:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

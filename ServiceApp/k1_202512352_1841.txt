@@ -1,0 +1,15 @@
+===== SERVICE INVOICE =====
+
+Client: k1
+Service type: Service
+Date: 2025-11-05
+Time: 10:00
+
+----- Used parts -----
+Part1 | 220.0 EUR
+Part1 | 220.0 EUR
+
+----------------------
+TOTAL: 440.00 EUR
+
+Thank you for using our service.
