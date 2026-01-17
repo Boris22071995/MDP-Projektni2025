@@ -1,20 +1,20 @@
 package net.etfbl.mdp.model;
 
 public class Supplier {
-	
+
 	private String name;
 	private String port;
 	private int instaceNumber;
+
 	public Supplier() {
-		
 	}
-	
+
 	public Supplier(String name, String port, int instanceNumber) {
 		this.name = name;
 		this.port = port;
 		this.instaceNumber = instanceNumber;
 	}
-	
+
 	public int getInstanceNumber() {
 		return instaceNumber;
 	}
@@ -22,7 +22,7 @@ public class Supplier {
 	public void setInstanceNumber(int number) {
 		this.instaceNumber = number;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -43,7 +43,5 @@ public class Supplier {
 	public String toString() {
 		return "Supplier [name=" + name + ", port=" + port + "]";
 	}
-	
-	
 
 }

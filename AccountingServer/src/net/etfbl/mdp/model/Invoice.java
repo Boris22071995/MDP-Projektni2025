@@ -94,7 +94,4 @@ public class Invoice implements Serializable {
 				+ ", issueDate=" + issueDate + "]";
 	}
 	
-	
-	
-	
 }

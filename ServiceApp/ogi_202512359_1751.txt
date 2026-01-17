@@ -1,15 +1,14 @@
 ===== SERVICE INVOICE =====
 
-Client: k1
+Client: ogi
 Service type: Service
-Date: 2025-11-05
-Time: 10:00
+Date: 2025-12-27
+Time: 08:00
 
 ----- Used parts -----
-Part1 | 220.0 EUR
-Part1 | 220.0 EUR
+Supplier2 | 23.62 KM
 
 ----------------------
-TOTAL: 440.00 EUR
+TOTAL: 23.62 KM
 
 Thank you for using our service.

@@ -4,8 +4,12 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -16,18 +20,24 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 
+import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.model.Client;
-import net.etfbl.mdp.service.ClientService;
+import net.etfbl.mdp.service.gui.rest.RestAppointment;
 import net.etfbl.mdp.service.gui.rest.RestClient;
+import net.etfbl.mdp.util.AppLogger;
 
 public class ClientPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
 
 	private JTable table;
 	private ClientTableModel tableModel;
 	private RestClient restClient;
+	private RestAppointment restAppointment;
+	private static final Logger log = AppLogger.getLogger();
 
 	public ClientPanel() {
 		restClient = new RestClient();
+		restAppointment = new RestAppointment();
 		setLayout(new BorderLayout(10, 10));
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -37,7 +47,24 @@ public class ClientPanel extends JPanel {
 		add(title, BorderLayout.NORTH);
 
 		tableModel = new ClientTableModel();
-		table = new JTable(tableModel);
+		table = new JTable(tableModel) {
+			private static final long serialVersionUID = 1L;
+			
+			@Override
+			public String getToolTipText(MouseEvent e) {
+				Point p =e.getPoint();
+				int row = rowAtPoint(p);
+				int col = columnAtPoint(p);
+				
+				if(row >=0 && col >=0) {
+					Object value = getValueAt(row, col);
+					if(value != null) {
+						return value.toString();
+					}
+				}
+				return null;
+			}
+		};
 		table.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		table.setRowHeight(24);
 		table.getColumnModel().getColumn(4).setCellRenderer(new StatusCellRenderer());
@@ -78,6 +105,7 @@ public class ClientPanel extends JPanel {
 
 	private void loadClients() {
 		List<Client> clients = restClient.getAllClients();
+		log.info("Clients are loaded.");
 		tableModel.setClients(clients);
 	}
 
@@ -86,9 +114,11 @@ public class ClientPanel extends JPanel {
 		int row = table.getSelectedRow();
 		if (row >= 0) {
 			String username = tableModel.getClientAt(row).getUsername();
+			log.info("Client is approved.");
 			restClient.approveClient(username);
 			loadClients();
 		} else {
+			log.warning("You need to choose client for approving.");
 			JOptionPane.showMessageDialog(this, "Choose client!", "Warning", JOptionPane.WARNING_MESSAGE);
 		}
 	}
@@ -105,6 +135,7 @@ public class ClientPanel extends JPanel {
 						"Approve", JOptionPane.YES_NO_OPTION);
 				if (confirm == JOptionPane.YES_OPTION) {
 					restClient.unblockClient(username);
+					log.info("Client is unblocked");
 					JOptionPane.showMessageDialog(this, "Client " + username + " is unblocked.");
 				}
 			} else {
@@ -112,12 +143,14 @@ public class ClientPanel extends JPanel {
 						"Approve", JOptionPane.YES_NO_OPTION);
 				if (confirm == JOptionPane.YES_OPTION) {
 					restClient.blockClient(username);
+					log.info("Client is blocked.");
 					JOptionPane.showMessageDialog(this, "Client " + username + " is blocked.");
 				}
 			}
 
 			loadClients();
 		} else {
+			log.warning("Choose of client is needed.");
 			JOptionPane.showMessageDialog(this, "Choose client!", "Warning", JOptionPane.WARNING_MESSAGE);
 		}
 
@@ -131,10 +164,15 @@ public class ClientPanel extends JPanel {
 					"Approve", JOptionPane.YES_NO_OPTION);
 			if (confirm == JOptionPane.YES_OPTION) {
 				restClient.deleteClient(username);
+				List<Appointment> appointments = new ArrayList<>();
+				appointments = restAppointment.getAllAppointmentsByUsername(username);
+				restAppointment.deleteAppointments(appointments);
+				log.info("Client is deleted.");
 				loadClients();
 			}
 		} else {
 			JOptionPane.showMessageDialog(this, "Choose client!", "Warning", JOptionPane.WARNING_MESSAGE);
+			log.warning("Choose of client is needed.");
 		}
 	}
 

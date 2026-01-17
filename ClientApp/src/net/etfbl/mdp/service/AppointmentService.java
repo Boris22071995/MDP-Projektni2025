@@ -16,8 +16,6 @@ import java.util.List;
 
 public class AppointmentService {
 	
-	//private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/appointments";
-	
 	private static final String BASE_URL = ConfigurationLoader.getString("appointments.url");
 	
 	 public List<Appointment> getAppointmentsByUser(String username) {

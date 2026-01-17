@@ -14,11 +14,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import net.etfbl.mdp.messaging.OrderConsumer;
 import net.etfbl.mdp.model.Supplier;
 
 public class SupplierMain extends JFrame{
 
+	private static final long serialVersionUID = 1L;
+	
 	private CardLayout cardLayout;
     private JPanel cardPanel;
    
@@ -33,20 +34,14 @@ public class SupplierMain extends JFrame{
          String name = "Supplier" + instanceNumber;
          String port = String.valueOf(5000 + instanceNumber);
          supplier = new Supplier(name, port, instanceNumber);
-
-         System.out.println("Pokrenut: " + supplier);
     	
-    	
-    	//new Thread(new OrderConsumer()).start();
-        setTitle("Supplier - Control Panel");
+        setTitle("Supplier: " + name + " - Control Panel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);
 
-        // Glavni layout
         setLayout(new BorderLayout());
 
-        // Gornja navigacija
         JPanel navPanel = new JPanel();
         JButton btnParts = new JButton("Manage Parts");
         JButton btnOrders = new JButton("Order Queue");
@@ -54,28 +49,20 @@ public class SupplierMain extends JFrame{
         navPanel.add(btnOrders);
         add(navPanel, BorderLayout.NORTH);
 
-        // Centralni sadržaj
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
-        // Dodaj panele
         cardPanel.add(new PartsPanel(supplier), "parts");
         cardPanel.add(new OrderQueuePanel(supplier.getName()), "orders");
 
         add(cardPanel, BorderLayout.CENTER);
 
-        // Dugmad — prebacivanje između panela
         btnParts.addActionListener(e -> cardLayout.show(cardPanel, "parts"));
         btnOrders.addActionListener(e -> cardLayout.show(cardPanel, "orders"));
         
-        JButton btnInvoices = new JButton("Invoices");
-        navPanel.add(btnInvoices);
-        cardPanel.add(new InvoicesPanel(), "invoices");
-        btnInvoices.addActionListener(e -> cardLayout.show(cardPanel, "invoices"));
        
     }
-    
-    
+      
     private int loadAndIncrementCounter() {
         int counter = 0;
         File file = new File(COUNTER_FILE);

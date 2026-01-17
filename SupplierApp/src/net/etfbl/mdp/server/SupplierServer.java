@@ -1,12 +1,7 @@
 package net.etfbl.mdp.server;
 
-import net.etfbl.mdp.model.Part;
-import net.etfbl.mdp.parser.PartScraper;
-
 import java.io.*;
-import java.net.*;
 import java.security.KeyStore;
-import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,7 +13,6 @@ import javax.net.ssl.SSLSocket;
 
 public class SupplierServer implements Runnable {
 	
-
     private String port;
     private String supplierName;
     private ExecutorService pool;
@@ -36,14 +30,12 @@ public class SupplierServer implements Runnable {
     @Override
     public void run() {
     	try {
-            // Absolutna putanja do keystore-a
             File f = new File(KEY_STORE_PATH);
             KEY_STORE_PATH = f.getAbsolutePath();
 
             System.setProperty("javax.net.ssl.keyStore", KEY_STORE_PATH);
             System.setProperty("javax.net.ssl.keyStorePassword", KEY_STORE_PASSWORD);
 
-            // Učitavanje keystore-a
             char[] passphrase = KEY_STORE_PASSWORD.toCharArray();
             KeyStore ks = KeyStore.getInstance("JKS");
             try (FileInputStream fis = new FileInputStream(KEY_STORE_PATH)) {
@@ -59,12 +51,12 @@ public class SupplierServer implements Runnable {
             SSLServerSocketFactory ssf = sc.getServerSocketFactory();
             SSLServerSocket serverSocket = (SSLServerSocket) ssf.createServerSocket(PORT);
 
-            System.out.println("[SSLChatServer] ✅ Secure server started on port " + PORT);
+           // System.out.println("[SSLChatServer] ✅ Secure server started on port " + PORT);
+            //TODO:loger
 
             while (true) {
                 SSLSocket socket = (SSLSocket) serverSocket.accept();
                 SupplierHandler handler = new SupplierHandler(socket, supplierName);
-                //clients.add(handler);
                 new Thread(handler).start();
             }
 

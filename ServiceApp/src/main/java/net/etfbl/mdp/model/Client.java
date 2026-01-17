@@ -121,10 +121,5 @@ public class Client implements Serializable {
 				+ ", email=" + email + ", phone=" + phone + ", vehicleData=" + vehicleData + ", approved=" + approved
 				+ ", blocked=" + blocked + "]";
 	}
-	
-	
-	
-	
-	
 
 }

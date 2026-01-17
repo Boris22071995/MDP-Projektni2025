@@ -4,17 +4,18 @@ import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 
 public class Part implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private String code;
 	private String title;
 	private double price;
 	private String imageURL;
-	
+
 	public Part() {
-		
+
 	}
 
 	public Part(String code, String title, double price, String imageURL) {
@@ -56,30 +57,31 @@ public class Part implements Serializable {
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
 	}
-	
+
 	public static String encode(String s) {
-        try {
+		try {
 			return URLEncoder.encode(s == null ? "" : s, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return s;
 		}
-    }
-    public static String decode(String s) {
-        try {
+	}
+
+	public static String decode(String s) {
+		try {
 			return s == null ? "" : URLDecoder.decode(s, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return s;
 		}
-    }
+
+	}
 
 	@Override
 	public String toString() {
 		return "Part [code=" + code + ", title=" + title + ", price=" + price + "]";
 	}
-	
-	
+
 }

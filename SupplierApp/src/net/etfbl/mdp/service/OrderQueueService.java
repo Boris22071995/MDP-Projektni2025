@@ -5,7 +5,6 @@ import net.etfbl.mdp.model.Order;
 import net.etfbl.mdp.rmi.InvoiceService;
 
 import java.rmi.Naming;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;

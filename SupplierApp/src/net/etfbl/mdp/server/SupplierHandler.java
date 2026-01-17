@@ -1,10 +1,11 @@
 package net.etfbl.mdp.server;
 
+import net.etfbl.mdp.gui.OrderQueuePanel;
 import net.etfbl.mdp.model.Part;
 import net.etfbl.mdp.parser.PartXmlUtil;
 
 import java.io.*;
-import java.net.Socket;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.net.ssl.SSLSocket;
@@ -28,11 +29,11 @@ public class SupplierHandler implements Runnable{
 	            String request = in.readLine();
 	            if (request == null) return;
 
-	            System.out.println("📩 Request received: " + request);
+	           // System.out.println("📩 Request received: " + request);
+	            //TODO:loger
 
 	            if (request.startsWith("GET_PARTS")) {
-	            	
-	            	
+	            	            	
 	                // Format: GET_PARTS|Supplier1
 	                String[] parts = request.split("\\|");
 	                String requestedSupplier = parts.length > 1 ? parts[1] : supplierName;
@@ -54,7 +55,15 @@ public class SupplierHandler implements Runnable{
 	                            Part.encode(p.getImageURL())));
 	                }
 	                out.println("END");
-	                System.out.println("✅ Sent " + partList.size() + " parts to service.");
+	              //  System.out.println("✅ Sent " + partList.size() + " parts to service.");
+	                //TODO:loger
+	            }else if(request.startsWith("STATUS")) {
+	            	  // Format: STATUS|OrderId
+	            	 String[] parts = request.split("\\|");
+		             String orderId = parts.length > 1 ? parts[1] : "";
+		             HashMap<String, String> ordersMap = OrderQueuePanel.getOrderMap();
+		             out.println("STATUS|" + ordersMap.get(orderId));
+		             out.println("END");
 	            }
 
 	        } catch (Exception e) {

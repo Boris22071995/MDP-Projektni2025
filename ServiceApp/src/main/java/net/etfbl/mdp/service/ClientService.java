@@ -1,15 +1,19 @@
 package net.etfbl.mdp.service;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.service.repository.ClientRepository;
+import net.etfbl.mdp.util.AppLogger;
 
 public class ClientService {
 
 	private ClientRepository repository = new ClientRepository();
+	private static final Logger log = AppLogger.getLogger();
 
 	public ArrayList<Client> getAllClients() {
+		log.info("Clients are retrived.");
 		return repository.getAllClients();
 	}
 
@@ -21,11 +25,11 @@ public class ClientService {
 		if (repository.findByUsername(c.getUsername()) != null)
 			return false;
 		repository.addClient(c);
+		log.info("Client is registered.");
 		return true;
 	}
 
 	public boolean login(String username, String password) {
-		System.out.println("OVDJE NA SERVERU PODACI: " + username + " " + password);
 		Client c = repository.findByUsername(username);
 		return (c != null && c.getPassword().equals(password));
 	}

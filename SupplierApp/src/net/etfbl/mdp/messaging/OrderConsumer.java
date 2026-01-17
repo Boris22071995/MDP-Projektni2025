@@ -10,43 +10,43 @@ import com.rabbitmq.client.DeliverCallback;
 import java.io.ByteArrayInputStream;
 import java.io.ObjectInputStream;
 
-public class OrderConsumer implements Runnable{
+public class OrderConsumer implements Runnable {
 
-    private static String QUEUE_NAME = "orders_queue";
-    
-    public OrderConsumer(String queueName) {
-    	this.QUEUE_NAME = queueName;
-    }
+	private String QUEUE_NAME = "orders_queue";
 
-    @Override
-    public void run() {
-        try {
-            ConnectionFactory factory = new ConnectionFactory();
-            factory.setHost("localhost");
-            Connection connection = factory.newConnection();
-            Channel channel = connection.createChannel();
+	public OrderConsumer(String queueName) {
+		this.QUEUE_NAME = queueName;
+	}
 
-            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-            System.out.println("[SupplierApp] Waiting for orders...");
+	@Override
+	public void run() {
+		try {
+			ConnectionFactory factory = new ConnectionFactory();
+			factory.setHost("localhost");
+			Connection connection = factory.newConnection();
+			Channel channel = connection.createChannel();
 
-            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-                byte[] data = delivery.getBody();
-                try (ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data))) {
-                    Order order = (Order) ois.readObject();
-                    System.out.println("[SupplierApp] Received order: " + order);
-                    OrderQueueService.addOrder(order);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            };
+			channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+			// TODO:loger
 
-            CancelCallback cancelCallback = consumerTag ->
-                    System.out.println("[SupplierApp] Cancelled: " + consumerTag);
+			DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+				byte[] data = delivery.getBody();
+				try (ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data))) {
+					Order order = (Order) ois.readObject();
+					// TODO:loger
+					OrderQueueService.addOrder(order);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			};
 
-            channel.basicConsume(QUEUE_NAME, true, deliverCallback, cancelCallback);
+			CancelCallback cancelCallback = consumerTag -> System.out
+					.println("[SupplierApp] Cancelled: " + consumerTag); // TODO:loger
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+			channel.basicConsume(QUEUE_NAME, true, deliverCallback, cancelCallback);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

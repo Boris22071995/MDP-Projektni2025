@@ -4,9 +4,7 @@ import net.etfbl.mdp.model.Invoice;
 import net.etfbl.mdp.util.InvoiceStorage;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.ObjectOutputStream;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDate;
@@ -19,6 +17,8 @@ import com.google.gson.GsonBuilder;
 
 public class InvoiceServiceImpl extends UnicastRemoteObject implements InvoiceService {
 	
+	private static final long serialVersionUID = 1L;
+
 	private List<Invoice> invoices;
 	
 	private static final String INVOICE_DIR = "invoices";

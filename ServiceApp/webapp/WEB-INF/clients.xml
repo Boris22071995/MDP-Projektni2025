@@ -4,158 +4,6 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Client">
     <void property="address">
-     <string>boris</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
-    </void>
-    <void property="email">
-     <string>boris</string>
-    </void>
-    <void property="lastName">
-     <string>boris</string>
-    </void>
-    <void property="name">
-     <string>boris</string>
-    </void>
-    <void property="password">
-     <string>boris</string>
-    </void>
-    <void property="phone">
-     <string>boris</string>
-    </void>
-    <void property="username">
-     <string>boris</string>
-    </void>
-    <void property="vehicleData">
-     <string>boris</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
-     <string>k1</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
-    </void>
-    <void property="email">
-     <string>k1</string>
-    </void>
-    <void property="lastName">
-     <string>k1</string>
-    </void>
-    <void property="name">
-     <string>k1</string>
-    </void>
-    <void property="password">
-     <string>k1</string>
-    </void>
-    <void property="phone">
-     <string>k1</string>
-    </void>
-    <void property="username">
-     <string>k1</string>
-    </void>
-    <void property="vehicleData">
-     <string>k1</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
-     <string>aa</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
-    </void>
-    <void property="email">
-     <string>aa</string>
-    </void>
-    <void property="lastName">
-     <string>aa</string>
-    </void>
-    <void property="name">
-     <string>aa</string>
-    </void>
-    <void property="password">
-     <string>aa</string>
-    </void>
-    <void property="phone">
-     <string>aa</string>
-    </void>
-    <void property="username">
-     <string>aa</string>
-    </void>
-    <void property="vehicleData">
-     <string>aa</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
-     <string>korisnik2</string>
-    </void>
-    <void property="approved">
-     <boolean>true</boolean>
-    </void>
-    <void property="email">
-     <string>korisnik2</string>
-    </void>
-    <void property="lastName">
-     <string>korisnik2</string>
-    </void>
-    <void property="name">
-     <string>korisnik2</string>
-    </void>
-    <void property="password">
-     <string>korisnik2</string>
-    </void>
-    <void property="phone">
-     <string>korisnik2</string>
-    </void>
-    <void property="username">
-     <string>korisnik2</string>
-    </void>
-    <void property="vehicleData">
-     <string>korisnik2</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
-     <string>Osjecani bb</string>
-    </void>
-    <void property="email">
-     <string>bvasiljevic21@gmail.com</string>
-    </void>
-    <void property="lastName">
-     <string>markovic</string>
-    </void>
-    <void property="name">
-     <string>marko</string>
-    </void>
-    <void property="password">
-     <string>12345</string>
-    </void>
-    <void property="phone">
-     <string>066032089</string>
-    </void>
-    <void property="username">
-     <string>marko</string>
-    </void>
-    <void property="vehicleData">
-     <string>BMW6</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Client">
-    <void property="address">
      <string>Osjecani bb Doboj</string>
     </void>
     <void property="approved">
@@ -181,6 +29,133 @@
     </void>
     <void property="vehicleData">
      <string>Golf 6</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>Test1 address</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bvasiljevic21@gmail.com</string>
+    </void>
+    <void property="lastName">
+     <string>Test1</string>
+    </void>
+    <void property="name">
+     <string>Test1</string>
+    </void>
+    <void property="password">
+     <string>test1</string>
+    </void>
+    <void property="phone">
+     <string>123456789</string>
+    </void>
+    <void property="username">
+     <string>test1</string>
+    </void>
+    <void property="vehicleData">
+     <string>Test1 vehicle</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>Test2 address</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bvasiljevic21@gmail.com</string>
+    </void>
+    <void property="lastName">
+     <string>Test2</string>
+    </void>
+    <void property="name">
+     <string>Test2</string>
+    </void>
+    <void property="password">
+     <string>test2</string>
+    </void>
+    <void property="phone">
+     <string>123456789</string>
+    </void>
+    <void property="username">
+     <string>test2</string>
+    </void>
+    <void property="vehicleData">
+     <string>Test2 vehicle data</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>Test3 address</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bvasiljevic21@gmail.com</string>
+    </void>
+    <void property="lastName">
+     <string>Test3</string>
+    </void>
+    <void property="name">
+     <string>Test3</string>
+    </void>
+    <void property="password">
+     <string>test3</string>
+    </void>
+    <void property="phone">
+     <string>123456789</string>
+    </void>
+    <void property="username">
+     <string>test3</string>
+    </void>
+    <void property="vehicleData">
+     <string>Test3 vehicle</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Client">
+    <void property="address">
+     <string>Test4 address</string>
+    </void>
+    <void property="approved">
+     <boolean>true</boolean>
+    </void>
+    <void property="blocked">
+     <boolean>true</boolean>
+    </void>
+    <void property="email">
+     <string>bvasiljevic21@gmail.com</string>
+    </void>
+    <void property="lastName">
+     <string>Test4</string>
+    </void>
+    <void property="name">
+     <string>Test4</string>
+    </void>
+    <void property="password">
+     <string>test4</string>
+    </void>
+    <void property="phone">
+     <string>123456789</string>
+    </void>
+    <void property="username">
+     <string>test4</string>
+    </void>
+    <void property="vehicleData">
+     <string>Test4 vehicle</string>
     </void>
    </object>
   </void>

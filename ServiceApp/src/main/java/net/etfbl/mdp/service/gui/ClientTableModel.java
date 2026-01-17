@@ -8,7 +8,8 @@ import javax.swing.table.AbstractTableModel;
 import net.etfbl.mdp.model.Client;
 
 public class ClientTableModel extends AbstractTableModel {
-
+	private static final long serialVersionUID = 1L;
+	
 	private String[] columns = { "Username", "Name", "Surname", "Vehicle data", "Approved", "Blocked" };
 	private List<Client> clients = new ArrayList<>();
 

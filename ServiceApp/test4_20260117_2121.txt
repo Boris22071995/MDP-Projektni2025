@@ -1,14 +1,14 @@
 ===== SERVICE INVOICE =====
 
-Client: k1
+Client: test4
 Service type: Service
-Date: 2025-11-05
-Time: 10:00
+Date: 2026-01-25
+Time: 09:00
 
 ----- Used parts -----
-aa | 1.0 EUR
+Supplier2 | 23.62 KM
 
 ----------------------
-TOTAL: 1.00 EUR
+TOTAL: 23.62 KM
 
 Thank you for using our service.

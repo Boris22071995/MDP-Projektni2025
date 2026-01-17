@@ -1,14 +1,14 @@
 ===== SERVICE INVOICE =====
 
-Client: k1
+Client: borvas
 Service type: Service
-Date: 2025-11-05
-Time: 10:00
+Date: 2025-12-25
+Time: 09:00
 
 ----- Used parts -----
-aa | 1.0 EUR
+Supplier2 | 23.62 EUR
 
 ----------------------
-TOTAL: 1.00 EUR
+TOTAL: 23.62 EUR
 
 Thank you for using our service.

@@ -4,215 +4,47 @@
   <void method="add">
    <object class="net.etfbl.mdp.model.Appointment">
     <void property="comment">
-     <string>bice uradjeno</string>
-    </void>
-    <void property="date">
-     <string>2025-11-05</string>
-    </void>
-    <void property="description">
-     <string>asd	</string>
-    </void>
-    <void property="id">
-     <string>74024880-a3c7-42f6-8219-2d7ac1f6242d</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>approved</string>
-    </void>
-    <void property="time">
-     <string>10:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string>aaaa</string>
-    </void>
-    <void property="date">
-     <string>2025-11-05</string>
-    </void>
-    <void property="description">
-     <string>aaa</string>
-    </void>
-    <void property="id">
-     <string>68807172-08b0-44b4-b66a-658bd815b821</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>approved</string>
-    </void>
-    <void property="time">
-     <string>10:10</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string>test</string>
-    </void>
-    <void property="date">
-     <string>2025-11-19</string>
-    </void>
-    <void property="description">
-     <string>treba ulje</string>
-    </void>
-    <void property="id">
-     <string>81a11eb4-9853-4175-9ff8-0cd825413cba</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>approved</string>
-    </void>
-    <void property="time">
-     <string>10:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string> </string>
-    </void>
-    <void property="date">
-     <string>2025-11-25</string>
-    </void>
-    <void property="description">
-     <string>popravka</string>
-    </void>
-    <void property="id">
-     <string>f734b860-61db-4d7a-a1fe-d31b891766df</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>pending</string>
-    </void>
-    <void property="time">
-     <string>15:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string> </string>
-    </void>
-    <void property="date">
-     <string>2026-11-21</string>
-    </void>
-    <void property="description">
-     <string>da</string>
-    </void>
-    <void property="id">
-     <string>42e16b8b-bcb4-4886-9623-457a6a988ca8</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>pending</string>
-    </void>
-    <void property="time">
-     <string>09:00</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string> </string>
-    </void>
-    <void property="date">
-     <string>2025-11-27</string>
-    </void>
-    <void property="description">
-     <string>da</string>
-    </void>
-    <void property="id">
-     <string>b549c533-005b-4118-9af3-588a16c7d125</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>pending</string>
-    </void>
-    <void property="time">
-     <string>09:14</string>
-    </void>
-    <void property="type">
-     <string>Service</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string>acacacac</string>
-    </void>
-    <void property="date">
-     <string>2025-12-19</string>
-    </void>
-    <void property="description">
-     <string>asdsadasdasdasd</string>
-    </void>
-    <void property="id">
-     <string>024f0dde-76b2-4301-9997-42fb7d1d09f1</string>
-    </void>
-    <void property="ownerUsername">
-     <string>k1</string>
-    </void>
-    <void property="status">
-     <string>pending</string>
-    </void>
-    <void property="time">
-     <string>11:07</string>
-    </void>
-    <void property="type">
-     <string>Repair</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="net.etfbl.mdp.model.Appointment">
-    <void property="comment">
-     <string>Uradicemo</string>
+     <string>Dovezite automobil u zakazano vrijeme</string>
     </void>
     <void property="date">
      <string>2025-12-25</string>
     </void>
     <void property="description">
-     <string>Treba da odradite redovni mali servis na automobilu.</string>
+     <string>Treba mi redovni mali servis</string>
     </void>
     <void property="id">
-     <string>4eeab34e-0bc7-4621-b6f8-4286dd0ba71c</string>
+     <string>2be7680b-2f38-4d71-87cf-6416c61d162e</string>
     </void>
     <void property="ownerUsername">
      <string>borvas</string>
+    </void>
+    <void property="status">
+     <string>approved</string>
+    </void>
+    <void property="time">
+     <string>12:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>Zavrsili smo sve</string>
+    </void>
+    <void property="date">
+     <string>2026-01-25</string>
+    </void>
+    <void property="description">
+     <string>Potreban mi je mali servis na automobilu.</string>
+    </void>
+    <void property="id">
+     <string>26cdb926-3cb9-47a5-9846-a04f2f4b500f</string>
+    </void>
+    <void property="ownerUsername">
+     <string>test4</string>
     </void>
     <void property="status">
      <string>approved</string>

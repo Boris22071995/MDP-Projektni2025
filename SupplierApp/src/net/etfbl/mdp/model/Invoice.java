@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Invoice implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private String invoiceId;
 	private String supplierName;
 	private String partCode;
@@ -15,14 +15,15 @@ public class Invoice implements Serializable {
 	private double priceWithoutVAT;
 	private double totalWithVAT;
 	private LocalDateTime issueDate;
-	
+
 	public Invoice() {
-		
+
 	}
 
 	public Invoice(String supplierName, String partCode, String partTitle, double priceWithoutVAT, LocalDateTime time) {
 		super();
-		this.invoiceId = UUID.randomUUID().toString();;
+		this.invoiceId = UUID.randomUUID().toString();
+		;
 		this.supplierName = supplierName;
 		this.partCode = partCode;
 		this.partTitle = partTitle;
@@ -93,6 +94,5 @@ public class Invoice implements Serializable {
 				+ ", partTitle=" + partTitle + ", priceWithoutVAT=" + priceWithoutVAT + ", totalWithVAT=" + totalWithVAT
 				+ ", issueDate=" + issueDate + "]";
 	}
-	
 
 }

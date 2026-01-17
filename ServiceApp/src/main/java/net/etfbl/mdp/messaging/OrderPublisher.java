@@ -4,14 +4,14 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import net.etfbl.mdp.model.Order;
+import net.etfbl.mdp.util.AppLogger;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Logger;
 
 public class OrderPublisher {
-	
-	private static final String QUEUE_NAME = "orders_queue";
-	
+	 private static final Logger log = AppLogger.getLogger();
 	 public static void sendOrder(Order order, String queueName, int quantity) {
 	        try {
 	            ConnectionFactory factory = new ConnectionFactory();
@@ -31,12 +31,11 @@ public class OrderPublisher {
 
 	                byte[] data = baos.toByteArray();
 	                channel.basicPublish("", queueName, null, data);
-	                System.out.println("[ServiceApp] Sent order: " + order);
 	                channel.close();
 	            }
 	        } catch (Exception e) {
+	        	log.severe("Order cannot be sent.");
 	            e.printStackTrace();
 	        }
 	    }
-
 }
