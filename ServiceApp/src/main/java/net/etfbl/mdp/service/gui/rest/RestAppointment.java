@@ -2,6 +2,7 @@ package net.etfbl.mdp.service.gui.rest;
 
 import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class RestAppointment {
-	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/appointments";
+	private static final String BASE_URL = ConfigurationLoader.getString("appointments.url");
 	private static final Logger log = AppLogger.getLogger();
 
 	public List<Appointment> getAllAppointments() {
@@ -26,7 +27,7 @@ public class RestAppointment {
 			conn.setRequestProperty("Accept", "application/json");
 
 			if (conn.getResponseCode() != 200) {
-				System.out.println("Error with GET method: " + conn.getResponseCode());
+				log.warning("Error while retriving appointments");
 				return appointments;
 			}
 

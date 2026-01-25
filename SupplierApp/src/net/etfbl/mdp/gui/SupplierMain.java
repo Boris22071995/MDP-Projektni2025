@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,6 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import net.etfbl.mdp.model.Supplier;
+import net.etfbl.mdp.server.SupplierServer;
+import net.etfbl.mdp.util.AppLogger;
 
 public class SupplierMain extends JFrame{
 
@@ -22,10 +25,11 @@ public class SupplierMain extends JFrame{
 	
 	private CardLayout cardLayout;
     private JPanel cardPanel;
+    private static final Logger log = AppLogger.getLogger();
    
     private static final String COUNTER_FILE = "supplier_counter.txt";
     private Supplier supplier;
-    
+    private  OrderQueuePanel orderQueuePanel;
     
     public SupplierMain() {    	
     	
@@ -34,14 +38,14 @@ public class SupplierMain extends JFrame{
          String name = "Supplier" + instanceNumber;
          String port = String.valueOf(5000 + instanceNumber);
          supplier = new Supplier(name, port, instanceNumber);
-    	
+        
         setTitle("Supplier: " + name + " - Control Panel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);
 
         setLayout(new BorderLayout());
-
+        
         JPanel navPanel = new JPanel();
         JButton btnParts = new JButton("Manage Parts");
         JButton btnOrders = new JButton("Order Queue");
@@ -53,12 +57,16 @@ public class SupplierMain extends JFrame{
         cardPanel = new JPanel(cardLayout);
 
         cardPanel.add(new PartsPanel(supplier), "parts");
-        cardPanel.add(new OrderQueuePanel(supplier.getName()), "orders");
+        orderQueuePanel = new OrderQueuePanel(supplier.getName());
+        cardPanel.add(orderQueuePanel, "orders");
 
         add(cardPanel, BorderLayout.CENTER);
 
         btnParts.addActionListener(e -> cardLayout.show(cardPanel, "parts"));
-        btnOrders.addActionListener(e -> cardLayout.show(cardPanel, "orders"));
+        btnOrders.addActionListener(e -> {
+            cardLayout.show(cardPanel, "orders");
+            orderQueuePanel.refreshOrders();
+        });
         
        
     }
@@ -81,6 +89,7 @@ public class SupplierMain extends JFrame{
                 writer.write(String.valueOf(counter));
             }
         } catch (IOException | NumberFormatException e) {
+        	log.severe("Error while login in supplier");
             e.printStackTrace();
             counter = 1;
         }

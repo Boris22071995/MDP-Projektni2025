@@ -8,6 +8,7 @@ import javax.net.ssl.SSLSocket;
 
 import net.etfbl.mdp.service.securechat.storage.OfflineMessageStorage;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,9 +21,9 @@ import java.util.logging.Logger;
 
 public class SSLChatServer implements Runnable {
 
-	private static final int PORT = 9443;
-	private static String KEY_STORE_PATH = "./keystore.jks";
-	private static final String KEY_STORE_PASSWORD = "servis123";
+	private static final int PORT = ConfigurationLoader.getInt("ssl.port");
+	private static String KEY_STORE_PATH = ConfigurationLoader.getString("keystore.path");
+	private static final String KEY_STORE_PASSWORD = ConfigurationLoader.getString("keystore.password");
 	private static final Set<SSLClientHandler> clients = new HashSet<>();
 	private static Map<String, SSLClientHandler> onlineUsers = new HashMap<>();
 	private static Map<String, Set<SSLClientHandler>> groups = new HashMap<>();

@@ -1,0 +1,15 @@
+===== SERVICE INVOICE =====
+
+Client: borvas
+Service type: Service
+Date: 2026-01-31
+Time: 09:00
+
+----- Used parts -----
+PA382 | 95.4 KM
+PA383 | 104.9 KM
+
+----------------------
+TOTAL: 200.30 KM
+
+Thank you for using our service.

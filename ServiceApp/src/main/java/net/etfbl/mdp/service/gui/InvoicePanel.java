@@ -9,6 +9,7 @@ import net.etfbl.mdp.model.Part;
 import net.etfbl.mdp.service.RedisPartService;
 import net.etfbl.mdp.service.repository.ClientRepository;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 import net.etfbl.mdp.util.EmailSender;
 
 import java.awt.*;
@@ -104,9 +105,8 @@ public class InvoicePanel extends JPanel {
 	private void sendInvoiceEmail() {
 		String clientName = appointment.getOwnerUsername();
 		Client c = clientRepo.findByUsername(clientName);
-		System.out.println(c.getEmail());
 		try {
-			EmailSender.sendZip("mdpService2025@gmail.com", "xorw ssob hcha mdhh", c.getEmail(),
+			EmailSender.sendZip(ConfigurationLoader.getString("mail.sender"), ConfigurationLoader.getString("mail.password"), c.getEmail(),
 					"Service invoice", "Dear customer,\n\nYour service invoice is attached.\n\nRegards.",
 					zipFileForSend);
 
@@ -182,7 +182,7 @@ public class InvoicePanel extends JPanel {
 		}
 
 		try {
-			String fileName = buildFileName();
+			String fileName = ConfigurationLoader.getString("invoices.location") + buildFileName();
 			File txtFile = new File(fileName);
 
 			writeInvoiceToFile(txtFile);
@@ -200,8 +200,12 @@ public class InvoicePanel extends JPanel {
 
 	private File zipInvoice(File txtFile) throws IOException {
 		String zipName = txtFile.getName().replace(".txt", ".zip");
-		File zipFile = new File(zipName);
+		
+		File parentDir = txtFile.getParentFile();
+		File zipFile = new File(parentDir, zipName);
 
+		
+		
 		try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFile));
 			FileInputStream fis = new FileInputStream(txtFile)) {
 
@@ -256,7 +260,7 @@ public class InvoicePanel extends JPanel {
 			double total = 0;
 
 			for (Part p : invoiceItems) {
-				writer.write(p.getName() + " | " + p.getPrice() + " KM");
+				writer.write(p.getId() + " | " + p.getPrice() + " KM");
 				writer.newLine();
 				total += p.getPrice();
 			}

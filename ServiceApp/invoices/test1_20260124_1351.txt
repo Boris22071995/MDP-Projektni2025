@@ -1,0 +1,15 @@
+===== SERVICE INVOICE =====
+
+Client: test1
+Service type: Repair
+Date: 2026-02-01
+Time: 12:00
+
+----- Used parts -----
+PA382 | 95.4 KM
+PA382 | 95.4 KM
+
+----------------------
+TOTAL: 190.80 KM
+
+Thank you for using our service.

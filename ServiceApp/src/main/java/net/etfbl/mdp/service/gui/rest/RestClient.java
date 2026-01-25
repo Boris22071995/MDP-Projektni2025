@@ -2,6 +2,7 @@ package net.etfbl.mdp.service.gui.rest;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -15,7 +16,7 @@ import java.util.logging.Logger;
 
 public class RestClient {
 
-	private static final String BASE_URL = "http://localhost:8080/ServiceApp/api/clients";
+	private static final String BASE_URL = ConfigurationLoader.getString("clients.url");
 	private static final Logger log = AppLogger.getLogger();
 	public List<Client> getAllClients() {
 		List<Client> clients = new ArrayList<>();

@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 import net.etfbl.mdp.model.Part;
 import net.etfbl.mdp.service.RedisPartService;
+import net.etfbl.mdp.service.gui.rest.RestParts;
 import net.etfbl.mdp.util.AppLogger;
 
 public class PartsPanel extends JPanel {
@@ -20,26 +21,28 @@ public class PartsPanel extends JPanel {
 	private JTable table;
 	private DefaultTableModel model;
 	private RedisPartService service;
+	private RestParts restParts;
 
 	public PartsPanel(RedisPartService service) {
+		restParts = new RestParts();
 		this.service = service;
 		setLayout(new BorderLayout());
 		setBorder(BorderFactory.createTitledBorder("Parts"));
 
 		model = new DefaultTableModel(new Object[] { "Id", "Name", "Manufacturer", "Price", "Quantity", "Description" },
 				0);
-		table = new JTable(model){
+		table = new JTable(model) {
 			private static final long serialVersionUID = 1L;
-			
+
 			@Override
 			public String getToolTipText(MouseEvent e) {
 				Point p = e.getPoint();
 				int row = rowAtPoint(p);
 				int col = columnAtPoint(p);
-				
-				if(row >=0 && col >=0) {
+
+				if (row >= 0 && col >= 0) {
 					Object value = getValueAt(row, col);
-					if(value != null) {
+					if (value != null) {
 						return value.toString();
 					}
 				}
@@ -78,12 +81,14 @@ public class PartsPanel extends JPanel {
 
 	private void loadParts() {
 		model.setRowCount(0);
-		List<Part> parts = service.getAllParts();
-		for (Part p : parts) {
-			model.addRow(new Object[] { p.getId(), p.getName(), p.getManufacturer(), p.getPrice(), p.getQuantity(),
-					p.getDescription() });
+		List<Part> parts = restParts.getAllParts();
+
+		if (parts != null) {
+			for (Part p : parts) {
+				model.addRow(new Object[] { p.getId(), p.getName(), p.getManufacturer(), p.getPrice(), p.getQuantity(),
+						p.getDescription() });
+			}
 		}
-		log.info("Parts are loaded.");
 	}
 
 	private void addPart() {
@@ -100,8 +105,7 @@ public class PartsPanel extends JPanel {
 		if (result == JOptionPane.OK_OPTION) {
 			Part p = new Part(UUID.randomUUID().toString().substring(0, 8), name.getText(), manu.getText(),
 					Double.parseDouble(price.getText()), Integer.parseInt(qty.getText()), desc.getText());
-			service.addPart(p);
-			log.info("Part added to database.");
+			restParts.addPart(p);
 			loadParts();
 		}
 	}
@@ -127,7 +131,7 @@ public class PartsPanel extends JPanel {
 		if (result == JOptionPane.OK_OPTION) {
 			Part p = new Part(id, name.getText(), manu.getText(), Double.parseDouble(price.getText()),
 					Integer.parseInt(qty.getText()), desc.getText());
-			service.updatePart(p);
+			restParts.updatePart(p);
 			log.info("Part is changed.");
 			loadParts();
 		}
@@ -144,7 +148,7 @@ public class PartsPanel extends JPanel {
 		int conf = JOptionPane.showConfirmDialog(this, "Delete part " + id + "?", "Confirm", JOptionPane.YES_NO_OPTION);
 		if (conf == JOptionPane.YES_OPTION) {
 			log.info("Part is deleted.");
-			service.deletePart(id);
+			restParts.deletePart(id);
 			loadParts();
 		}
 	}

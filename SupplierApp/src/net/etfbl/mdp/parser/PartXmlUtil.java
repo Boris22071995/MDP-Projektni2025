@@ -8,11 +8,14 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import net.etfbl.mdp.model.Part;
+import net.etfbl.mdp.util.AppLogger;
 
 public class PartXmlUtil {
 
+	private static final Logger log = AppLogger.getLogger();
 	public static void savePartsToXml(String supplierName, List<Part> parts) throws Exception {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
@@ -71,6 +74,7 @@ public class PartXmlUtil {
 			try {
 				price = Double.parseDouble(priceStr);
 			} catch (Exception ignored) {
+				log.severe("Error while reading parts from site");
 			}
 			String img = Part.decode(pe.getElementsByTagName("image").item(0).getTextContent());
 			parts.add(new Part(code, title, price, img));

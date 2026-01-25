@@ -322,3 +322,61 @@ Jan 17, 2026 9:23:20 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
 INFO: Reservation history loaded.
 Jan 17, 2026 9:23:22 PM net.etfbl.mdp.gui.MainFrame logout
 INFO: User: test4 loged out.
+Jan 23, 2026 6:32:28 PM net.etfbl.mdp.gui.LoginFrame login
+INFO: User borvas successfully logged in.
+Jan 23, 2026 6:32:28 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
+INFO: Reservation history loaded.
+Jan 23, 2026 6:34:05 PM net.etfbl.mdp.gui.ChatSecurePanel <init>
+INFO: User: borvas connected to secure chat.
+Jan 23, 2026 6:34:20 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 23, 2026 6:34:20 PM net.etfbl.mdp.gui.ChatSecurePanel sendMessage
+INFO: Message sent to: test1
+Jan 23, 2026 6:34:34 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 23, 2026 6:34:34 PM net.etfbl.mdp.gui.ChatSecurePanel createGroup
+INFO: Group is created: SVI
+Jan 23, 2026 6:34:37 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 23, 2026 6:34:37 PM net.etfbl.mdp.gui.ChatSecurePanel addUserToGroup
+INFO: borvas added test1 to a group SVI.
+Jan 23, 2026 6:34:40 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 23, 2026 6:34:40 PM net.etfbl.mdp.gui.ChatSecurePanel addUserToGroup
+INFO: borvas added test2 to a group SVI.
+Jan 23, 2026 6:34:47 PM net.etfbl.mdp.securechat.SSLChatClient sendMessageMulticast
+INFO: Multicast message sent to group SVI
+Jan 23, 2026 6:34:47 PM net.etfbl.mdp.gui.ChatSecurePanel sendGroupMessage
+INFO: Message sent to group: SVI
+Jan 23, 2026 6:35:30 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 23, 2026 6:35:30 PM net.etfbl.mdp.gui.ChatSecurePanel sendMessage
+INFO: Message sent to: test3
+Jan 25, 2026 3:36:02 PM net.etfbl.mdp.gui.LoginFrame login
+INFO: User borvas successfully logged in.
+Jan 25, 2026 3:36:02 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
+INFO: Reservation history loaded.
+Jan 25, 2026 3:38:08 PM net.etfbl.mdp.gui.ReservationPanel saveAppointment
+INFO: Appointment successfullu scheduled.
+Jan 25, 2026 3:38:14 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
+INFO: Reservation history loaded.
+Jan 25, 2026 3:38:35 PM net.etfbl.mdp.gui.ChatSecurePanel <init>
+INFO: User: borvas connected to secure chat.
+Jan 25, 2026 3:38:52 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 25, 2026 3:38:52 PM net.etfbl.mdp.gui.ChatSecurePanel sendMessage
+INFO: Message sent to: test2
+Jan 25, 2026 3:39:35 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 25, 2026 3:39:35 PM net.etfbl.mdp.gui.ChatSecurePanel sendMessage
+INFO: Message sent to: test2
+Jan 25, 2026 3:40:10 PM net.etfbl.mdp.securechat.SSLChatClient sendMessage
+INFO: Message sent.
+Jan 25, 2026 3:40:10 PM net.etfbl.mdp.gui.ChatSecurePanel sendMessage
+INFO: borvas sent to service: Dobar vam dan zelim time:15:40
+Jan 25, 2026 3:41:19 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
+INFO: Reservation history loaded.
+Jan 25, 2026 3:42:33 PM net.etfbl.mdp.gui.HistoryPanel loadHistory
+INFO: Reservation history loaded.
+Jan 25, 2026 3:47:30 PM net.etfbl.mdp.securechat.SSLChatClient lambda$0
+SEVERE: java.net.SocketException: Connection reset

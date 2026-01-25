@@ -11,13 +11,15 @@ import java.util.logging.Logger;
 
 import net.etfbl.mdp.model.Client;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import java.beans.XMLEncoder;
 import java.beans.XMLDecoder;
 
 public class ClientRepository {
 
-	private static final String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\clients.xml";
+	private static String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\clients.xml";
+	//private static String FILE_PATH = "database/clients.xml";
 	private static final Logger log = AppLogger.getLogger();
 
 	@SuppressWarnings("unchecked")

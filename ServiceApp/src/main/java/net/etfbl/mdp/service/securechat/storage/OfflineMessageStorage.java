@@ -3,6 +3,7 @@ package net.etfbl.mdp.service.securechat.storage;
 import org.w3c.dom.*;
 
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
@@ -13,7 +14,7 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class OfflineMessageStorage {
-	private static final String FILE_NAME = "offlineMessages.xml";
+	private static final String FILE_NAME = ConfigurationLoader.getString("message.storage");
 	private static final Logger log = AppLogger.getLogger();
 
 	public static synchronized void saveMessage(String toUser, String fromUser, String message) {

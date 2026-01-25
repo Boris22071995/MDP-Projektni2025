@@ -44,11 +44,12 @@ public class AppointmentController {
 	@Path("/create")
 	public Response create(Appointment a) {
 		if (a == null || a.getOwnerUsername() == null) {
-			log.info("Appointment created.");
+			log.severe("Error while creating appointment.");
+			
 			return Response.status(Response.Status.BAD_REQUEST).entity("{\"message\":\"invalid\"}").build();
 		}
 		Appointment created = service.create(a);
-		log.severe("Error while creating appointment.");
+		log.info("Appointment created.");
 		return Response.status(Response.Status.CREATED).entity(created).build();
 	}
 

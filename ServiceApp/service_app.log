@@ -324,3 +324,2389 @@ Jan 17, 2026 9:56:56 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
 INFO: Invoice is generated successfully
 Jan 17, 2026 9:57:03 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
 SEVERE: Error while sending email.
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:19:10 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:19:23 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:19:23 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 6:19:23 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 6:19:37 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 6:19:37 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 6:19:37 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 6:19:37 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 6:19:44 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 6:19:55 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 23, 2026 6:20:05 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:20:05 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 6:20:05 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:26:32 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:26:52 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:26:52 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 6:26:52 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 6:27:03 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 6:27:03 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 6:27:03 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 6:27:03 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 6:27:31 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 6:27:37 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:31:25 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:36:59 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:36:59 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:37:07 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:37:07 PM net.etfbl.mdp.service.gui.AppointmentPanel approveAppointment
+INFO: Appointment is approved.
+Jan 23, 2026 6:37:08 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:37:08 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:37:13 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:37:21 PM net.etfbl.mdp.service.gui.rest.RestAppointment addComment
+INFO: Commented added successfully.
+Jan 23, 2026 6:37:21 PM net.etfbl.mdp.service.gui.AppointmentPanel addComment
+INFO: Commented is added.
+Jan 23, 2026 6:37:22 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:37:22 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:37:31 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:37:31 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:37:32 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:37:36 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:38:41 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:38:48 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:38:56 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:40:04 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 6:40:10 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 6:41:59 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:42:10 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 23, 2026 6:42:12 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 23, 2026 6:42:13 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 23, 2026 6:42:15 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:51:46 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:52:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:52:43 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel lambda$5
+SEVERE: Failed to connect to URL
+Jan 23, 2026 6:52:43 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel lambda$7
+SEVERE: Failed to load image.
+Jan 23, 2026 6:52:56 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 6:53:29 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 6:54:45 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier1 added to database.
+Jan 23, 2026 6:54:45 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 23, 2026 6:55:43 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:55:48 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 6:55:55 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 6:57:17 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 6:58:29 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 6:58:33 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+SEVERE: Error while retriving clients.
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+SEVERE: Error while loading appointments
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 7:04:47 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:05:43 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:05:43 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 7:05:43 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:05:44 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 7:05:44 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 7:05:44 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:06:25 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 7:06:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 7:14:53 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:14:59 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 7:15:04 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 7:25:24 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:25:24 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 7:25:24 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:25:25 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 7:25:25 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 7:25:25 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:25:31 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 7:25:35 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 7:39:40 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 7:39:47 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 7:39:55 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 7:40:25 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 23, 2026 7:40:30 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 7:40:51 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 23, 2026 8:47:28 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:47:28 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 8:47:29 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:47:29 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:47:29 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 8:47:29 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 8:47:42 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:47:42 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:47:42 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 8:47:46 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 8:47:46 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 8:47:46 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:47:46 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 8:47:52 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 8:47:53 PM net.etfbl.mdp.util.ConfigurationLoader <clinit>
+SEVERE: Cannot load configuration properties
+Jan 23, 2026 8:51:46 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier1 added to database.
+Jan 23, 2026 8:51:46 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier1 updated.
+Jan 23, 2026 8:51:46 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:51:46 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 8:51:50 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 8:53:47 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:53:47 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 8:53:47 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:53:48 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:53:48 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 8:53:48 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 8:53:53 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:53:53 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:53:53 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 8:53:56 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 8:53:56 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 8:53:56 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:53:56 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 8:54:00 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 8:55:22 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:55:22 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 8:55:22 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:55:22 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:55:22 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 8:55:23 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 8:55:35 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:55:35 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:55:35 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 8:55:38 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 8:55:38 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 8:55:38 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:55:38 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 8:55:42 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 8:55:59 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 23, 2026 8:58:45 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:58:45 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 8:58:45 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 8:58:48 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:58:48 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 8:58:48 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 8:58:57 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 8:58:57 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:58:57 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 23, 2026 8:59:28 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 23, 2026 8:59:28 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 23, 2026 8:59:28 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 23, 2026 8:59:28 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 23, 2026 8:59:31 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 23, 2026 8:59:41 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 23, 2026 9:39:44 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:39:44 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:39:44 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:39:44 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:39:44 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:42:29 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:42:30 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:43:36 PM net.etfbl.mdp.service.securechat.SSLChatServer run
+SEVERE: Error with messaging
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:45:02 PM net.etfbl.mdp.service.securechat.SSLChatServer run
+SEVERE: Error with messaging
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:48:11 PM net.etfbl.mdp.service.securechat.SSLChatServer run
+SEVERE: Error with messaging
+Jan 23, 2026 9:49:04 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:49:04 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:49:04 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:49:04 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:49:04 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+SEVERE: Error while retriving clients.
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+SEVERE: Error while loading appointments
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:50:50 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:51:32 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:54:16 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:56:02 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:56:02 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:56:02 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 9:56:02 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:56:02 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:56:45 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:56:45 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:56:45 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 9:56:45 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:56:45 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:56:58 PM net.etfbl.mdp.service.gui.ChatServerPanel sendMessage
+INFO: Message from service is sent.
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:58:18 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 9:59:50 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:01:04 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:03:25 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:03:25 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:03:25 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 10:03:25 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:03:25 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:05:53 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+WARNING: Error while retriving appointments
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:10:40 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:12:33 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:12:33 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:12:33 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:12:34 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:12:34 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:12:34 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:15:25 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:15:25 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:15:25 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:15:26 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:15:26 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:15:26 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:15:35 PM net.etfbl.mdp.service.gui.rest.RestClient sendPutRequest
+INFO: Client is updated.
+Jan 23, 2026 10:15:35 PM net.etfbl.mdp.service.gui.ClientPanel blockClient
+INFO: Client is unblocked
+Jan 23, 2026 10:15:36 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:15:36 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:17:17 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:17:40 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:20:07 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:20:07 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:20:07 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:20:07 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:20:08 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:26:41 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:26:41 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:26:42 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:26:42 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:26:42 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:28:04 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:28:04 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:28:05 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:28:05 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:28:05 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:29:50 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:29:50 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:29:50 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:29:50 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:29:50 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:29:51 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:33:29 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:33:29 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:33:29 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:33:30 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:33:30 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:33:30 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:37:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:37:40 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:37:40 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:37:41 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:37:41 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:37:41 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:37:49 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:37:49 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:40:24 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:42:01 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 23, 2026 10:54:07 PM net.etfbl.mdp.service.gui.PartsPanel loadParts
+INFO: Parts are loaded.
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 10:37:45 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+WARNING: Error while retriving parts from database
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 10:38:47 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:38:54 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 10:55:44 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:32 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:34 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:36 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:40 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:48 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:49 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:49 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:56:49 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 10:59:42 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 10:59:57 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:01:58 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:02:19 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:04:25 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:04:25 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:04:25 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:04:26 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:04:26 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:04:26 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:05:32 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:05:48 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:09:22 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:09:37 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:13:05 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:13:25 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:43:02 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:43:02 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:43:02 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:43:02 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:43:02 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:43:03 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:43:28 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:44:33 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:44:33 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:44:33 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:44:34 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:44:34 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:44:34 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:45:00 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:52:06 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:52:06 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:52:06 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:52:07 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:52:07 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:52:07 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:52:18 AM net.etfbl.mdp.service.gui.PartsPanel editPart
+INFO: Part is changed.
+Jan 24, 2026 11:52:18 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:52:22 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:55:11 AM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:55:11 AM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 11:55:11 AM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 11:55:12 AM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 11:55:12 AM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 11:55:12 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 11:55:24 AM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:a added to database.
+Jan 24, 2026 11:55:24 AM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:a updated.
+Jan 24, 2026 11:55:24 AM net.etfbl.mdp.service.gui.PartsPanel editPart
+INFO: Part is changed.
+Jan 24, 2026 11:55:24 AM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:00:02 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:00:02 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:00:02 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:00:03 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:00:03 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:00:03 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:00:08 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:00:08 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:00:08 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:00:12 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:00:12 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:00:12 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:01:06 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:01:06 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:01:06 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:01:07 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:01:07 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:01:07 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:01:12 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:01:12 PM net.etfbl.mdp.service.RedisPartService deletePart
+INFO: Part deleted.
+Jan 24, 2026 12:01:12 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:01:16 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 12:01:16 PM net.etfbl.mdp.service.RedisPartService deletePart
+INFO: Part deleted.
+Jan 24, 2026 12:01:16 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:13:46 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:14:08 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+SEVERE: Error while loading parts from supplier.
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:15:15 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All appointments are retrived
+Jan 24, 2026 12:15:19 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:15:23 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:15:26 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:15:27 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:15:30 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:15:31 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+SEVERE: Error while retriving clients.
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+SEVERE: Error while loading appointments
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:28:46 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+SEVERE: Error while retriving parts
+Jan 24, 2026 12:29:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:29:40 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:29:40 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:29:41 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:29:41 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:29:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:29:48 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:30:20 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:30:20 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:30:20 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:30:21 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:30:21 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:30:21 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:30:25 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:30:55 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:30:55 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:30:55 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:30:56 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:30:56 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:30:56 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:31:06 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:32:19 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:32:28 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:35:58 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:36:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:39:56 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:40:03 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 12:41:51 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 12:41:58 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 1:47:48 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 1:47:49 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 1:47:49 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 1:47:49 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 1:47:49 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 1:47:49 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 1:48:20 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 1:48:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 1:48:29 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 24, 2026 1:49:22 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 24, 2026 1:49:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 24, 2026 1:50:55 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 1:50:55 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:50:55 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 24, 2026 1:51:04 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 24, 2026 1:51:04 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 24, 2026 1:51:04 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:51:04 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 24, 2026 1:51:11 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 24, 2026 1:51:11 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 24, 2026 1:51:11 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:51:11 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 24, 2026 1:51:15 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 24, 2026 1:51:24 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+SEVERE: Error while sending email.
+Jan 24, 2026 1:53:03 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 1:53:03 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:53:03 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 24, 2026 1:53:07 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 24, 2026 1:53:07 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 24, 2026 1:53:07 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:53:07 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 24, 2026 1:53:10 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 24, 2026 1:53:19 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+SEVERE: Error while sending email.
+Jan 24, 2026 1:54:48 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 1:54:48 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 1:54:48 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 1:54:48 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 1:54:48 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 1:54:49 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 1:54:57 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 1:54:57 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:54:57 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 24, 2026 1:55:01 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 24, 2026 1:55:01 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 24, 2026 1:55:01 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 24, 2026 1:55:01 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 24, 2026 1:55:04 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 24, 2026 1:55:14 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 2:37:29 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:37:47 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:37:57 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:37:57 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:37:58 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:38:00 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:40:25 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:40:25 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 2:40:25 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:40:26 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 2:40:26 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 2:40:26 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:40:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 2:43:09 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:43:30 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:43:38 PM net.etfbl.mdp.service.gui.PartsPanel editPart
+INFO: Part is changed.
+Jan 24, 2026 2:43:38 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:48:40 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:48:41 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 2:48:41 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:48:41 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 2:48:41 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 2:48:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:49:00 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:51:50 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:51:50 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 2:51:50 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 2:51:50 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 2:51:51 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 2:51:51 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:52:07 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:test added to database.
+Jan 24, 2026 2:52:07 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:52:15 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:test added to database.
+Jan 24, 2026 2:52:15 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:test updated.
+Jan 24, 2026 2:52:15 PM net.etfbl.mdp.service.gui.PartsPanel editPart
+INFO: Part is changed.
+Jan 24, 2026 2:52:15 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 2:52:19 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 2:52:19 PM net.etfbl.mdp.service.RedisPartService deletePart
+INFO: Part deleted.
+Jan 24, 2026 2:52:19 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:01:46 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:02:02 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:04:36 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:04:36 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:04:36 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:04:37 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:04:37 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:04:37 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:04:49 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:14:13 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:14:14 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:14:14 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:14:14 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:14:14 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:14:14 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:14:37 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:16:26 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:16:26 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:16:26 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:16:27 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:16:27 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:16:27 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:20:38 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:20:51 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:28 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:22:28 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:22:28 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:22:29 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:22:29 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:22:29 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:36 PM net.etfbl.mdp.service.gui.PartsPanel editPart
+INFO: Part is changed.
+Jan 24, 2026 3:22:36 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:41 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 24, 2026 3:22:41 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 24, 2026 3:22:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:43 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:22:44 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:28:13 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:28:13 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:28:13 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:28:13 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:28:13 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:28:14 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:28:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:34:11 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:34:20 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:37:57 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:38:03 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:42:16 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:42:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 24, 2026 3:48:55 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 24, 2026 3:49:00 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 24, 2026 3:49:01 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:35:16 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:35:16 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:35:16 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:35:17 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:35:17 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:35:17 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:37:11 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:37:11 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:37:14 PM net.etfbl.mdp.service.gui.ClientPanel approveClient
+INFO: Client is approved.
+Jan 25, 2026 3:37:14 PM net.etfbl.mdp.service.gui.rest.RestClient sendPutRequest
+INFO: Client is updated.
+Jan 25, 2026 3:37:14 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:37:14 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:37:17 PM net.etfbl.mdp.service.gui.rest.RestClient sendPutRequest
+INFO: Client is updated.
+Jan 25, 2026 3:37:17 PM net.etfbl.mdp.service.gui.ClientPanel blockClient
+INFO: Client is blocked.
+Jan 25, 2026 3:37:18 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:37:18 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:37:27 PM net.etfbl.mdp.service.gui.rest.RestClient sendPutRequest
+INFO: Client is updated.
+Jan 25, 2026 3:37:27 PM net.etfbl.mdp.service.gui.ClientPanel blockClient
+INFO: Client is unblocked
+Jan 25, 2026 3:37:28 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:37:28 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:39:26 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 25, 2026 3:40:02 PM net.etfbl.mdp.service.securechat.SSLClientHandler run
+SEVERE: Error with socket.
+Jan 25, 2026 3:40:20 PM net.etfbl.mdp.service.gui.ChatServerPanel sendMessage
+INFO: Message from service is sent.
+Jan 25, 2026 3:40:47 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:40:47 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:40:55 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:09 PM net.etfbl.mdp.service.gui.rest.RestAppointment addComment
+INFO: Commented added successfully.
+Jan 25, 2026 3:41:09 PM net.etfbl.mdp.service.gui.AppointmentPanel addComment
+INFO: Commented is added.
+Jan 25, 2026 3:41:10 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:10 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:41:13 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:13 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:41:23 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:23 PM net.etfbl.mdp.service.gui.AppointmentPanel approveAppointment
+INFO: Appointment is approved.
+Jan 25, 2026 3:41:24 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:24 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:41:26 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:41:26 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 25, 2026 3:41:26 PM net.etfbl.mdp.service.gui.InvoicePanel loadAppointment
+INFO: Appointments loaded.
+Jan 25, 2026 3:41:31 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 3:41:31 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 25, 2026 3:41:31 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 25, 2026 3:41:31 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 25, 2026 3:41:34 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 3:41:34 PM net.etfbl.mdp.service.RedisPartService updatePart
+INFO: Part:Supplier4 updated.
+Jan 25, 2026 3:41:34 PM net.etfbl.mdp.service.gui.InvoicePanel loadParts
+INFO: Parts are loaded
+Jan 25, 2026 3:41:34 PM net.etfbl.mdp.service.gui.InvoicePanel addPartToInvoice
+INFO: Part is added to invoice.
+Jan 25, 2026 3:41:37 PM net.etfbl.mdp.service.gui.InvoicePanel generateInvoice
+INFO: Invoice is generated successfully
+Jan 25, 2026 3:42:13 PM net.etfbl.mdp.service.gui.InvoicePanel sendInvoiceEmail
+INFO: Invoice is sent.
+Jan 25, 2026 3:44:33 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:44:34 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:44:44 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:44:58 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:45:42 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:45:44 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:45:49 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:45:59 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:46:00 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:46:05 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:46:33 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:34 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:36 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:39 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:39 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:46:47 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+SEVERE: Error while loading parts from supplier.
+Jan 25, 2026 3:47:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:47:19 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:20 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:20 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:21 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:21 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:21 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:47:27 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+WARNING: Selection of part is needed.
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:49:30 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:50:11 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:50:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:50:17 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:50:30 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:50:31 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:50:35 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:50:47 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:51:07 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 3:51:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 3:51:12 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:51:27 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:51:31 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:51:37 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:51:58 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:52:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:52:37 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:52:39 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:52:45 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:53:02 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:53:03 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:53:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:53:47 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 3:54:27 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:54:33 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:54:34 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:54:41 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:55:14 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:55:29 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:55:37 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:55:58 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:56:17 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:56:18 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:56:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:56:35 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 3:56:35 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 3:56:43 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:56:44 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:56:49 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:56:52 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 3:57:12 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:57:13 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:57:32 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:57:33 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:57:38 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:58:43 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:58:45 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:58:56 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 3:59:47 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:59:48 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 3:59:53 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:00:31 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:03:55 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:05:08 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:05:09 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:06:09 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:06:23 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:06:24 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:06:56 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:07:07 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:07:09 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:07:46 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:07:57 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:07:58 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:08:29 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:09:13 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 4:09:13 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:10:38 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:11:38 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+SEVERE: Error while loading parts from supplier.
+Jan 25, 2026 4:12:14 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:12:14 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:12:14 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:12:14 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:12:14 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:12:15 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:12:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+SEVERE: Error while loading parts from supplier.
+Jan 25, 2026 4:13:10 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+SEVERE: Error while retriving clients.
+Jan 25, 2026 4:13:10 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:13:10 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:13:11 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+SEVERE: Error while loading appointments
+Jan 25, 2026 4:13:11 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:13:11 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+SEVERE: Error while retriving parts
+Jan 25, 2026 4:13:41 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:13:41 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:13:41 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:13:42 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:13:42 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:13:42 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:17:12 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:14 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:17:31 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:37 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:17:45 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:46 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:17:51 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:17:58 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:18:00 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:18:04 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:18:54 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 4:18:54 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:22:54 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:22:54 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:22:54 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:22:55 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:22:55 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:22:55 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:22:59 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:22:59 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:04 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:23:07 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:09 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:23:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:23:23 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:24 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:28 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:23:32 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:23:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:28:06 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 4:28:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:32:25 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:32:25 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:32:25 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:32:26 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:32:26 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:32:26 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:34:27 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:34:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:34:37 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:35:33 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 4:35:33 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:36:38 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:38:17 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:38:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:38:27 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:39:08 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:39:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:39:19 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:39:50 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier1 added to database.
+Jan 25, 2026 4:39:50 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:42:15 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:42:15 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:42:15 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:42:16 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:42:16 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:42:16 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:43:19 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:43:24 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:43:34 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:49:27 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:49:27 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 4:49:27 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 4:49:27 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 4:49:27 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 4:49:28 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 4:50:04 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:50:05 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:50:11 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:50:20 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 4:50:20 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:50:42 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:50:52 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 4:50:52 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:51:24 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:51:26 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:51:50 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:53:11 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:53:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:53:25 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:53:36 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 4:53:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:54:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:54:21 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 4:54:21 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 4:54:27 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:54:29 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 4:55:00 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 4:56:21 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:00:31 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:01:59 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:02:09 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:02:17 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:03:12 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 5:03:12 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:04:02 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:04:07 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:04:13 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:07:32 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:07:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:07:42 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:08:39 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 5:08:39 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:09:28 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:09:54 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:10:00 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:11:40 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:22:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:23:15 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:23:17 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:23:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:23:40 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:23:41 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:23:53 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:24:02 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 5:24:02 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:25:24 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:26:28 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:26:29 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:26:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:27:50 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 5:27:50 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:27:58 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:27:59 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:28:04 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:32:23 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:33:16 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:33:17 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:33:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:33:39 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:33:40 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:34:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:37:33 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:37:33 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:37:33 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:37:34 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:37:34 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:37:34 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:38:17 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:38:18 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:38:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:38:31 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier2 added to database.
+Jan 25, 2026 5:38:31 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:38:38 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:38:41 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:38:45 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:40:54 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:41:25 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:41:31 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:41:32 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:41:39 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:42:07 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:42:08 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:42:11 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:42:20 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 5:42:20 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 5:56:25 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:56:26 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 5:56:26 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 5:56:26 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 5:56:26 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 5:56:26 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 5:57:07 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:57:08 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:57:14 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 5:57:35 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:57:36 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 5:57:41 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:00:22 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:00:23 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:00:38 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:00:46 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier1 added to database.
+Jan 25, 2026 6:00:46 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 6:01:16 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:01:17 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:01:22 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:02:06 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.gui.rest.RestClient getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.gui.ClientPanel loadClients
+INFO: Clients are loaded.
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.ClientService getAllClients
+INFO: Clients are retrived.
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.gui.rest.RestAppointment getAllAppointments
+INFO: All appointments are retrived.
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.gui.AppointmentPanel loadAppointments
+INFO: Appointments are loaded
+Jan 25, 2026 6:10:02 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:10:42 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:10:44 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:10:47 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:10:55 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier3 added to database.
+Jan 25, 2026 6:10:55 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 6:11:06 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:11:19 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:11:20 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:11:24 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:11:35 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 6:11:35 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 6:11:41 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:11:46 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:11:55 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:11:55 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:11:55 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:11:58 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:11:58 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:11:58 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:01 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:01 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:01 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:05 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:05 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:05 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:09 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:09 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:09 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:12 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:12 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:12 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:14 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:14 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:14 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:17 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:17 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:17 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:20 PM net.etfbl.mdp.service.gui.PartsPanel deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:20 PM net.etfbl.mdp.service.gui.rest.RestParts deletePart
+INFO: Part is deleted.
+Jan 25, 2026 6:12:20 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived
+Jan 25, 2026 6:12:24 PM net.etfbl.mdp.service.SupplierOrderService loadParts
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:12:26 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel loadPartsFromSupplier
+INFO: Parts from supplier are loaded.
+Jan 25, 2026 6:12:30 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel sendOrder
+INFO: Order to publisher is sent.
+Jan 25, 2026 6:12:38 PM net.etfbl.mdp.service.RedisPartService addPart
+INFO: Part:Supplier4 added to database.
+Jan 25, 2026 6:12:38 PM net.etfbl.mdp.service.gui.SupplierOrdersPanel checkStatus
+INFO: Status of order is approved.
+Jan 25, 2026 6:12:40 PM net.etfbl.mdp.service.gui.rest.RestParts getAllParts
+INFO: All parts are retrived

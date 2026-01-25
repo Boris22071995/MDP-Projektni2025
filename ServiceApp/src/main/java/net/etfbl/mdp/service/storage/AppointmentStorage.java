@@ -2,6 +2,7 @@ package net.etfbl.mdp.service.storage;
 
 import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class AppointmentStorage {
-	private static final String FILE = "appointments.json";
+	private static final String FILE = ConfigurationLoader.getString("appointment.storage");
 	private static final Logger log = AppLogger.getLogger();
 
 	public static synchronized List<Appointment> loadAll() {

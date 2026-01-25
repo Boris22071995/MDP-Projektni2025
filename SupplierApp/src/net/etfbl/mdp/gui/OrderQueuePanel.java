@@ -4,6 +4,9 @@ import net.etfbl.mdp.messaging.OrderConsumer;
 import net.etfbl.mdp.model.Invoice;
 import net.etfbl.mdp.model.Order;
 import net.etfbl.mdp.service.OrderQueueService;
+import net.etfbl.mdp.service.OrderStatusStore;
+import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -13,24 +16,29 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class OrderQueuePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	private static final Logger log = AppLogger.getLogger();
 	private JTable orderTable;
 	    private DefaultTableModel tableModel;
 	    private String queueName;
-	    private static HashMap<String, String> ordersMap = new HashMap<String, String>();
-
+	    private String supplierName;
+	   // private static HashMap<String, String> ordersMap = new HashMap<String, String>();
+	    
 	    public OrderQueuePanel(String supplier) {
+	    	
+	    	this.supplierName = supplier;
 	    	 if("Supplier1".equals(supplier)) {
-		        	queueName = "orders_queue1";
+		        	queueName = ConfigurationLoader.getString("mq1.name");
 		        }else if ("Supplier2".equals(supplier)) {
-		        	queueName = "orders_queue2";
+		        	queueName = ConfigurationLoader.getString("mq2.name");
 		        }else if("Supplier3".equals(supplier)) {
-		        	queueName = "orders_queue3";
+		        	queueName = ConfigurationLoader.getString("mq3.name");
 		        }else {
-		        	queueName = "orders_queue4";
+		        	queueName = ConfigurationLoader.getString("mq4.name");
 		        }
 	        setLayout(new BorderLayout());
 
@@ -54,7 +62,7 @@ public class OrderQueuePanel extends JPanel {
 				}
 			};
 
-	        refreshOrders();
+	       
 
 	        JButton approveBtn = new JButton("Approve");
 	        JButton rejectBtn = new JButton("Reject");
@@ -71,9 +79,10 @@ public class OrderQueuePanel extends JPanel {
 
 	        add(new JScrollPane(orderTable), BorderLayout.CENTER);
 	        add(buttonPanel, BorderLayout.SOUTH);
+	        refreshOrders();
 	    }
 
-	    private void refreshOrders() {
+	    public void refreshOrders() {
 	    	new Thread(new OrderConsumer(queueName)).start();
 	    	
 	        tableModel.setRowCount(0);
@@ -89,7 +98,8 @@ public class OrderQueuePanel extends JPanel {
 	                    o.getPrice(),
 	                    o.getTime().format(formatter)
 	            });
-	            ordersMap.put(o.getOrderId(), "PENDING");
+	           // ordersMap.put(o.getOrderId(), "PENDING");
+	            OrderStatusStore.put(o.getOrderId(), "PENDING");
 	        }
 	    }
 
@@ -113,9 +123,12 @@ public class OrderQueuePanel extends JPanel {
 	        Invoice invoice = new Invoice(supplierName, orderId, partTitle, price*quant, time);
 	        OrderQueueService.processOrder(invoice,approved);
 	        if(true == approved) {
-	        	ordersMap.put(orderId, "APPROVED");
+	        	log.info("Order approved");
+	        	//ordersMap.put(orderId, "APPROVED");
+	        	 OrderStatusStore.put(orderId, "APPROVED");
 	        }else {
-	        	ordersMap.put(orderId,"REJECTED");
+	        	log.info("Order rejected");
+	        	OrderStatusStore.put(orderId, "REJECTED");
 	        }
 	        refreshOrders();
 
@@ -123,7 +136,7 @@ public class OrderQueuePanel extends JPanel {
 	                approved ? "Order approved and invoice sent." : "Order rejected.");
 	    }
 	    
-	    public static HashMap<String,String> getOrderMap(){
-	    	return ordersMap;
-	    }
+//	    public static HashMap<String,String> getOrderMap(){
+//	    	return ordersMap;
+//	    }
 }

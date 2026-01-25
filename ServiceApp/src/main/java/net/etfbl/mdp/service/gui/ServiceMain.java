@@ -5,6 +5,7 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.io.InputStream;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,6 +16,7 @@ import javax.swing.UIManager;
 import net.etfbl.mdp.model.Appointment;
 import net.etfbl.mdp.service.RedisPartService;
 import net.etfbl.mdp.service.securechat.SSLChatServer;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 public class ServiceMain extends JFrame {
 
@@ -96,6 +98,10 @@ public class ServiceMain extends JFrame {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> new ServiceMain().setVisible(true));
+	     String FILE_PATH = ConfigurationLoader.getString("clients.filepath");
+		System.out.println(ConfigurationLoader.getString("clients.filepath"));
+		
+		
 	}
 
 }

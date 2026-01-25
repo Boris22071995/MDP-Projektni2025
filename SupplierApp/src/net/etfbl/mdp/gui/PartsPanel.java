@@ -5,6 +5,8 @@ import net.etfbl.mdp.model.Supplier;
 import net.etfbl.mdp.parser.PartScraper;
 import net.etfbl.mdp.parser.PartXmlUtil;
 import net.etfbl.mdp.server.SupplierServer;
+import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -15,10 +17,12 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PartsPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	private static final Logger log = AppLogger.getLogger();
 	
 	private JTable table;
 	private DefaultTableModel model;
@@ -75,7 +79,7 @@ public class PartsPanel extends JPanel {
 			try {
 				loadParts();
 			} catch (Exception e1) {
-				// TODO loger
+				log.severe("Error while loading parts");
 				e1.printStackTrace();
 			}
 		});
@@ -84,7 +88,7 @@ public class PartsPanel extends JPanel {
         try {
 			loadParts();
 		} catch (Exception e1) {
-			// TODO loger
+			log.severe("Error while loading parts");
 			e1.printStackTrace();
 		}
     }
@@ -103,49 +107,49 @@ public class PartsPanel extends JPanel {
         List<Part> list = new ArrayList<>();
         try {
         	if(supplier.getInstanceNumber() == 1) {
-    			List<Part> list2 = PartScraper.fetchParts("https://www.autohub.ba/ts/senzor-temperature-rashladne-tecnosti-2/bmw-3-e21-3206-90kw?q=");
-    			List<Part> list3 = PartScraper.fetchParts("https://www.autohub.ba/ts/alternator/vw-golf-vi-5k1-14-tsi-90kw?q=");
-    			List<Part> list4 = PartScraper.fetchParts("https://www.autohub.ba/ts/set-kvacila/vw-golf-vii-variant-ba5-bv5-14-tgi-cng-81kw?q=");
-    			List<Part> list5 = PartScraper.fetchParts("https://www.autohub.ba/ts/senzor-radilice-2/vw-golf-v-variant-1k5-14-tsi-90kw?q=");
+    			List<Part> list2 = PartScraper.fetchParts(ConfigurationLoader.getString("linkones1.link"));
+    			List<Part> list3 = PartScraper.fetchParts(ConfigurationLoader.getString("linktwos1.link"));
+    			List<Part> list4 = PartScraper.fetchParts(ConfigurationLoader.getString("linkthrees1.link"));
+    			List<Part> list5 = PartScraper.fetchParts(ConfigurationLoader.getString("linkfours1.link"));
     			list.addAll(list2);
     			list.addAll(list3);
     			list.addAll(list4);
     			list.addAll(list5);
-    			PartXmlUtil.savePartsToXml(supplier.getName(), list2);
+    			PartXmlUtil.savePartsToXml(supplier.getName(), list);
         	}else if(supplier.getInstanceNumber() == 2) {
-        		List<Part> list2 = PartScraper.fetchParts("https://www.autohub.ba/ts/nosac-motora-2/bmw-3-e21-3206-90kw?q=");
-        		List<Part> list3 = PartScraper.fetchParts("https://www.autohub.ba/ts/starter/vw-golf-vi-5k1-14-tsi-90kw?q=");
-        		List<Part> list4 = PartScraper.fetchParts("https://www.autohub.ba/ts/glavni-cilindar-kvacila/vw-golf-vii-variant-ba5-bv5-14-tgi-cng-81kw?q=");
-        		List<Part> list5 = PartScraper.fetchParts("https://www.autohub.ba/ts/oktanski-senzor-3/vw-golf-v-variant-1k5-14-tsi-90kw?q=");
+        		List<Part> list2 = PartScraper.fetchParts(ConfigurationLoader.getString("linkones2.link"));
+        		List<Part> list3 = PartScraper.fetchParts(ConfigurationLoader.getString("linktwos2.link"));
+        		List<Part> list4 = PartScraper.fetchParts(ConfigurationLoader.getString("linkthrees2.link"));
+        		List<Part> list5 = PartScraper.fetchParts(ConfigurationLoader.getString("linkfours2.link"));
         		list.addAll(list2);
     			list.addAll(list3);
     			list.addAll(list4);
     			list.addAll(list5);
-    			PartXmlUtil.savePartsToXml(supplier.getName(), list2);
+    			PartXmlUtil.savePartsToXml(supplier.getName(), list);
         	}else if(supplier.getInstanceNumber() == 3) {
-        		List<Part> list2 = PartScraper.fetchParts("https://www.autohub.ba/ts/filter-vazduha-2/bmw-3-e21-3206-90kw?q=");
-        		List<Part> list3 = PartScraper.fetchParts("https://www.autohub.ba/ts/akumulator/all?q=");
-        		List<Part> list4 = PartScraper.fetchParts("https://www.autohub.ba/ts/pomocni-cilindar-kvacila/vw-golf-vii-variant-ba5-bv5-14-tgi-cng-81kw?q=");
-        		List<Part> list5 = PartScraper.fetchParts("https://www.autohub.ba/ts/senzor-bregaste-osovine-2/vw-golf-v-variant-1k5-14-tsi-90kw?q=");
+        		List<Part> list2 = PartScraper.fetchParts(ConfigurationLoader.getString("linkones3.link"));
+        		List<Part> list3 = PartScraper.fetchParts(ConfigurationLoader.getString("linktwos3.link"));
+        		List<Part> list4 = PartScraper.fetchParts(ConfigurationLoader.getString("linkthrees3.link"));
+        		List<Part> list5 = PartScraper.fetchParts(ConfigurationLoader.getString("linkfours3.link"));
         		list.addAll(list2);
     			list.addAll(list3);
     			list.addAll(list4);
     			list.addAll(list5);
-    			PartXmlUtil.savePartsToXml(supplier.getName(), list2);
+    			PartXmlUtil.savePartsToXml(supplier.getName(), list);
         	}else {
-        		List<Part> list2 = PartScraper.fetchParts("https://www.autohub.ba/ts/pumpa-za-vodu-2/bmw-3-e21-3206-90kw?q=");
-        		List<Part> list3 = PartScraper.fetchParts("https://www.autohub.ba/ts/lambda-sonda-3/vw-golf-vi-5k1-14-tsi-90kw?q=");
-        		List<Part> list4 = PartScraper.fetchParts("https://www.autohub.ba/ts/svecica/vw-golf-v-variant-1k5-14-tsi-90kw?q=");
-        		List<Part> list5 = PartScraper.fetchParts("https://www.autohub.ba/ts/relej-grejaca/all?q=");
+        		List<Part> list2 = PartScraper.fetchParts(ConfigurationLoader.getString("linkones4.link"));
+        		List<Part> list3 = PartScraper.fetchParts(ConfigurationLoader.getString("linktwos4.link"));
+        		List<Part> list4 = PartScraper.fetchParts(ConfigurationLoader.getString("linkthrees4.link"));
+        		List<Part> list5 = PartScraper.fetchParts(ConfigurationLoader.getString("linkfours4.link"));
         		list.addAll(list2);
     			list.addAll(list3);
     			list.addAll(list4);
     			list.addAll(list5);
-    			PartXmlUtil.savePartsToXml(supplier.getName(), list2);
+    			PartXmlUtil.savePartsToXml(supplier.getName(), list);
         	}
         	
 		} catch (IOException e) {
-			// TODO loger
+			log.severe("Error while loading parts");
 			e.printStackTrace();
 		}
         

@@ -1,6 +1,7 @@
 package net.etfbl.mdp.parser;
 
 import net.etfbl.mdp.model.Part;
+import net.etfbl.mdp.util.AppLogger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,9 +11,10 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PartScraper {
-
+	private static final Logger log = AppLogger.getLogger();
 	public static List<Part> fetchParts(String url) throws IOException {
 
 		Document doc = Jsoup.connect(url).userAgent(
@@ -40,7 +42,6 @@ public class PartScraper {
 			double price = 0.0;
 			try {
 				if ("Cijena na poziv".equals(productPrice)) {
-					// TODO math random
 					price = 25.00;
 				} else if (productPrice.contains(" ")) {
 					String[] prices = productPrice.split(" ");
@@ -51,11 +52,12 @@ public class PartScraper {
 					price = Double.parseDouble(productPrice);
 				}
 			} catch (Exception e) {
+				log.severe("Error while loading parts from site");
 				e.printStackTrace();
 			}
 
 			String image = product.select("img").attr("src");
-
+			log.info("Parts are retrived from site");
 			parts.add(new Part(code, title, price, image));
 
 		}

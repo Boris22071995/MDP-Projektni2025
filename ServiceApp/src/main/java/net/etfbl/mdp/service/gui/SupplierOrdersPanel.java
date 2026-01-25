@@ -30,7 +30,10 @@ import net.etfbl.mdp.messaging.OrderPublisher;
 import net.etfbl.mdp.model.Order;
 import net.etfbl.mdp.model.Part;
 import net.etfbl.mdp.service.RedisPartService;
+import net.etfbl.mdp.service.SupplierOrderService;
+import net.etfbl.mdp.service.gui.rest.RestSupplierOrder;
 import net.etfbl.mdp.util.AppLogger;
+import net.etfbl.mdp.util.ConfigurationLoader;
 
 public class SupplierOrdersPanel extends JPanel {
 
@@ -43,9 +46,11 @@ public class SupplierOrdersPanel extends JPanel {
 	private JTable ordersTable;
 	private DefaultTableModel ordersModel;
 	private RedisPartService redisService;
+	private SupplierOrderService orderService = new SupplierOrderService();
+	private RestSupplierOrder restSupplier;
 	
 	public SupplierOrdersPanel(RedisPartService service) {
-		
+		this.restSupplier = new RestSupplierOrder();
 		this.redisService = service;
 		setLayout(new BorderLayout(10, 10));
 		setBorder(BorderFactory.createTitledBorder("Parts ordering from suppliers"));
@@ -172,20 +177,20 @@ public class SupplierOrdersPanel extends JPanel {
 			return;
 		}
 		String orderId = ordersModel.getValueAt(row,1).toString();	
-		String TRUST_STORE_PATH = "./clienttruststore.jks";
-		String TRUST_STORE_PASSWORD = "trustpass";
+		String TRUST_STORE_PATH = ConfigurationLoader.getString("truststore.path");
+		String TRUST_STORE_PASSWORD = ConfigurationLoader.getString("truststire.password");
 		File f = new File(TRUST_STORE_PATH);
 		TRUST_STORE_PATH = f.getAbsolutePath();
 		String supplier = (String) supplierBox.getSelectedItem();
-		int port = 5001;
-		if ("Supplier1".equalsIgnoreCase(supplier)) {
-			port = 5001;
-		} else if ("Supplier2".equalsIgnoreCase(supplier)) {
-			port = 5002;
-		} else if ("Supplier3".equalsIgnoreCase(supplier)) {
-			port = 5003;
-		} else if ("Supplier4".equalsIgnoreCase(supplier)) {
-			port = 5004;
+		int port = ConfigurationLoader.getInt("supplierone.port");
+		if (ConfigurationLoader.getString("supplierone.name").equalsIgnoreCase(supplier)) {
+			port = ConfigurationLoader.getInt("supplierone.port");
+		} else if (ConfigurationLoader.getString("suppliertwo.name").equalsIgnoreCase(supplier)) {
+			port = ConfigurationLoader.getInt("suppliertwo.port");
+		} else if (ConfigurationLoader.getString("supplierthree.name").equalsIgnoreCase(supplier)) {
+			port = ConfigurationLoader.getInt("supplierthree.port");
+		} else if (ConfigurationLoader.getString("supplierfour.name").equalsIgnoreCase(supplier)) {
+			port = ConfigurationLoader.getInt("supplierfour.port");
 		}
 		System.setProperty("javax.net.ssl.trustStore", TRUST_STORE_PATH);
 		System.setProperty("javax.net.ssl.trustStorePassword", TRUST_STORE_PASSWORD);
@@ -220,12 +225,13 @@ public class SupplierOrdersPanel extends JPanel {
 					status = p[1];
 				}
 			}
-			if(status == null) {status = "PENDING";}
+			
 			if("APPROVED".equals(status)) {
 				Part p = new Part(decode(ordersModel.getValueAt(row, 1).toString()),decode(ordersModel.getValueAt(row, 0).toString()), decode(ordersModel.getValueAt(row, 2).toString()),Double.parseDouble(ordersModel.getValueAt(row, 4).toString()),Integer.parseInt(ordersModel.getValueAt(row, 3).toString()),"Description");
 				redisService.addPart(p);
 				log.info("Status of order is approved.");
 			}
+			if(status == null || status.equalsIgnoreCase("null")) {status = "PENDING";}
 			 ordersModel.setValueAt(status, row, 5);		
 
 		} catch (Exception e) {
@@ -237,74 +243,94 @@ public class SupplierOrdersPanel extends JPanel {
 		socket.close();		
 	}
 
+	
 	private void loadPartsFromSupplier() throws KeyStoreException, FileNotFoundException, IOException, NoSuchAlgorithmException, CertificateException, KeyManagementException {
-			
-		String TRUST_STORE_PATH = "./clienttruststore.jks";
-		String TRUST_STORE_PASSWORD = "trustpass";
-		File f = new File(TRUST_STORE_PATH);
-		TRUST_STORE_PATH = f.getAbsolutePath();
-		String supplier = (String) supplierBox.getSelectedItem();
-		int port = 5001;
-		if ("Supplier1".equalsIgnoreCase(supplier)) {
-			port = 5001;
-		} else if ("Supplier2".equalsIgnoreCase(supplier)) {
-			port = 5002;
-		} else if ("Supplier3".equalsIgnoreCase(supplier)) {
-			port = 5003;
-		} else if ("Supplier4".equalsIgnoreCase(supplier)) {
-			port = 5004;
-		}
-		System.setProperty("javax.net.ssl.trustStore", TRUST_STORE_PATH);
-		System.setProperty("javax.net.ssl.trustStorePassword", TRUST_STORE_PASSWORD);
-		char[] passphrase = TRUST_STORE_PASSWORD.toCharArray();
-		KeyStore ts = KeyStore.getInstance("JKS");
-		try (FileInputStream fis = new FileInputStream(TRUST_STORE_PATH)) {
-			ts.load(fis, passphrase);
-		}
-
-		TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
-		tmf.init(ts);
-
-		SSLContext sc = SSLContext.getInstance("TLS");
-		sc.init(null, tmf.getTrustManagers(), null);
-
-		SSLSocketFactory sf = sc.getSocketFactory();
-		SSLSocket socket = (SSLSocket) sf.createSocket("localhost", port);
-		socket.startHandshake();
-
-		List<Part> parts = new ArrayList<>();
-		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 		
+		String supplier = (String) supplierBox.getSelectedItem();
 		try {
-			out.println("GET_PARTS|" + supplier);
-
-			String line;
-			while ((line = in.readLine()) != null) {
-				if ("END".equals(line))
-					break;
-				if (line.startsWith("PART|")) {
-					String[] p = line.split("\\|", 5);
-					if (p.length >= 5) {
-						parts.add(new Part(decode(p[1]), decode(p[2]), Double.parseDouble(p[3]), decode(p[4])));
-					}
-				}
-			}
+			List<Part> parts = orderService.loadParts(supplier);
 			model.setRowCount(0);
 			for (Part part : parts) {
 				model.addRow(new Object[] { part.getId(), part.getName(), part.getPrice(), part.getDescription() });
 			}
 			JOptionPane.showMessageDialog(this, "Loaded " + parts.size() + " parts from " + supplier);
 			log.info("Parts from supplier are loaded.");
-
-		} catch (Exception e) {
+		}catch(Exception e) {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(this, "Error loading parts: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 			log.severe("Error while loading parts from supplier.");
 		}
 		
-		socket.close();		
 	}
+
+//	private void loadPartsFromSupplier() throws KeyStoreException, FileNotFoundException, IOException, NoSuchAlgorithmException, CertificateException, KeyManagementException {
+//			
+//		String TRUST_STORE_PATH = ConfigurationLoader.getString("truststore.path");
+//		String TRUST_STORE_PASSWORD = ConfigurationLoader.getString("truststire.password");
+//		File f = new File(TRUST_STORE_PATH);
+//		TRUST_STORE_PATH = f.getAbsolutePath();
+//		String supplier = (String) supplierBox.getSelectedItem();
+//		int port = ConfigurationLoader.getInt("supplierone.port");
+//		if (ConfigurationLoader.getString("supplierone.name").equalsIgnoreCase(supplier)) {
+//			port = ConfigurationLoader.getInt("supplierone.port");
+//		} else if (ConfigurationLoader.getString("suppliertwo.name").equalsIgnoreCase(supplier)) {
+//			port = ConfigurationLoader.getInt("suppliertwo.port");
+//		} else if (ConfigurationLoader.getString("supplierthree.name").equalsIgnoreCase(supplier)) {
+//			port = ConfigurationLoader.getInt("supplierthree.port");
+//		} else if (ConfigurationLoader.getString("supplierfour.name").equalsIgnoreCase(supplier)) {
+//			port = ConfigurationLoader.getInt("supplierfour.port");
+//		}
+//		System.setProperty("javax.net.ssl.trustStore", TRUST_STORE_PATH);
+//		System.setProperty("javax.net.ssl.trustStorePassword", TRUST_STORE_PASSWORD);
+//		char[] passphrase = TRUST_STORE_PASSWORD.toCharArray();
+//		KeyStore ts = KeyStore.getInstance("JKS");
+//		try (FileInputStream fis = new FileInputStream(TRUST_STORE_PATH)) {
+//			ts.load(fis, passphrase);
+//		}
+//
+//		TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
+//		tmf.init(ts);
+//
+//		SSLContext sc = SSLContext.getInstance("TLS");
+//		sc.init(null, tmf.getTrustManagers(), null);
+//
+//		SSLSocketFactory sf = sc.getSocketFactory();
+//		SSLSocket socket = (SSLSocket) sf.createSocket("localhost", port);
+//		socket.startHandshake();
+//
+//		List<Part> parts = new ArrayList<>();
+//		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+//		
+//		try {
+//			out.println("GET_PARTS|" + supplier);
+//
+//			String line;
+//			while ((line = in.readLine()) != null) {
+//				if ("END".equals(line))
+//					break;
+//				if (line.startsWith("PART|")) {
+//					String[] p = line.split("\\|", 5);
+//					if (p.length >= 5) {
+//						parts.add(new Part(decode(p[1]), decode(p[2]), Double.parseDouble(p[3]), decode(p[4])));
+//					}
+//				}
+//			}
+//			model.setRowCount(0);
+//			for (Part part : parts) {
+//				model.addRow(new Object[] { part.getId(), part.getName(), part.getPrice(), part.getDescription() });
+//			}
+//			JOptionPane.showMessageDialog(this, "Loaded " + parts.size() + " parts from " + supplier);
+//			log.info("Parts from supplier are loaded.");
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			JOptionPane.showMessageDialog(this, "Error loading parts: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+//			log.severe("Error while loading parts from supplier.");
+//		}
+//		
+//		socket.close();		
+//	}
 
 	private void sendOrder() {
 		
@@ -326,14 +352,14 @@ public class SupplierOrdersPanel extends JPanel {
 		if (qty == null || qty.isEmpty())
 			return;
 		String queueName = "";
-		if ("Supplier1".equals(supplier)) {
-			queueName = "orders_queue1";
-		} else if ("Supplier2".equals(supplier)) {
-			queueName = "orders_queue2";
-		} else if ("Supplier3".equals(supplier)) {
-			queueName = "orders_queue3";
+		if (ConfigurationLoader.getString("supplierone.name").equals(supplier)) {
+			queueName = ConfigurationLoader.getString("supplierone.mqname");
+		} else if (ConfigurationLoader.getString("suppliertwo.name").equals(supplier)) {
+			queueName = ConfigurationLoader.getString("suppliertwo.mqname");
+		} else if (ConfigurationLoader.getString("supplierthree.name").equals(supplier)) {
+			queueName = ConfigurationLoader.getString("supplierthree.mqname");
 		} else {
-			queueName = "orders_queue4";
+			queueName = ConfigurationLoader.getString("supplierfour.mqname");
 		}
 
 		OrderPublisher.sendOrder(order, queueName, quant);
