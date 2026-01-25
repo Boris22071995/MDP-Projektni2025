@@ -19,7 +19,7 @@ import java.beans.XMLDecoder;
 public class ClientRepository {
 
 	private static String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\clients.xml";
-	//private static String FILE_PATH = "database/clients.xml";
+	//private static String FILE_PATH = ConfigurationLoader.getString("clients.filepath");
 	private static final Logger log = AppLogger.getLogger();
 
 	@SuppressWarnings("unchecked")

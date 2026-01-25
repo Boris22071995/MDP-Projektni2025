@@ -19,6 +19,22 @@ public class ConfigurationLoader {
 		}
 	}
 	
+//	static {
+//	    try (InputStream is = ConfigurationLoader.class
+//	            .getClassLoader()
+//	            .getResourceAsStream("configuration/config.properties")) {
+//
+//	        if (is == null) {
+//	            throw new RuntimeException("config.properties not found in classpath");
+//	        }
+//
+//	        properties.load(is);
+//	    } catch (Exception e) {
+//	        log.severe("Cannot load configuration properties");
+//	        throw new RuntimeException(e);
+//	    }
+//	}
+	
 	public static String getString(String key) {
 		return properties.getProperty(key);
 	}

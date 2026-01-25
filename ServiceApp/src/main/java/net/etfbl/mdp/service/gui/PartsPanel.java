@@ -29,7 +29,7 @@ public class PartsPanel extends JPanel {
 		setLayout(new BorderLayout());
 		setBorder(BorderFactory.createTitledBorder("Parts"));
 
-		model = new DefaultTableModel(new Object[] { "Id", "Name", "Manufacturer", "Price", "Quantity", "Description" },
+		model = new DefaultTableModel(new Object[] { "Id", "Supplier", "Name", "Price(KM)", "Quantity", "Description" },
 				0);
 		table = new JTable(model) {
 			private static final long serialVersionUID = 1L;

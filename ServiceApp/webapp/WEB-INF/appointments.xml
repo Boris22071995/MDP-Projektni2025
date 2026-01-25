@@ -113,5 +113,33 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="net.etfbl.mdp.model.Appointment">
+    <void property="comment">
+     <string>uradjeno je sve</string>
+    </void>
+    <void property="date">
+     <string>2026-02-15</string>
+    </void>
+    <void property="description">
+     <string>Potreban mi je mali servis</string>
+    </void>
+    <void property="id">
+     <string>49a6b96a-6b40-429e-83e7-da19f7be2929</string>
+    </void>
+    <void property="ownerUsername">
+     <string>borvas</string>
+    </void>
+    <void property="status">
+     <string>approved</string>
+    </void>
+    <void property="time">
+     <string>10:00</string>
+    </void>
+    <void property="type">
+     <string>Service</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

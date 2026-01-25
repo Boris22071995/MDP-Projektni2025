@@ -18,6 +18,7 @@ import net.etfbl.mdp.util.ConfigurationLoader;
 public class AppointmentRepository {
 
 	private static final String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\appointments.xml"; //ConfigurationLoader.getString("appointments.filepath");
+	//private static final String FILE_PATH = ConfigurationLoader.getString("appointments.filepath");
 	private static final Logger log = AppLogger.getLogger();
 	@SuppressWarnings("unchecked")
 	public ArrayList<Appointment> getAllAppointments() {

@@ -1,0 +1,15 @@
+===== SERVICE INVOICE =====
+
+Client: borvas
+Service type: Service
+Date: 2026-02-15
+Time: 10:00
+
+----- Used parts -----
+1105 | 23.62 KM
+STX200287 | 243.27 KM
+
+----------------------
+TOTAL: 266.89 KM
+
+Thank you for using our service.

@@ -98,10 +98,13 @@ public class ServiceMain extends JFrame {
 
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> new ServiceMain().setVisible(true));
-	     String FILE_PATH = ConfigurationLoader.getString("clients.filepath");
+		String FILE_PATH = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\appointments.xml";
+		System.out.println(FILE_PATH);
+		System.out.println(ConfigurationLoader.getString("appointments.filepath"));
+		
+		String FILE_PATH2 = "C:\\Users\\Boris\\OneDrive\\Desktop\\MDP-Projektni2025\\ServiceApp\\webapp\\WEB-INF\\clients.xml";
+		System.out.println(FILE_PATH2);
 		System.out.println(ConfigurationLoader.getString("clients.filepath"));
-		
-		
 	}
 
 }
